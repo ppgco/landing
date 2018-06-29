@@ -1,0 +1,58 @@
+<header class="section-header" id="recent-posts">
+  <h2 class="title--uppercase">{{__ 'Dowiedz się więcej o Web Push'}}</h2>
+</header>
+
+<section class="main recent-posts">
+  <div class="content-limiter">
+    <div class="recent-posts-container">
+      {{#ifCond locale 'pl' }}
+        {{#recentPosts collections.posts}}
+        <div class="post-item">
+          <div class="post-image" style="background-image: url({{image this}});" >
+            <a class="post-layer" href="/{{link this.path}}">
+              <div>
+                <p class="post-description"> {{description}} </p>
+                <div class="post-read-more">{{__ 'Czytaj'}}</div>
+              </div>
+            </a>
+          </div>
+
+          {{#each this.tags}}
+            <span class="post-tag">{{this.name}}</span>
+          {{/each}}
+
+          <a href="/{{link this.path}}" class="post-title"> {{title}}</a>
+        </div>
+        {{/recentPosts}}
+      {{/ifCond}}
+
+      {{#ifCond locale 'en' }}
+        {{#recentPosts collections.enPosts}}
+        <div class="post-item">
+          <div class="post-image" style="background-image: url({{image this}});" >
+            <a class="post-layer" href="/{{link this.path}}">
+              <div>
+                <p class="post-description"> {{description}} </p>
+                <div class="post-read-more">{{__ 'Czytaj'}}</div>
+              </div>
+            </a>
+          </div>
+
+          {{#each this.tags}}
+            <span class="post-tag">{{this.name}}</span>
+          {{/each}}
+
+          <a href="/{{link this.path}}" class="post-title"> {{title}}</a>
+        </div>
+        {{/recentPosts}}
+      {{/ifCond}}
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="text-center">
+    <a href="{{linkLocale 'blog/page/1' locale}}" class="btn">{{__ 'Przejdź do bloga'}}  &#155;</a>
+  </div>
+</section>

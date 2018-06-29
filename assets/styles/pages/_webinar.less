@@ -1,0 +1,174 @@
+header.main {
+  &--webinar {
+    background: lighten(@brand-blue, 8%);
+    color: #fff;
+
+    .logo {
+      width: 160px;
+    }
+
+    nav {
+      > a:not(.btn) {
+        color: #dedede;
+      }
+    }
+
+    .call-us a {
+      color: #dedede;
+    }
+  }
+}
+.pointer {
+  cursor: pointer;
+}
+.webinar {
+  display: flex;
+  background: @brand-blue;
+  padding: 40px !important;
+
+  &__video {
+    width: 80%;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  &__chat {
+    width: 20%;
+
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+.section--webinar {
+  .row {
+    .column {
+
+      &:nth-child(1) {
+        width: 40%;
+      }
+
+      &:nth-child(2) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.webinar-form {
+  max-width: 400px;
+  box-shadow: @wide-shadow;
+  padding: 20px 40px;
+}
+
+.webinar-description {
+  max-width: 600px;
+
+  table {
+    border: none;
+
+    tr {
+      border: none;
+
+      td {
+        border: none;
+      }
+    }
+  }
+}
+
+.webinar-list-item {
+  max-width: 500px;
+  margin: 0px auto 40px auto;
+
+  &__time {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 12px;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    color: #666;
+  }
+
+  &:hover {
+
+    .webinar-list-item__play {
+      color: @brand-color;
+    }
+  }
+}
+
+@media @medium {
+  header.main.main--webinar .main-menu {
+    background: rgba(69, 72, 93, 0.8);
+    text-align: center;
+
+    nav {
+      float: none;
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+  .webinar {
+
+    &__video {
+      width: 60%;
+    }
+
+    &__chat {
+      width: 40%;
+    }
+  }
+
+  .section--webinar {
+    .row {
+      display: flex;;
+
+      .column {
+
+        &:nth-child(1) {
+          width: 50%;
+        }
+
+        &:nth-child(2) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media @small {
+  .webinar {
+    display: block;
+
+    &__video {
+      width: 100%;
+    }
+
+    &__chat {
+      width: 100%;
+    }
+  }
+
+  .section--webinar {
+    .row {
+      display: block;
+
+      .column {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .webinar-form {
+    width: auto;
+    margin-top: 40px;
+    max-width: none;
+  }
+}

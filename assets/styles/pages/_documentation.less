@@ -1,0 +1,189 @@
+.documentation {
+
+	.content-limiter {
+		max-width: 1300px;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 200px;
+	}
+
+	.content {
+		width: 75%;
+
+		em {
+			font-style: italic;
+		}
+
+		b {
+			color: @text-color;
+		}
+
+		h2 {
+			font-size: 32px;
+			margin: 0px 0 20px 0;
+			padding-top: 50px;
+		}
+
+		h3 {
+			font-weight: 600;
+			margin-top: 30px;
+		}
+
+		h4 {
+			padding-top: 20px;
+		}
+
+		strong {
+			font-weight: @font-bold;
+		}
+
+		img {
+			border-radius: @base-radius;
+			max-width: 100%;
+			margin: 20px 0;
+			display: inline-block;
+			vertical-align: top;
+			box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.31);
+		}
+
+		img.big {
+			width: 700px;
+		}
+
+		img.medium {
+			width: 400px;
+		}
+
+		ul li {
+			margin: 5px 0;
+			position: relative;
+		}
+
+		ul {
+			li:before {
+				content: '';
+				width: 5px;
+				height: 5px;
+				display: inline-block;
+				background: @green;
+				position: absolute;
+				top: 10px;
+				left: -20px;
+				border-radius: 50%;
+			}
+		}
+
+		blockquote {
+			margin: 30px 0;
+			background: #fbfbfb;
+			padding: 30px 20px;
+			color: @text-color;
+		}
+	}
+
+	.side-nav-toggle {
+		display: none;
+	}
+}
+
+
+// Side nav
+
+.side-nav {
+  width: 25%;
+  padding-right: 30px;
+	margin-top: 30px;
+
+  &.fixed nav {
+    position: fixed;
+    top: 70px;
+		height: calc(~"100% - 100px");
+    overflow: auto;
+		padding: 20px;
+		background: #fff;
+		z-index: 100;
+  }
+  nav {
+    a {
+      display: block;
+      color: @headers-color;
+      &:hover {
+        color: @green;
+      }
+    }
+    > a {
+      padding: 5px 0;
+      font-size: 16px;
+      font-weight: @font-bold;
+    }
+    .sublinks {
+      margin-bottom: 10px;
+      > a {
+        margin-left: 10px;
+        padding: 5px 0;
+        line-height: 16px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media @xsmall {
+	.documentation {
+
+		.content-limiter {
+			display: block;
+		}
+
+		.content {
+			width: auto;
+		}
+
+		.side-nav {
+			position: fixed;
+			left: 10px;
+			bottom: 80px;
+			z-index: 10;
+
+			nav {
+				display: none;
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				background: #fff;
+				box-shadow: @base-shadow;
+				border-radius: @base-radius;
+				width: auto;
+				padding: 20px;
+				margin: 10px 0;
+				height: 300px;
+				overflow: auto;
+				min-width: 200px;
+			}
+
+			&:hover {
+				width: 100%;
+
+				nav {
+					display: block;
+				}
+			}
+		}
+
+		.side-nav-toggle {
+			background: #fff;
+			border-radius: @base-radius;
+			display: inline-block;
+			padding: 10px 15px;
+			box-shadow: @base-shadow;
+		}
+
+		.side-nav:hover {
+
+			nav {
+				display: block;
+			}
+		}
+
+	}
+}

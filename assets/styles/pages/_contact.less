@@ -1,0 +1,139 @@
+#map {
+  height: 430px;
+}
+
+.map-wrapper {
+  position: relative;
+
+  .map-layer {
+    position: absolute;
+    top: -8px;
+    right: 80px;
+    z-index: 1;
+    background: rgba(52, 54, 70, 0.9);
+    color: #fff;
+    padding: 30px 50px;
+    width: 350px;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 0  8px;
+      border-color:  transparent transparent transparent rgba(52, 54, 70, 1);
+      position: absolute;
+      top: 0px;
+      right: -8px;
+    }
+
+    a {
+      color: lighten(@brand-color, 10%);
+      font-size: 16px;
+      line-height: 40px;
+      display: block;
+    }
+  }
+}
+
+.team-members {
+  text-align: center;
+}
+
+.member-item {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 0 0 30px 0px;
+  margin: 1px;
+  width: 250px;
+  transition: all 0.3s;
+
+  .name {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .position {
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: @text-color;
+    font-size: 14px;
+  }
+
+  .image-funny {
+    display: none;
+  }
+
+  &:hover {
+    background: #f3f3f3;
+
+    .image-funny {
+      display: block;
+    }
+    .image-normal {
+      display:  none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .team-members {
+
+    .member-item {
+      width: 30%;
+    }
+  }
+
+}
+
+@media (max-width: 700px) {
+  .map-wrapper {
+
+    #map {
+      height: 300px;
+    }
+
+    .map-layer {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: auto;
+
+      &:before {
+        display: none;
+      }
+    }
+
+  }
+
+  .team-members {
+
+    .member-item {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  .team-members {
+
+    .member-item {
+      width: 80%;
+    }
+  }
+}

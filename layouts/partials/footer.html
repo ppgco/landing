@@ -1,0 +1,92 @@
+{{>landing/ebook-popup}}
+{{>landing/calltoaction-landing}}
+
+<footer class="main-footer" id="contact">
+	<div class="content-limiter">
+		<div class="row">
+			<div class="logo-column column">
+				<a href="{{envlink 'https://HOST_DOMAIN' NODE_ENV}}" class="logo">PushPushGo</a>
+				<p class="copyright">Copyright © 2017 by PushPushGo. All rights reserved.</p>
+			</div>
+
+			{{>footer-menu}}
+			<div class="socials-column column">
+				<a href="https://www.linkedin.com/company/10915197" class="ppg-icon-linkedin" target="_blank"></a>
+				<!--<a href="http://twitter.com" class="ppg-icon-twitter"></a>-->
+				<a href="https://www.facebook.com/PushPushGo/" target="_blank" class="ppg-icon-facebook" target="_blank"></a>
+				<a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="ppg-icon-youtube" target="_blank"></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="c2c-modal hide" id="c2c-modal">
+	<div class="c2c-modal-backdrop"></div>
+	<div class="c2c-modal-box">
+		<span class="ppg-icon-telephone size30 text-light"></span>
+		<h2 class="title--uppercase">{{__ 'Potrzebujesz konsultacji?'}}</h2>
+		<p>{{__ 'Wpisz swój numer telefonu, oddzwonimy tak szybko jak to możliwe, zwykle za kilka sekund'}}</p>
+		<input class="c2c-input" id="c2c-input" value="+48"/>
+		<a href="#" class="c2c-call" id="c2c-call">{{__ 'Zamów'}}</a>
+
+		<a href="#" class="c2c-modal-close" id="c2c-modal-close"></a>
+		<small> {{__ 'Zostawiając numer telefonu wyrażasz zgodę na przetwarzanie swoich danych oraz jednorazowe oddzwonienie. Twój numer telefonu nie będzie przekazywany żadnym podmiotom trzecim.'}}</small>
+		<p>
+			<span id="c2c-status-ok" class="c2c-status hide">{{__ 'Rozmowa zamówiona, zaczekaj na połączenie, ten komunikat możesz już zamknąć.'}}</span>
+			<span id="c2c-status-error" class="c2c-status hide">{{__ 'Wystąpił problem, spróbuj jeszcze raz.'}}</span>
+			<span id="c2c-status-validate" class="c2c-status hide">{{__ 'Wpisz poprawny numer telefonu (+YYXXXXXXXXX)'}}</span>
+			<span id="c2c-status-loading" class="c2c-status hide">{{__ 'Trwa łączenie z Joanną'}}</span>
+		</p>
+	</div>
+</div>
+<script type='application/ld+json'>
+{
+  "@context": "http://www.schema.org",
+  "@type": "Organization",
+  "name": "PushPushGo",
+  "url": "https://pushpushgo.com/pl/",
+  "sameAs": [
+    "https://pushpushgo.com/en/"
+  ],
+  "logo": "https://pushpushgo.com/images/logo_small.png",
+  "description": "Platforma do wysyłki notyfikacji web push",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ostatnia 1C / 2B",
+    "addressLocality": "Kraków",
+    "addressRegion": "MP",
+    "postalCode": "31-444",
+    "addressCountry": "Polska"
+  },
+  "hasMap": "https://www.google.pl/maps/place/Aleja+Pokoju+1A,+Krak%C3%B3w/@50.0572998,19.9606544,17z/data=!4m5!3m4!1s0x47165b3be0af0a3d:0xed2ebcd9e74c6dd9!8m2!3d50.05741!4d19.961384",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su 01:00-01:00",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": " +48 12 312 5213",
+    "contactType": "Support"
+	"email": "support@pushpushgo.com"
+  }
+}
+ </script>
+
+ 	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2534138.js"></script>
+</body>
+</html>
+<link rel="stylesheet" type="text/css" href="/styles/main.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+<script src="/js/main.js" async="true"></script>
+<script charset="UTF-8" src="https://cdn.pushpushgo.com/js/57a04ba53f29062f1fed6d8f.js" async="true"></script>
+
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1959134684349655&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
+
+<div class="ppg-cookies">
+	{{#ifCond locale 'pl'}}
+	Nasza strona używa ciasteczek (cookies). <span class="link ppg-cookies__close">Zamknij</span> <a href="{{linkLocale 'pages/polityka-prywatnosci' locale}}">Dowiedz się więcej</a>
+	{{else}}
+	Our website is using cookies. <span class="link ppg-cookies__close">Close</span> <a href="{{linkLocale 'pages/privacy' locale}}">Read more</a>
+	{{/ifCond}}
+</div>

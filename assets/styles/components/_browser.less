@@ -1,0 +1,241 @@
+.browser {
+	border-radius: @base-radius;
+	background: @white;
+	box-shadow: @base-shadow;
+	width: 450px;
+	height: 250px;
+	padding-top: 30px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	.browser-bar {
+		background: #ddd;
+		padding: 0px 10px;
+		height: 30px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		border-top-right-radius: @base-radius;
+    border-top-left-radius: @base-radius;
+		box-sizing: border-box;
+		text-align: left;
+		> span {
+			background: #fff;
+			width: 12px;
+			height: 12px;
+			margin: 9px 0;
+			vertical-align: top;
+			display: inline-block;
+			border-radius: 50%;
+		}
+	}
+	.browser-loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -15px;
+   	margin-left: -20px;
+	}
+}
+
+.subscription-form {
+	opacity: 0;
+	width: 250px;
+	padding: 20px;
+	box-shadow: @base-shadow;
+	position: absolute;
+	left: 20px;
+	top: 50px;
+	background: #fff;
+	border-radius: @base-radius;
+	font-size: 14px;
+	&:before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		left: 20px;
+		top: -5px;
+		transform: rotate(45deg);
+		background: #fff;
+	}
+	.text {
+		margin-bottom: 20px;
+	}
+	.success-title {
+		color: @brand-color;
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.button {
+		height: 30px;
+		line-height: 30px;
+		padding: 0 20px;
+		display: inline-block;
+		background: #ddd;
+		border-radius: 4px;
+		font-size: 12px;
+	}
+	.button-agree {
+		background: @brand-color;
+		color: #fff;
+		margin-left: 5px;
+	}
+}
+
+.question-slide {
+	text-align: left;
+}
+
+.success-slide {
+	text-align: center;
+	opacity: 0;
+}
+
+.click-slide {
+	opacity: 0;
+	transform: translate(100px, 100px);
+}
+
+.browser-loader {
+	opacity: 0;
+}
+
+.browser.in-viewport {
+	.subscription-form { 
+		animation: animateSubscriptionForm 15s linear;
+	}
+	.question-slide {
+		animation: animateSubscribeQuestion 15s linear;
+	}
+	.success-slide {
+		animation: animateSubscribeSuccess 15s linear;
+	}
+	.browser-loader {
+		animation: animateLoader 15s linear;
+	}
+	.click-slide {
+		animation: animateClick 15s linear;
+	}
+}
+
+@keyframes animateLoader {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 1
+	}
+	11% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes animateSubscriptionForm {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0
+	}
+	21% {
+		opacity: 1;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes animateSubscribeQuestion {
+	0% {
+		opacity: 1;
+		height: auto;
+	}
+	50% {
+		opacity: 1;
+		height: auto;
+	}
+	51% {
+		opacity: 0;
+		height: 0;
+	}
+	100% {
+		opacity: 0;
+		height: 0;
+	}
+}
+
+@keyframes animateSubscribeSuccess {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+	50% {
+		opacity: 0;
+		height: 0;
+	}
+	51% {
+		opacity: 1;
+		height: auto;
+	}
+	100% {
+		opacity: 1;
+		height: auto;
+	}
+}
+
+@keyframes animateClick {
+	0% {
+		opacity: 0;
+		transform: translate(100px, 100px)
+	}
+	30% {
+		opacity: 0;
+		transform: translate(100px, 100px)
+	}
+	31% {
+		opacity: 1;
+	}
+	33% {
+		transform: translate(-50px, 20px);
+	}
+	35% {
+		background: rgba(255,255,255, 0.2);
+	}
+	37% {
+		background: rgba(236, 236, 236, 0.7);
+	}
+	42% {
+		background: rgba(255,255,255, 0.2);
+	}
+	42% {
+		opacity: 1;
+	}
+	43% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50px, 20px);
+	}
+}
+
+@media @small {
+	.browser {
+		width: 360px;
+	}
+}
+
+@media @xsmall {
+	.browser {
+		width: 100%;
+	}
+}

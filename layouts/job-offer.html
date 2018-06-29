@@ -1,0 +1,38 @@
+{{> header }} {{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{jobTitle}}</h1>
+    <p>{{jobSubtitle}}</p>
+  </div>
+</section>
+
+<div class="content-limiter job-offer">
+  <div class="row">
+
+    {{#if jobPicture}}
+    <div class="column column-50">
+      <img src="/images/{{jobPicture}}" alt="">
+    </div>
+    {{/if}}
+
+
+    <div class="column">
+      <p>
+        {{jobIntro}}
+      </p>
+    </div>
+  </div>
+
+  <br> {{{contents}}}
+
+  <br>
+  <br>
+
+  <a href="{{linkLocale 'pages/praca' locale}}">
+     Powróć do listy ofert
+  </a>
+</div>
+
+
+{{>footer}}

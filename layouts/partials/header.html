@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="max-age=3600" />
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="google-site-verification" content="oec4S5aP6w5wBadFzh9zMieUTWiMRPp9LYhiyfm4dgE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="image_src" type="image/jpeg" id="logo" href="/images/logo_mini.png">
+    <link rel="image_src" type="image/jpeg" id="screen" href="/images/screen.png">
+
+    <meta property="og:title" content="{{#if title}}{{ title }}{{else}}PushPushGo - platforma to wysyłki web push{{/if}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url }}{{ path }}" />
+    <meta property="og:image" content="{{#if ogImage}}/{{stripPath path}}/{{ ogImage }}{{/if}}" />
+    <meta property="og:image" content="/images/logo_mini.png" />
+    <meta property="og:image" content="/images/screen.png" />
+    <meta property="og:description" content="{{#if description}}{{ description }}{{else}}Web push dla Twojego ecommerce, sprawdź - 14 dni bezpłatnego okresu testowego{{/if}}" />
+
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+
+    {{#if pagination}}
+        <link rel="next" href="{{url}}{{pagination.next.path}}"/>
+        <link rel="prev" href="{{url}}{{pagination.previous.path}}"/>
+    {{/if}}
+
+    <title> {{ title }} </title>
+
+    {{#ifCond NODE_ENV 'staging'}}
+    <meta name="robots" content="noindex">
+    {{/ifCond}}
+
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body class="{{ locale }}" data-lang="{{ locale }}">
+<var id="ppg-tags" data-tags="{{ tagsPPG }}"></var>
+
+<style>
+    body { opacity: 0; transition: opacity 0.3s; }
+</style>

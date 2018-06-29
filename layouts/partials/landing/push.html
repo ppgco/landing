@@ -1,0 +1,170 @@
+
+<header class="section-header grey-bg" id="push">
+  <h2 class="title--uppercase">{{__ 'Jak działają powiadomienia web push?'}}</h2>
+</header>
+<section class="main section-push grey-bg">
+  <div class="content-limiter">
+    <div class="row">
+      <div class="column-half">
+        <div class="column-content">
+          <div class="ppg-icon-bell section-icon"></div>
+          <h2>{{__ 'Dyskretna notyfikacja'}}</h2>
+          <p>
+            {{__ 'Powiadomienia push mają formę małego prostokąta, który wyświetla się w rogu ekranu komputera lub smartfona.'}}
+            <br><br>
+            {{__ 'Skłonią odbiorcę do kliknięcia w zawarty link i przejścia na Twoją stronę.'}}
+            <br><br>
+            {{__ 'Możesz dowolnie spersonalizować swoje notyfikacje: dodać logo lub zdjęcie produktu w promocyjnej cenie.
+            Twoje powiadomienie może zawierać do 30 znaków tytułu i do 40 znaków głównego komunikatu, tak aby odbiorca mógł go przeczytać
+            za jednym spojrzeniem i odruchowo kliknąć w link.'}}
+          </p>
+        </div>
+      </div>
+      <div class="column-half">
+        <div class="column-content">
+          <div class="push-carousel">
+            <img src="/images/push-content{{#ifCond locale 'en'}}-en{{/ifCond}}.png" class="push-slide shadow push-content" data-order="front">
+            <img src="/images/push-info{{#ifCond locale 'en'}}-en{{/ifCond}}.png" class="push-slide shadow push-info" data-order="middle">
+            <img src="/images/push-promo{{#ifCond locale 'en'}}-en{{/ifCond}}.png" class="push-slide shadow push-promo" data-order="back">
+          </div>
+          <div class="push-carousel-nav">
+            <div class="push-carousel-nav-button active" data-target="push-content">
+              <span class="ppg-icon-music"></span>
+            </div>
+            <div class="push-carousel-nav-button" data-target="push-info">
+              <span class="ppg-icon-message"></span>
+            </div>
+            <div class="push-carousel-nav-button" data-target="push-promo">
+              <span class="ppg-icon-basket"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main section-push">
+  <div class="content-limiter">
+    <div class="row">
+      <div class="column-half">
+        <div class="column-content">
+          <div class="click-animation">
+            <img src="/images/push-promo{{#ifCond locale 'en'}}-en{{/ifCond}}.png" alt="" class="shadow">
+            <span class="ppg-icon-click click-animation-icon"></span>
+            <div class="click-animation-progress">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column-half">
+        <div class="column-content">
+          <div class="ppg-icon-click section-icon"></div>
+          <h2>{{__ 'To się klika'}}</h2>
+          <p>
+            {{__ 'Powiadomienia wyświetlają się jedynie przez kilkanaście sekund a następnie znikają, dlatego odbiorcy tak chętnie je klikają.'}}
+            <br><br>
+            {{__ 'Boisz się, że Twój odbiorca przegapi notyfikację? Nic z tego!'}}
+            <br><br>
+            {{__ ' Wyświetlą się nawet, gdy ma wyłączoną przeglądarkę. Jeśli Twój odbiorca ma wyłączony komputer lub telefon, wysłane powiadomienia zobaczy od razu po włączeniu urządzenia.'}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main section-push grey-bg">
+  <div class="content-limiter">
+    <div class="row">
+      <div class="column-half">
+        <div class="column-content">
+          <div class="ppg-icon-quill-ink section-icon"></div>
+          <h2>{{__ 'Łatwa subskrypcja'}}</h2>
+          <p>{{__ 'Zapomnij o zaśmieconych skrzynkach mailowych i rozbudowanych newsletterach, których nie chcą czytać klienci.'}}
+          <br><br>
+            {{__ 'Twój odbiorca zgadza się na powiadomienia w dwóch kliknięciach, bez podawania żadnych danych osobowych. Nie musisz się
+            już martwić ich kłopotliwym przechowywaniem.'}}
+            </p>
+        </div>
+      </div>
+      <div class="column-half">
+        <div class="column-content">
+          <div class="browser">
+            <div class="browser-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="browser-loader">
+              <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#16A085">
+                    <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(1 1)" stroke-width="2">
+                            <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                <animateTransform
+                                    attributeName="transform"
+                                    type="rotate"
+                                    from="0 18 18"
+                                    to="360 18 18"
+                                    dur="1s"
+                                    repeatCount="indefinite"/>
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="subscription-form">
+              <div class="question-slide">
+                <div class="text">
+                  <span class="ppg-icon-bell m5r"></span>{{__ 'Czy zgadzasz się na otrzymywanie powiadomień push?'}}
+                </div>
+                <span class="button button-disagree">{{__ 'Nie, dziękuję'}}</span>
+                <span class="button button-agree">{{__ 'Zgadzam się'}}</span>
+              </div>
+              <div class="success-slide">
+                <div class="success-title">{{__ 'Dziękujemy za Twoją zgodę!'}}</div>
+                {{__ 'Od teraz będziesz otrzymywał od nas powiadomienia web push.'}}
+              </div>
+              <span class="click-slide icon-click click-cursor-icon"></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="main section-push">
+  <div class="content-limiter">
+    <div class="row">
+      <div class="column-half">
+        <div class="column-content">
+          <div class="integration-animation">
+            <img src="/images/integrate-screen1{{#ifCond locale 'en'}}-en{{/ifCond}}.png" alt="" class="integration-slide app-screen-error shadow">
+            <img src="/images/integrate-screen2{{#ifCond locale 'en'}}-en{{/ifCond}}.png" alt="" class="integration-slide app-screen-copy shadow">
+            <img src="/images/integrate-screen3{{#ifCond locale 'en'}}-en{{/ifCond}}.png" alt="" class="integration-slide app-screen-success shadow">
+            <img src="/images/integrate1.png" alt="" class="integration-slide editor shadow">
+            <img src="/images/integrate2.png" alt="" class="integration-slide pasted-code shadow">
+          </div>
+        </div>
+      </div>
+      <div class="column-half">
+        <div class="column-content">
+          <div class="ppg-icon-cog section-icon"></div>
+          <h2>{{__ 'Zaczniesz w 5 minut'}}</h2>
+          <p>
+            {{__ 'Boisz się skomplikowanego procesu integracji? Zajmie Ci to nie więcej niż 5 minut.'}}
+           <br><br>
+            {{__ 'Wystarczy, że wkleisz na stronie internetowej jedną dodatkową linijkę kodu a klienci zaczną otrzymywać komunikat z prośbą o akceptację powiadomień push na Twojej stronie.'}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

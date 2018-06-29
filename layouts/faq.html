@@ -1,0 +1,193 @@
+{{>header}} {{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{__ 'Faq'}}</h1>
+    <p>{{__ 'Często zadawane pytania'}}</p>
+  </div>
+</section>
+
+<section class="faq grey-bg">
+  <div class="content-limiter">
+    <br>
+    <br>
+    <div class="row top">
+      <div class="column column-20">
+        <nav class="well faq-menu">
+          <a href="#integration" class="active"><span class="ppg-icon-cog"></span> Integracja</a>
+          <a href="#webpush"><span class="ppg-icon-bell"></span> Powiadomienia</a>
+          <a href="#subscribers"><span class="ppg-icon-subscribers"></span> Subskrybenci</a>
+          <a href="#payments"><span class="ppg-icon-closed-wallet"></span> Płatności</a>
+        </nav>
+      </div>
+      <div class="column column-80">
+
+        <div class="faq__section" data-topic="integration" style="display: block;">
+          <div class="faq__item well">
+            <div class="faq__item-title">Pojawia się komunikat, że projekt nie został poprawnie zintegrowany</div>
+            <div class="faq__item-content">
+              <ol>
+                <li>Upewniamy się, że wykonaliśmy wymienione w aplikacji niezbędne kroki w celu integracji projektu.</li>
+                <li>Klikamy przycisk “Sprawdź integrację”. </li>
+                <li>Jeśli w dalszym ciągu pojawia się komunikat błędu, a jesteśmy pewni, że wykonaliśmy poprawnie integrację
+                  i formularz wyświetla się na stronie, możemy użyć opcji “Manualne potwierdzenie integracji”.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Jak mogę wykorzystać formularz multichannel?</div>
+            <div class="faq__item-content">
+             Formularz multichannel stworzony jest dla osób, które swój projekt mają zintegrowany również  z platformami newsletterowymi. Wówczas w takim formularzu jednocześnie zbierane są adresy e-mail odbiorców, jak i zgody na powiadomienia web push.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section" data-topic="webpush">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Jak długo wyświetla się powiadomienie?</div>
+            <div class="faq__item-content">
+              <p>Jeśli nie została zaznaczona opcja <b>“Wymagana interakcja”</b>, wówczas powiadomienie będzie się wyświetlać około 5-10 sekund w zależności od przeglądarki. Jeśli natomiast opcja wymaganej interakcji została włączona, u odbiorców zapisanych na Chromie notyfikacja będzie się tak długo wyświetlać, aż nie zostanie kliknięta lub zamknięta.</p>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Duży obrazek w kampanii ucina treść</div>
+            <div class="faq__item-content">
+              <p>Jedną z możliwości przy tworzeniu kampani jest umieszczenie większej grafiki. Taka kampania wyświetli się tylko użytkownikom Google Chrome. Osoby korzystające z innych przeglądarek otrzymają notyfikacje o standardowym wymiarze. Kampania z większą grafiką, choć niebywale skuteczna, niestety uniemożliwia zawarcie dłuższej treści. Maksymalna ilość znaków w takim powiadomieniu to 42 znaki w treści oraz 30 znaków w tytule.</p>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Moja kampania nie dotarła do wszystkich odbiorców</div>
+            <div class="faq__item-content">
+              <ol>
+                <li>Upewnij się, czy wśród nich nie ma zagubionych odbiorców</li>
+                <li>Możliwe, że odbiorcy mają zablokowany/wyłączony komputer</li>
+                <li>Na urządzeniach mobilnych, tryb oszczędzania baterii również może spowodować brak przychodzących powiadomień</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Nie mogę zapisać się na powiadomienia</div>
+            <div class="faq__item-content">
+              Prawdopodobnie:
+              <ul>
+                <li>Korzystasz z okna incognito <br>
+                  <b>Nigdy nie należy testować zapisu na web push w trybie incognito</b>. Co prawda skrypty PushPushGo działają normalnie i wyświetlają wszystkie elementy (formularz zapisu, skrzynka odbiorcza) ale zapis w incognito nie działa.
+                </li>
+                <li>Już jesteś zapisany/a na powiadomienia</li>
+                <li>Jeśli, żadne z powyższych, zresetuj ustawienia przeglądarki</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Jak mogę zresetować ustawienia przeglądarki związane z zapisem na powiadomienia?</div>
+            <div class="faq__item-content">
+              Chrome:
+              <ol>
+                <li>Należy wejść w <b>chrome://serviceworker-internals/</b></li>
+                <li>Wyszukać pozycji zawierającej nazwę strony i kliknąć <b>Unregister</b>​</li>
+                <li>Następnie przechodzimy na naszą stronę</li>
+                <li>Klikamy F12 i w zakładce <b>Aplication</b> pojawi się pozycja <b>Index DB</b>.</li>
+                <li>Klikamy w Index DB po czym pojawi się w rozwijalnej liście pozycja pushpushgo. Należy ją usunąć (Po kliknięciu w nią, delete database)</li>
+                <li>W pasku przeglądarki (tam gdzie wpisujemy adres www) lokalizujemy ikonkę kłódki i klikamy w nią. Pojawi się wysuwana lista na której wyszukujemy "Powiadomienia".</li>
+                <li>Klikamy opcję "Pytaj"</li>
+              </ol>
+
+              <br>
+              Firefox:
+              <ol>
+                <li>W polu gdzie umieszczamy adres, należy wpisać <b>about:debugging#workers<b></li>
+                <li>Następnie w wątkach usługowych pojawi się nasza strona</li>
+                <li>Należy kliknąć Wyrejestruj</li>
+                <li>Kolejnym krokiem będzie odwiedzenie naszej strony i kliknięcie F12</li>
+                <li>Pojawi się okno w którym trzeba wejść w <b>Dane</b></li>
+                <li>Na liście należy znaleźć <b>Index DB -> nasza strona-> pushpushgo</b></li>
+                <li>W pushpushgo należy kliknąć prawym przyciskiem myszki i usuń</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Podczas zapisu nie wyświetliło mi się drugie okno z potwierdzeniem zapisu</div>
+            <div class="faq__item-content">
+              Prawdopodobnie:
+              <ul>
+                <li>Korzystasz z okna incognito</li>
+                <li>Wyraziłeś/aś już kiedyś zgodę na powiadomienia na tej stronie</li>
+                <li>Masz włączoną blokadę powiadomień od różnych witryn</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Jakie przeglądarki wspierają powiadomienia web push?</div>
+            <div class="faq__item-content">
+              Przeglądarki, które wspierają powiadomienia web push to: Google Chrome, Firefox, Opera oraz Safari. Zobacz
+              <a href="{{linkLocale 'pages/kompatybilnosc' locale}}">tabelę</a> wspieralności PushPushGo.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section" data-topic="subscribers">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">W jaki sposób identyfikowani są odbiorcy?</div>
+            <div class="faq__item-content">
+              <p>Technologia web push bazuje na <b>Service Workerach</b> w przeglądarce, a więc odbiorcy identyfikowani są przez
+                przeglądarkę z której korzystają. Do zapisu na web push nie potrzebujemy więc żadnych danych osobowych. Co
+                ważne, web push nie korzysta z plików cookies. </p>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Kto to jest aktywny subskrybent?</div>
+            <div class="faq__item-content">
+              <p>Aktywny subskrybent to taki, który zapisał się, nie zrezygnował z subskrypcji i docierają do niego powiadomienia.
+                Za aktywnych subskrybentów naliczamy miesięczną opłatę.</p>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Kim jest odbiorca zgubiony?</div>
+            <div class="faq__item-content">
+              Odbiorcą zgubionym nazywamy osobę, do której nie dotarła wysłana kampania, ponieważ:
+              <ul>
+                <li>wypisała się za pomocą ustawień przeglądarki</li>
+                <li>odinstalowała przeglądarkę</li>
+                <li>odinstalowała ServiceWorker w przeglądarce (niektóre wtyczki czyszczące mogą to powodować)</li>
+                <li>z jakiegoś innego powodu Google nie może dostarczyć jej powiadomienia i zwraca nam błąd podczas wysyłki.</li>
+              </ul>
+
+              Taka osoba będzie się wyświetlać na szaro w zakładce “Odbiorcy” i do niej nie będą już przychodzić notyfikacje. Za zgubionych
+              odbiorców nie pobieramy opłaty.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section" data-topic="payments">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Pomimo przelewu, moje konto jest zablokowane</div>
+            <div class="faq__item-content">
+              Wpłata środków na konto możliwa jest na dwa sposoby:
+              <ul>
+                <li>za pomocą aplikacji - wówczas środki natychmiastowo znajdują się na koncie,</li>
+                <li>za pomocą tradycyjnego przelewu - wówczas aplikacja nie otrzymuje informacji o wpłacie, w związku z czym zaksięgowanie wpłaconej kwoty może zająć do 1 dnia. W sprawie uznania za przelewy tradycyjne można kontaktować się mailowo na adres support@pushpushgo.com</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+</section>
+
+{{>footer}}

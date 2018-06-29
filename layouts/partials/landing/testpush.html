@@ -1,0 +1,51 @@
+<header class="section-header grey-bg" id="push">
+  <h2 class="title--uppercase">{{__ 'Jak działają powiadomienia web push?'}}</h2>
+</header>
+
+<section class="section-test-push grey-bg">
+  <br>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="browser-url">
+      <input type="text" value="http://clothesshop.pl">
+    </div>
+
+      <div class="push-screen">
+        <img src="/images/shop-bg.png" alt="">
+        <img src="/images/permission-ask.png" alt="" class="push-screen-permision">
+        <img src="/images/shop-push.png" alt="" class="push-screen-notification">
+        <div class="push-screen-overlay"></div>
+      </div>
+  </div>
+
+  <div class="test-push-form">
+    <ul>
+      <li>
+        <span>1</span>{{__ 'Uzyskaj zgodę na wysyłkę powiadomień' }}.
+      </li>
+      <li>
+        <span>2</span>{{__ 'Stwórz i wyślij notyfkację' }}.
+      </li>
+        <li>
+        <span>3</span>{{__ 'Powiadomienie pojawi się w rogu ekranu' }}.
+      </li>
+    </ul>
+
+
+    <form action="">
+      <h4>{{__ 'Wyślij swoje pierwsze powiadomienie'}}</h4>
+
+      <img src="/images/dummy-icon.png" alt="" class="app-push-image">
+      <label for="">{{__ 'Tytuł powiadomienia'}}</label>
+      <input type="text" value="{{__ 'Cześć'}}'" class="app-push-title">
+      <label for="">{{__ 'Treść'}}</label>
+      <textarea class="app-push-body">{{__ 'Twoje pierwsze powiadomienie'}}</textarea>
+      <a href="" class="btn app-test-push">{{__ 'Wyślij'}}</a>
+    </form>
+  </div>
+</section>

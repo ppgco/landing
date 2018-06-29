@@ -1,0 +1,80 @@
+{{>header}} {{>menu}}
+
+<section class="blog">
+	<div class="content-limiter">
+
+		<div class="blog-breadcrumbs">
+			<a href="/">Home</a> <span class="divider">/</span>
+			<a href="/blog">Blog</a> <span class="divider">/</span>
+			<span>Post</span>
+		</div>
+
+		<div class="blog-single-post">
+			<div class="blog-post-item">
+				<header class="blog-post-item-header">
+					<h1 class="blog-post-item-title">{{title}} </h1>
+					<div>
+						{{#each this.tags}}
+						<a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>&nbsp; {{/each}}
+					</div>
+
+					<span class="blog-post-item-date"> {{parseDate date}} </span>
+				</header>
+				<div class="blog-post-item-stats">
+					<span class="stat-item">
+          {{__ 'Czas czytania:' }} {{readingTime}}
+        </span>
+				</div>
+
+				{{#if image}}
+				<a href="/{{link path}}">
+					<img src="{{image this}}" class="blog-post-item-image">
+				</a>
+				{{/if}}
+
+				<div class="blog-post-item-text">
+
+					{{{contents}}}
+
+					<div class="blog-post-navigation">
+						{{#if this.previous}}
+						<a class="post-prev" href="/{{link this.previous.path}}">
+							<div class="link-description">{{__ 'Czytaj poprzedni: ' }}</div>
+							{{this.previous.title}}
+						</a>
+						{{/if}}
+
+						<a class="post-next" href="/{{link this.next.path}}">
+							<div class="link-description">{{__ 'Czytaj następny: ' }}</div>
+							{{this.next.title}}
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="disqus_thread"></div>
+		<script id="dsq-count-scr" src="//pushpushgo.disqus.com/count.js" async></script>
+		<script>
+				var disqus_config = function () {
+					this.page.url = 'https://www.pushpushgo.com/{{link path}}';
+					this.page.identifier = '{{md5 path}}';
+				};
+
+				(function () {
+					var d = document, s = d.createElement('script');
+
+					s.src = '//pushpushgo.disqus.com/embed.js';
+
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+				})();
+			</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	</div>
+</section>
+
+
+{{>footer}}

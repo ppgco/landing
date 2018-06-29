@@ -1,0 +1,89 @@
+@range-belt-color: #ddd;
+@range-belt-active-color: darken(@range-belt-color, 10%);
+@range-belt-height: 5px;
+@range-belt-radius: 10px;
+@range-point-color: @green;
+@range-point-radius: 50%;
+@range-point-size: 15px;
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 10px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+.irs-slider {
+  cursor: ew-resize;
+}
+
+// WEBKIT
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: @range-belt-height;
+  cursor: pointer;
+  background: @range-belt-color;
+  border-radius: @range-belt-radius;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: @range-point-size;
+  width: @range-point-size;
+  border-radius: @range-point-radius;
+  background: @range-point-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -@range-point-size/2 + 2px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: @range-belt-active-color;
+}
+
+// MOZ
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: @range-belt-height;
+  cursor: pointer;
+  background: @range-belt-color;
+  border-radius: @range-belt-radius;
+}
+input[type=range]::-moz-range-thumb {
+  height: @range-point-size;
+  width: @range-point-size;
+  border-radius: @range-point-radius;
+  background: @range-point-color;
+  cursor: pointer;
+}
+
+// IE
+input[type=range]::-ms-track {
+  width: 100%;
+  height: @range-belt-height;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: @range-belt-color;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  height: @range-point-size;
+  width: @range-point-size;
+  border-radius: @range-point-radius;
+  background: @range-point-color;
+  cursor: pointer;
+  height: @range-belt-height;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: @range-belt-color;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: @range-belt-active-color;
+}

@@ -1,0 +1,64 @@
+{{>header}}
+{{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{__ 'Blog' }}</h1>
+    <p>{{__ 'Dowiedz się jak działają powiadomienia web push i odkryj ich marketingowy potencjał' }}</p>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="content-limiter">
+
+  <div class="blog-breadcrumbs">
+    <a href="/">Home</a>
+    <span class="divider">/</span>
+    <span>Blog</span>
+  </div>
+
+  <div class="blog-grid">
+    {{#eachLocale pagination.files locale}}
+      <div class="blog-post-item">
+        {{#if this.image}}
+        <a href="/{{link this.path}}">
+          <img src="{{image this}}" class="blog-post-item-image">
+        </a>
+        {{/if}}
+        <div class="blog-post-item-text">
+          <div>
+            {{#each this.tags}}
+              <a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>&nbsp;
+            {{/each}}
+          </div>
+          <a class="blog-post-item-title"  href="/{{link this.path}}">{{this.title}} </a>
+          <p class="blog-post-item-description">{{{part this.contents}}} </p>
+
+          <div class="flex space-between">
+            <div>
+              <span class="blog-post-item-date"> {{ parseDate this.date }}</span>
+              <span class="text-small">
+                <span class="ppg-icon-stopwatch m5r"></span>
+                {{__ 'Czas czytania:' }} {{this.readingTime}}
+              </span>
+            </div>
+            <div class="text-right">
+              <a class="btn btn--medium" href="/{{link this.path}}">{{__ 'Czytaj dalej' }} &#155;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/eachLocale}}
+    </div>
+    <nav class='page-links'>
+      {{#if pagination.previous}}
+        <a class='page page-prev' href='/{{toDir pagination.previous.path}}'> &lt; {{__ 'Poprzednia strona' }}</a>
+      {{/if}}
+
+      {{#if pagination.next}}
+        <a class='page page-next' href='/{{toDir pagination.next.path}}'>{{__ 'Następna strona' }} &gt; </a>
+      {{/if}}
+    </nav>
+  </div>
+</section>
+{{>footer}}

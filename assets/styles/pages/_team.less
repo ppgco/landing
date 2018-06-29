@@ -1,0 +1,57 @@
+.team-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .person {
+        width: 50%;
+        text-align: center;
+
+        .picture-area {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: @bg-grey;
+            position: relative;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: auto 80%;
+
+            .person-description {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                transition: opacity 0.4s;
+                background: rgba(241, 241, 241, 0.85);
+            }
+        }
+
+        .person-name {
+            padding: 20px 0 50px 0;
+            
+            > span {
+                display: block;
+            }
+
+            .name {
+                font-weight: @font-bold;
+                font-size: 18px;
+            }
+
+            .position {
+                font-style: italic;
+                font-size: 13px;
+                color: #545454;
+            }
+        }
+
+        &:hover {
+            .person-description {
+                opacity: 1;
+            }
+        }
+    }
+}

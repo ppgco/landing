@@ -1,0 +1,69 @@
+.number-stats {
+  text-align: center;
+
+  .stat-item {
+    margin: 10px;
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+
+    .pie-wrapper {
+      font-size: 150px;
+    }
+
+    .stat-name {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.benefits-list {
+  width: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+
+  li {
+    margin: 0px;
+    transition: all 0.3s;
+    font-size: 14px;
+    display: flex;
+    align-items: bottom;
+
+    > span {
+      border-bottom: 1px solid #f0f0f0;
+      padding: 20px;
+      display: block;
+    }
+
+    > .list-content {
+      width: 90%;
+      font-weight: 600;
+    }
+
+    > .list-tick {
+      font-size: 20px;
+      width: 5%;
+      text-align: center;
+    }
+
+    > .list-icon {
+      text-align: center;
+      width: 5%;
+      font-size: 22px;
+      color: lighten(@text-color, 20%);
+    }
+
+    &:hover {
+      box-shadow: @wide-shadow;
+    }
+  }
+}
+
+
+@media @small {
+
+}

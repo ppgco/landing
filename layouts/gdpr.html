@@ -1,0 +1,114 @@
+{{> header }} {{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{__ 'Jesteśmy RODO-friendly' }}</h1>
+    <p>{{__ 'Sprawdź jakie dane przetwarzamy świadcząc Ci usługi i dlaczego jesteśmy partnerem, któremu warto zaufać' }}</p>
+  </div>
+</section>
+
+
+<header class="section-header">
+  <span class="ppg-icon-license-document header-icon size36"></span>
+  <h2 class="title--uppercase">{{__ 'Szanujemy Twoją prywatność'}}</h2>
+</header>
+
+<section class="main gdpr">
+  <div class="content-limiter">
+    <div class="step-blocks w800">
+      <div class="block-item h300">
+        <h4>{{__ 'Nowa Polityka Prywatności'}}</h4>
+        <span class="ppg-icon-computer size36 m10"></span>
+        <ul>
+          <li>{{{__ '<a href="https://pushpushgo.com/pl/pages/polityka-prywatnosci/">tutaj</a> dowiesz się więcej o tym jakie dane przetwarzamy'}}}</li>
+          <li>{{__ 'sprawdzisz też w jaki sposób je zabezpieczamy'}}</li>
+          <li>{{__ 'komu je przekazujemy i dlaczego musimy to robić'}}</li>
+          <li>{{__ 'jakie są Twoje prawa odnośnie przetwarzania tych danych'}}</li>
+        </ul>
+      </div>
+
+      <div class="block-item h300">
+        <h4>{{__ 'Rodzaje danych, które przetwarzamy'}}</h4>
+        <span class="ppg-icon-package size36 m10"></span>
+        <ul>
+          <li>{{__ 'dane kontaktowe, które podajesz przy zakładaniu konta'}}</li>
+          <li>{{__ 'dane, które podajesz nam do płatności'}}</li>
+          <li>{{__ 'adresy IP Twoich subskrybentów (anonimowe), aby wysłać im notyfikację'}}</li>
+          <li>{{__ 'nigdy nie przetwarzamy danych Twoich subskrybentów i nie odsprzedajemy ich'}}</li>
+        </ul>
+      </div>
+
+      <div class="block-item h300">
+        <h4>{{__ 'Co robimy z Twoimi danymi i po co'}}</h4>
+        <span class="ppg-icon-cog size36 m10"></span>
+        <ul>
+          <li>{{__ 'świadczymy Ci usługi web push'}}</li>
+          <li>{{__ 'dajemy wsparcie działu Client Service'}}</li>
+          <li>{{__ 'wystawiamy Ci faktury'}}</li>
+          <li>{{__ 'wysyłamy Ci treści marketingowe, jeśli tego chcesz'}}</li>
+        </ul>
+      </div>
+
+      <div class="block-item h300">
+        <h4>{{__ 'Komu przekazujemy Twoje dane'}}</h4>
+        <span class="ppg-icon-handshake size36 m10"></span>
+        <ul>
+          <li>{{__ 'OVH - to nasz dostawca serwerów'}}</li>
+          <li>{{__ 'HubSpot, Gmail, Slack - to nasze platformy komunikacji'}}</li>
+          <li>{{__ 'Fakturownia, PayLane, Meritoros - obsługują nasze płatności'}}</li>
+          <li>{{__ 'Google Analytics, HotJar, Hubspot, Mixpanel - pozwalają nam ulepszać naszą stronę www dla Ciebie'}}</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<header class="section-header">
+  <h3 class="title--uppercase">{{__ 'Najczęściej zadawane pytania'}}</h3>
+</header>
+
+<section class="main gdpr">
+  <div class="content-limiter">
+    <div class="partnership-faq">
+
+      <div class="question-item">
+        <h4>{{__ 'Czy RODO mnie dotyczy?'}}</h4>
+        {{__ 'RODO, czyli nowe unijne rozporządzenie w zakresie ochrony danych osobowych dotyczy wszystkich przedsiębiorców i osób nie będących przedsiębiorcami, np. blogerów, którzy przetwarzają dane osobowe swoich klientów czy czytelników. Biorąc pod uwagę, że adresy email uważane są również za dane osobowe, dotyczy ono praktycznie każdego podmiotu działającego w internecie.'}}
+      </div>
+
+      <div class="question-item">
+        <h4>{{__ 'Czy jako klient muszę podpisywać z wami umowę powierzenia przetwarzania danych osobowych moich subskrybentów?'}}</h4>
+        {{{__ 'Nie ma takiego obowiązku ponieważ podczas wysyłki notyfikacji web push nie są przetwarzane żadne dane osobowe. Spotkaliśmy się jednak z tym, że część bardziej restrykcyjnych prawników uważa za dane osobowe adresy IP, które wykorzystuje przeglądarka internetowa, aby odebrać notyfikację. Jeśli podobna sytuacja ma miejsce w Twojej firmie, dla własnego spokoju, możesz wypełnić naszą <a href="https://docs.google.com/document/d/1EV8MJJGiHs_3ziMomGwgXOR13MJRF4K965213GFcQwc/edit?usp=sharing">umowę PPDO</a> i skontaktować się z nami w tej sprawie pod adresem <a href="mailto:daneosobowe@pushpushgo.com">daneosobowe@pushpushgo.com</a>.'}}}
+      </div>
+
+      <div class="question-item">
+        <h4>{{__ 'Czy pod formularzem web push na mojej stronie www muszę dodać checkboxy albo inne klauzule?'}}</h4>
+        {{__ 'Nie ma takiej potrzeby, ponieważ w formularzu zapisu web push znajduje się informacja na jaką formę komunikatu subskrybent wyraża zgodę. Kliknięcie przycisków zezwalam/blokuję jest równoznaczne z wyrażeniem zgody lub jej brakiem. Jesteś również wtedy w stanie sprawdzić kiedy ktoś się zapisał na notyfikacje a kiedy się z nich wypisał, więc cały proces jest, zgodnie z zasadami RODO, transparentny i rozliczalny.'}}
+      </div>
+
+      <div class="question-item">
+        <h4>{{__ 'Jaki wpływ RODO ma na moje działania marketingowe, co się zmieni?'}}</h4>
+        {{{__ 'Największe zmiany dotyczą samego podejścia firm do przetwarzania danych osobowych. W tym jakie działania prowadzisz nie zmieni się aż tak wiele. Więcej na ten temat dowiesz się z naszego ebooka <a href="https://edu.pushpushgo.com/ebook-o-rodo">24 zmiany, które RODO wprowadzi w Twoich działaniach marketingowych</a>.'}}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<header class="section-header">
+  <h3 class="title--uppercase">{{__ 'Skontaktuj się'}}</h3>
+</header>
+
+<div class="text-center contact-section">
+  <div class="contact-avatar avatar--joanna">
+    <img src="/images/team/joanna-s.jpg">
+  </div>
+  <p><b>Joanna Worotyńska</b></p>
+  <p><b> VP of Communication and Marketing</b>
+  <p> daneosobowe@pushpushgo.com</p>
+  <p><a href="tel:+48536722226">+48 536 722 226</a></p>
+</div>
+
+<br>
+<br>
+{{>footer}}

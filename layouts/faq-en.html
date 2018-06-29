@@ -1,0 +1,190 @@
+{{>header}} {{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{__ 'Faq'}}</h1>
+    <p>{{__ 'Często zadawane pytania'}}</p>
+  </div>
+</section>
+
+<section class="faq grey-bg">
+  <div class="content-limiter">
+    <br>
+    <br>
+    <div class="row top">
+      <div class="column column-20">
+        <nav class="well faq-menu">
+          <a href="#integration" class="active"><span class="ppg-icon-cog"></span> Integration</a>
+          <a href="#webpush"><span class="ppg-icon-bell"></span> Notifications</a>
+          <a href="#subscribers"><span class="ppg-icon-subscribers"></span> Subscribers</a>
+          <a href="#payments"><span class="ppg-icon-closed-wallet"></span> Payments</a>
+        </nav>
+      </div>
+      <div class="column column-80">
+
+        <div class="faq__section" data-topic="integration" style="display: block;">
+          <div class="faq__item well">
+            <div class="faq__item-title">Application is showing an error message that the project is not integrated</div>
+            <div class="faq__item-content">
+              <ol>
+                <li>Make sure that you have followed all steps in order to integrate</li>
+                <li>Click “check integration”</li>
+                <li>If there is still an information about incorrect integration and you are sure that you have followed all steps, check the option “manual confirm”</li>
+              </ol>
+            </div>
+          </div>
+
+
+          <div class="faq__item well">
+            <div class="faq__item-title">How can I use multichannel form?</div>
+            <div class="faq__item-content">
+            Multichannel subscribe form is dedicated to users who are also integrated with newsletter platform. Using this form, they can gather agreements to pushes and e-mail addresses.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq__section" data-topic="webpush">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">How long the notification displays?</div>
+            <div class="faq__item-content">
+              If you didn’t check “require interaction” option, the notification will display about 5-10 seconds. But if you have checked “require interaction”, the notification will be displayed as long, as the subscriber won’t click on it or close it.
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">The rich push shortens my content</div>
+            <div class="faq__item-content">
+              One of the additional functions that you may choose while creating the push is containing a larger image. This type of notification will be displayed only those subscribers, that use Google Chrome browser. The rest of subscribers, that use other browsers like Opera or Firefox receive traditional form od notification. The push with the larger image is much more effective than normal, unfortunately, prevents to contain a lot of content. The max. characters is 30 in title and 42 in the main content.
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Not all subscribers received my notification, why?</div>
+            <div class="faq__item-content">
+              Some of your recipients may:
+              <ol>
+                <li>have a lost status</li>
+                <li>have their computers turned off/logout</li>
+                <li>have the battery safe mode turned on in their mobile devices, that it sometimes prevents receiving pushes</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">I can’t subscribe to notifications</div>
+            <div class="faq__item-content">
+              Probably:
+              <ul>
+                <li>you are using incognito mode on your browser<br>
+                  Never test subscription on web push in incognito mode. Despite the fact that subscription form will appear, the subscription in confirm window is impossible.
+                </li>
+                <li>you are already subscribed</li>
+              </ul>
+              If none of above, reset browser settings and try to subscribe again.
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">How can I reset browser settings?</div>
+            <div class="faq__item-content">
+              Chrome:
+              <ol>
+                <li>Enter chrome://serviceworker-internals/ in the adress bar</li>
+                <li>Search your website and click <b>Unregister</b>​</li>
+                <li>Go to your website</li>
+                <li>Click F12 and click “application” tab, you will see IndexDB</li>
+                <li>Click IndexDB, next click pushpushgo. Delete it (delete database)</li>
+                <li>In the place where you enter www addresses, you will see a little padlock – click on it. In menu click – notifications -> allow</li>
+              </ol>
+
+              <br>
+              Firefox:
+              <ol>
+                <li>Enter about:debugging#workers in the address bar</li>
+                <li>Look for your website address in service threads</li>
+                <li>Click <b>Unregister</b></li>
+                <li>The next step is to enter your website and click F12</li>
+                <li>Choose data</li>
+                <li>Click IndexDB -> your website -> pushpushgo</li>
+                <li>Right click on pushpushgo and delete it</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">I can’t see the second confirmation window during subscription</div>
+            <div class="faq__item-content">
+              Probably:
+              <ul>
+                <li>you are using incognito mode</li>
+                <li>this browser is not cooperating with web push</li>
+                <li>you are already subscribed to this page</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Which browsers support web push notiofications?</div>
+            <div class="faq__item-content">
+              Browsers which support web push are: Google Chrome, Firefox, Opera oraz Safari. See our
+              <a href="{{linkLocale 'pages/kompatybilnosc' locale}}">support table</a>.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section" data-topic="subscribers">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">How do we identify the subscribers?</div>
+            <div class="faq__item-content">
+             The web push technology is based on service workers in your browser, so the subscriber is identified by the browser he is using. Our platform <b>does not</b> use any personal data or cookies files to identify subscriber.
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">Who is an active subscriber?</div>
+            <div class="faq__item-content">
+              <p>An active subscriber is a person who allowed receiving notifications and still may receive them. We charge for every active subscriber.</p>
+            </div>
+          </div>
+
+          <div class="faq__item well">
+            <div class="faq__item-title">What is the lost subscriber?</div>
+            <div class="faq__item-content">
+              We mark subscribers with lost status when they didn’t receive a notification, from one of the following reasons:
+              <ul>
+                <li>they unsubscribed using browser settings</li>
+                <li>they uninstalled the browser</li>
+                <li>they uninstalled the ServiceWorker in the browser</li>
+                <li>for some reason, notification server cannot deliver the notification and it returns an error message.</li>
+              </ul>
+
+              Lost subscribers are marked grey in the subscribers table and they won’t receive notifications any more. We do not charge for lost subscribers.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section" data-topic="payments">
+
+          <div class="faq__item well">
+            <div class="faq__item-title">My account is blocked, despite making a payment</div>
+            <div class="faq__item-content">
+              There are two ways of making payments:
+              <ul>
+                <li>using application - in this case, money should be transferred immediately,</li>
+                <li>using traditional transfer - in this case money transfer can take up to two days. In case of any problems with payments please contact us on support@pushpushgo.com</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+</section>
+
+{{>footer}}

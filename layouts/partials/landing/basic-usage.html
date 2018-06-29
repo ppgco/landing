@@ -1,0 +1,57 @@
+<section class="main grey-bg">
+  <h2 class="title--uppercase text-center">{{__ 'Wybierz sposób wysyłki'}}</h2>
+
+  <div class="content-limiter">
+    <div class="row">
+
+      <div class="column column-33">
+        <div class="text-center">
+          <span class="usage-icon usage-icon--mass"></span>
+          <h4 class="title--bolded text-green">{{{__ 'Masowe kampanie'}}}</h4>
+          <p>{{{__ 'Wysyłaj komunikaty <br>do dowolnej liczby odbiorców <br>w parę sekund.'}}}</p>
+
+          {{#ifCond locale 'pl'}}
+          <a href="https://edu.pushpushgo.com/pl/poradnik/wysylka-kampanii" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{else}}
+          <a href="https://edu.pushpushgo.com/user-guide/campaign-creator" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{/ifCond}}
+        </div>
+
+      </div>
+
+      <div class="column column-33">
+        <div class="text-center">
+          <span class="usage-icon usage-icon--targeting"></span>
+          <h4 class="title--bolded text-green">{{{__ 'Kampanie targetowane'}}}</h4>
+          <p>{{{__ 'Zawężaj grupę odbiorców<br> na podstawie ich zainteresowań <br>i wysyłaj do nich stargetowane komunikaty.'}}}</p>
+
+          {{#ifCond locale 'pl'}}
+          <a href="https://edu.pushpushgo.com/pl/poradnik/targetowanie-kampanii" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{else}}
+          <a href="https://edu.pushpushgo.com/user-guide/campaign-target" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{/ifCond}}
+        </div>
+
+      </div>
+
+      <div class="column column-33">
+        <div class="text-center">
+          <span class="usage-icon usage-icon--automation"></span>
+          <h4 class="title--bolded text-green">{{{__ 'Push automation'}}}</h4>
+          <p>{{{__ 'Projektuj scenariusze i wysłaj <br>do swoich użytkowników automatyczne, <br>spersonalizowane kampanie.'}}}</p>
+
+          {{#ifCond locale 'pl'}}
+          <a href="https://edu.pushpushgo.com/pl/poradnik/automation" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{else}}
+          <a href="https://edu.pushpushgo.com/user-guide/automation" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
+          {{/ifCond}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+</section>

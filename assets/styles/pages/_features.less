@@ -1,0 +1,116 @@
+.features-list {
+  padding: 0;
+	text-align: center;
+	margin-bottom: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+
+.features-list li {
+	margin-bottom: 30px;
+	margin-top: 0px;
+	padding: 20px;
+	margin: 10px;
+	display: inline-block;
+	text-align: left;
+	position: relative;
+	vertical-align: top;
+	background: #fff;
+	width: 200px;
+	box-shadow: @wide-shadow;
+
+	h4 {
+		font-size: 15px;
+	}
+
+	p {
+		max-width: none;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+
+	.feature-icon {
+		display: block;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		line-height: 63px;
+		border-radius: 100%;
+		background: #FAFAFA;
+		box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.07);
+		margin-top: 20px;
+
+		span[class*="icon"] {
+			font-size: 30px;
+			color: @brand-color;
+		}
+	}
+
+	&.inset {
+		box-shadow: none;
+		background: #ECECEC;
+		border: 1px solid #dedede;
+	}
+}
+
+.features-list:not(.in-viewport) li span[class*="icon"] {
+	transform: scale(0);
+	animation: scaleHide 0.5s ease-in;
+}
+
+.features-list.in-viewport li span[class*="icon"] {
+		transform: scale(1);
+		animation: scaleShow 0.5s ease-in;
+}
+
+@keyframes scaleShow {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleHide {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+.app-screen.in-viewport {
+	animation: slideScreen 2s;
+	transform: translate(0, 0)
+}
+
+@keyframes slideScreen {
+	0% {
+		transform: translate(0, 200px)
+	}
+	100% {
+		transform: translate(0, 0)
+	}
+}
+
+@media @medium {
+	.features-list li {
+		width: 30%;
+		margin: 10px;
+	}
+}
+
+@media @small {
+	.features-list li {
+		width: 100%;
+		margin: 10px;
+	}
+}
+

@@ -1,0 +1,121 @@
+<section class="page-intro new-prices__intro">
+  <div class="content-limiter">
+    <h1>{{__ 'Cennik' }}</h1>
+    <p>{{__ 'Przekonaj się dlaczego 95% Klientów zostaje z nami na stałe' }}</p>
+  </div>
+</section>
+
+<section class="new-prices__content">
+  <div class="content-limiter">
+
+    <div>
+      <div class="well">
+        <div class="row">
+          <div class="column">
+            <h4>{{__ 'Testuj za darmo'}}</h4>
+
+            <div class="m20b">
+              <span class="ppg-icon-access size40 text-green"></span>
+            </div>
+
+            <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}" class="btn" target="_blank">{{__ 'Uzyskaj dostęp'}}</a>
+          </div>
+          <div class="column">
+            <div class="m10t m10b">
+              <div class="m10b">{{{__ 'Otrzymasz <b>14 dni bezpłatnego okresu testowego</b>, bez żadnych zobowiązań'}}}</div>
+              <div class="m10b">{{{__ 'Będziesz miał dostęp do <b>wszystkich funkcjonalności</b>'}}}</div>
+              <div>{{{__ 'W każdej chwili <b>możesz zrezygnować</b>'}}}</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="well">
+
+        <div class="row">
+          <div class="column">
+            <h4>{{__ 'Skontaktuj się z nami'}}</h4>
+
+            <div class="m20b m20t">
+              <span class="ppg-icon-telephone size30 text-green"></span>
+            </div>
+
+            <button class="btn c2c-btn">{{__ 'Zamów rozmowę'}}</button>
+          </div>
+          <div class="column">
+
+            {{#ifCond locale 'pl'}}
+            <div class="contact-avatar avatar--artur">
+              <img src="/images/team/artur.jpg">
+            </div>
+            <div class="m10t">{{__ 'lub'}} {{__ 'napisz do mnie'}}</div>
+            <a href="mailto:artur@pushpushgo.com">artur@pushpushgo.com</a>
+            {{else}}
+            <div class="contact-avatar avatar--natalia">
+              <img src="/images/team/natalia.jpg">
+            </div>
+            <div class="m10t">{{__ 'lub'}} {{__ 'napisz do mnie'}}</div>
+            <a href="mailto:natalia@pushpushgo.com">natalia@pushpushgo.com</a>
+            {{/ifCond}}
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="m20t text-center light-uppercase">{{__ 'Wysyłają nasze powiadomienia'}}</div>
+    <div class="flex space-between client-logos p20">
+      <img src="/images/logos/interia.png">
+      <img src="/images/logos/travelist.png">
+      <img src="/images/logos/sportpl.png">
+      <img src="/images/logos/gazetapl.png">
+      <img src="/images/logos/secretescapes.png">
+      <a href="https://stileo.it" target="_blank">
+        <img src="/images/logos/stileo.png">
+      </a>
+      <img src="/images/logos/pandora.png">
+    </div>
+
+    <br/>
+
+    <header class="section-header">
+      <h2 class="title--uppercase">{{__ 'Nasze funkcjonalności' }}</h2>
+    </header>
+
+    <br/>
+
+    <div class="features">
+      <div class="row">
+        <div class="column">
+          <div class="p20 features__item">{{{__ '<b>Masowe kampanie</b> web push'}}}</div>
+          <div class="p20 features__item">{{{__ '<b>Segmentacja</b>'}}}</div>
+          <div class="p20 features__item">{{{__ '<b>Strefy czasowe</b>'}}}</div>
+          <div class="p20 features__item">{{{__ 'Kampanie <b>ABX</b>'}}}</div>
+        </div>
+        <div class="column">
+          <div class="p20 features__item">{{{__ 'Marketing <b>automation</b>'}}}</div>
+          <div class="p20 features__item">{{{__ 'Śledzenie <b>zainteresowań</b> odbiorców'}}}</div>
+          <div class="p20 features__item">{{{__ 'Zwiększenie <b>powracalności</b> na stronę'}}}</div>
+          <div class="p20 features__item">{{{__ 'Odzyskiwanie <b>porzuconych koszyków</b>'}}}</div>
+        </div>
+        <div class="column">
+          <div class="p20 features__item">{{{__ '<b>Własna domena</b> w powiadomieniach'}}}</div>
+          <div class="p20 features__item">{{{__ 'Dedykowane integracje przez <b>API i SDK</b>'}}}</div>
+          <div class="p20 features__item">{{{__ '<b>Eksport subskrybentów</b> do innych systemów'}}}</div>
+          <div class="p20 features__item">{{{__ 'Export danych do <b>CSV</b>'}}}</div>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+  </div>
+</section>

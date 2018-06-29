@@ -1,0 +1,63 @@
+{{>header}}
+{{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>#{{ tag }}</h1>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="content-limiter">
+
+  <div class="blog-breadcrumbs">
+    <a href="/">Home</a>
+    <span class="divider">/</span>
+    <span>Tag</span>
+    <span class="divider">/</span>
+    <span>{{tag}}</span>
+  </div>
+  {{#each pagination.files}}
+    <div class="blog-post-item">
+      {{#if this.image}}
+      <a href="/{{link this.path}}">
+        <img src="{{image this}}" class="blog-post-item-image">
+      </a>
+      {{/if}}
+      <div class="blog-post-item-text">
+        <p class="blog-post-item-title">{{this.title}} </p>
+        <span class="blog-post-item-date"> {{this.date}}</span>
+        <span class="blog-post-item-tags">
+          {{__ 'Tags'}}:
+          {{#each this.tags}}
+            <a href="/tag/{{this.slug}}/">{{this.name}}</a>&nbsp;
+          {{/each}}
+        </span>
+        <p class="blog-post-item-description">{{{part this.contents}}} </p>
+        <a class="btn btn--medium" href="/{{link this.path}}">{{__ 'Czytaj dalej' }}</a>
+        <div class="blog-post-item-stats">
+          <span class="stat-item">
+            {{__ 'Czas czytania:' }} {{this.readingTime}}
+          </span>
+          <!--<span class="stat-item">
+            <span class="ppg-icon-message"></span> 12
+          </span>
+          <span class="stat-item">
+            <span class="ppg-icon-share"></span> 3
+          </span>-->
+        </div>
+      </div>
+    </div>
+  {{/each}}
+    <nav class='page-links'>
+      {{#if pagination.previous}}
+        <a class='page page-prev' href='/{{pagination.previous.path}}'> &lt; {{__ 'Poprzednia strona' }}</a>
+      {{/if}}
+
+      {{#if pagination.next}}
+        <a class='page page-next' href='/{{pagination.next.path}}'>{{__ 'Następna strona' }} &gt; </a>
+      {{/if}}
+    </nav>
+  </div>
+</section>
+{{>footer}}

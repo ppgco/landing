@@ -1,0 +1,147 @@
+.click-animation {
+  width: 390px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.click-animation img {
+  display: block;
+}
+
+.click-animation-icon {
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  font-size: 32px;
+  z-index: 2;
+  background: none;
+  padding: 20px;
+  border-radius: 50%;
+  color: #8A8A8A; 
+}
+
+.click-animation-progress {
+  height: 6px;
+  width: 100%;
+  background: #dedede;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  .bar {
+    width: 0%;
+    height: 100%;
+    background: @brand-color;
+    position: absolute;
+    left: 0;
+    top: 0;    
+  }
+}
+
+.click-animation.in-viewport {
+  img {
+    animation: animatePush 14s ease-in;
+  }
+  .click-animation-icon {
+    animation: moveMouse 14s ease-in;
+  }
+  .click-animation-progress {
+    animation: showProgressBar 14s linear;
+  }
+  .click-animation-progress .bar {
+    animation: progress 14s linear;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  15% {
+    width: 100%;
+  }
+  90% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes showProgressBar {
+  0% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animatePush {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  4% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveMouse {
+  0% {
+   opacity: 0;
+   transform: translate(0px, 40px);
+  }
+  74% {
+   opacity: 0;
+   transform: translate(0px, 40px);
+  }
+  75% {
+   opacity: 1
+  }
+  77% {
+    transform: translate(0px, 10px);  
+  }
+  79% {
+    transform: translate(0px, 0px);
+  }
+  85% {
+    background: none;
+  }
+  87% {
+    background: rgba(236, 236, 236, 0.7);
+  }
+  92% {
+    background: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@media @xsmall {
+	.click-animation {
+		width: 100%;
+	}
+}
