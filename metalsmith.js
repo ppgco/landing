@@ -130,8 +130,7 @@ const config = {
     title: "PushPushGo",
     keywords: 'webpush, push, notifications, email, marketing, solution, saas, powiadomienia web push, notyfikacje, aplikacja, narzędzie, powiadomienia na stronie, offbrowser, desktop, mobile, message, wiadomości dla użytkowników, pushpushgo',
     description: "Send web push notifications, today!",
-    generator: "Gypsy",
-    url: "https://www.pushpushgo.com/"
+    url: "https://pushpushgo.com/"
   },
   assets: {
     "source": "./assets",
