@@ -23,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9063f2b0-9907-4eab-b0c4-640a99260315" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/metalsmith.js" afterPath="$PROJECT_DIR$/metalsmith.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="metalsmith.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metalsmith.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/metalsmith.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-828">
-              <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state relative-caret-position="289">
+              <caret line="141" column="27" lean-forward="false" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -57,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -155,10 +156,10 @@
         <option value="$PROJECT_DIR$/src/pl/blog/index.md" />
         <option value="$PROJECT_DIR$/netlify.toml" />
         <option value="$PROJECT_DIR$/src/pl/index.md" />
-        <option value="$PROJECT_DIR$/metalsmith.js" />
         <option value="$PROJECT_DIR$/dato.config.js" />
         <option value="$PROJECT_DIR$/assets/_redirects" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/metalsmith.js" />
       </list>
     </option>
   </component>
@@ -287,12 +288,12 @@
       <workItem from="1528898632630" duration="67000" />
       <workItem from="1529331158514" duration="9000" />
       <workItem from="1529573737871" duration="714000" />
-      <workItem from="1530250353826" duration="10552000" />
+      <workItem from="1530250353826" duration="10671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34764000" />
+    <option name="totallyTimeSpent" value="34883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="-18" width="1924" height="1100" extended-state="6" />
@@ -666,14 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metalsmith.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-828">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dato.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-449">
@@ -702,6 +695,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metalsmith.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="141" column="27" lean-forward="false" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
           <folding />
         </state>
       </provider>
