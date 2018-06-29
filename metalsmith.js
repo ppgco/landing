@@ -114,7 +114,7 @@ Handlebars.registerHelper('parseDate', function (date) {
 const config = {
   clean: true,
   source: './src',
-  destination: './build',
+  destination: './release',
   i18n: i18nConfig,
   sitemap: {
     privateProperty: 'unlisted',
