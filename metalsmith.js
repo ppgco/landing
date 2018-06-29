@@ -269,10 +269,6 @@ const app = Metalsmith(__dirname)
   .use(cleanCSS(config.cssmin))
   .use(htmlMinifier())
 
-  if(process.env.NODE_ENV !== 'development') {
-    app.use(imagemin(config.imagemin))
-  }
-
 if (module.parent) {
   module.exports = app
 } else {
