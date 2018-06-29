@@ -9,7 +9,30 @@ module.exports = (dato, root, i18n) => {
   // draft: false
   // locale: en
 
-  // inside a "src/articles" directory...
+  // createLangs:
+
+  /**
+   {
+      "data": {
+          "type": "item",
+          "attributes": {
+              "key": "test2",
+              "value": {
+                  "en": "test2",
+                  "pl": "test23"
+              }
+          },
+          "relationships": {
+              "item_type": {
+                  "data": {
+                      "type": "item_type",
+                      "id": "36953"
+                  }
+              }
+          }
+      }
+   }
+   */
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
       const path = `src/${lang}`;
@@ -18,15 +41,10 @@ module.exports = (dato, root, i18n) => {
          * Create index files
          */
         dato.mainPages.forEach(index => {
-          let workingDirectory;
-          if (index.path !== 'main')
-            workingDirectory = index.path;
-
-          const filePath = workingDirectory ? `${workingDirectory}/index.md` : `index.md`;
           rootDirectory.createPost(
-            filePath, "yaml", {
+            index.path, "yaml", {
               frontmatter: {
-                layout: index.layout,
+                layout: index.layout.name,
                 locale: lang,
                 title: index.value && index.value.title,
                 description: index.value && index.value.description,
@@ -36,19 +54,39 @@ module.exports = (dato, root, i18n) => {
         });
 
         /**
-         * Get posts from DATOCMS
+         * Create pages
+         */
+        dato.pages.forEach(page => {
+          console.log(page.layout.name)
+          rootDirectory.createPost(
+            `pages/${page.slug}/index.md`, "yaml", {
+              frontmatter: {
+                layout: page.layout.name,
+                locale: lang,
+                title: page.value && page.value.title,
+                description: page.value && page.value.description,
+              },
+              content: page.content || ''
+            }
+          );
+        });
+
+        /**
+         * Create blog posts
          */
         dato.posts.forEach((post) => {
+
           /**
            * Omit if empty - no translation for this article
            */
           if (!post.title)
             return;
+
           /**
            * Create post
            */
           rootDirectory.createPost(
-            `${post.slug}/index.md`, "yaml", {
+            `blog/${post.slug}/index.md`, "yaml", {
               frontmatter: {
                 // console.log({seo: post.seoMetaTags, author: post.author, tags: post.tags});
                 // post.seoMetaTags.forEach(seo => {

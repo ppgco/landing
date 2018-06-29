@@ -169,17 +169,17 @@ const config = {
   ],
   collections: {
     posts: {
-      pattern: '**/pl/blog/**/*.md',
+      pattern: '**/pl/blog/*.md',
       sortBy: 'date',
       reverse: true
     },
     enPosts: {
-      pattern: '**/blog/**/*.md',
+      pattern: '**/en/blog/*.md',
       sortBy: 'date',
       reverse: true
     },
     pages: {
-      pattern: '**/pages/**/*.md',
+      pattern: '**/pages/*.md',
       sortBy: 'date',
       reverse: true
     }
