@@ -23,235 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9063f2b0-9907-4eab-b0c4-640a99260315" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/_redirects" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/metalsmith.js" afterPath="$PROJECT_DIR$/metalsmith.js" />
-      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/404.md" afterPath="$PROJECT_DIR$/assets/404.md" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/campaign-notification.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/cover.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/image7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/5-ways-to-use-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/boost-your-campaigns/form-types.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/boost-your-campaigns/improve-push-campaigns.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/boost-your-campaigns/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/boost-your-campaigns/subscribe-form.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/boost-your-campaigns/web-push-sample.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/checklist.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/cover.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/image1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/image3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/choosing-web-push-platform/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/dummy-post/android.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/dummy-post/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/how-to-enable/enable-notifications.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/how-to-enable/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/how-to-enable/zoomin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/how-to-enable/zoomin2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/christmas-web-push.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/competition.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/custom-form.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/push-elements.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/newsletter-vs-webpush/reports.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/0.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/10.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/8.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/9.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/blog/post/web-push-basic-knowledge/man-coffee-cup-pen.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/choose-us/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/compatibility/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/contact/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/documentation/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/faq/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/gdpr/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/partnership/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/partnership/rules/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/pricing/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/privacy/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/en/pages/rules/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/manifest.json" afterPath="$PROJECT_DIR$/assets/manifest.json" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/index.md" afterPath="$PROJECT_DIR$/src/pl/blog/index.md" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/Poprawkidoartykuu5rzeczyktremusiszwiedzieoweb.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/centered-form.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/custom-form.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/form-settings.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/form-type.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/free-shipping.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/image3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/image4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/image5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/image6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/man-coffee-cup-pen.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/native-form.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/push-elements.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/test-push.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/top-belt.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/welcome-push.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/5-things-about-web-push/welcome-push2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/dummy-post/android.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/dummy-post/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/first-steps/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/first-steps/post-cover.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/first-steps/post-integrate.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/first-steps/post-send.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/first-steps/post-template.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/gtm-integration.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/gtm-integration/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/improve-push-campaigns/form-types.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/improve-push-campaigns/improve-push-campaigns.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/improve-push-campaigns/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/improve-push-campaigns/subscribe-form.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/improve-push-campaigns/watch-push.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/belt.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/inbox-sidebar.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/sidebar-configuration.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/sidebar.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/inbox-sidebar/sidebar2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wlaczyc-web-push/enable-notifications.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wlaczyc-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wlaczyc-web-push/zoomin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wlaczyc-web-push/zoomin2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/abx-schedule.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/abx-split.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/campaign-notification.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/cover.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/custom-fab.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/has-ssl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image4 (copy).png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/image7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/test-mode.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-wykorzystywac-web-push/test-push.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/image1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/image3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/image4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/image5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/jak-zachecic-do-zakupu/post-cover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/dodaj_kodjs.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/komunikatok.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/landingi-cover.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/new-project.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/sprawdzintegracje.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/start.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/wklejkod_ppg.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/wklejwlandingu_ppg.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/landingi-integracja/zakladaniekonta_ppg.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/cover-map.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/step1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/step1a.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/step2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/step3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/language-support/step4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/christmas-web-push.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/competition.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/czasnabuty-webpush-inbox.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/ft-custom-popup.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/push-elements.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/reports.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/newsletter-vs-webpush/yt-placeholder.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/chrome-answer.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/push-article.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/push-chrome.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/push-ff.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/push-ff1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/push-support/push-opera.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/rodo-poradnik/cover.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/rodo-poradnik/ebook-cover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/rodo-poradnik/image1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/rodo-poradnik/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/rodo-poradnik/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step1a.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/step7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/shoper-integration/web-push-ecommerce.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/checklista.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/image1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/image2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/image3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wybor-aplikacji-web-push/post-cover.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1a.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1c.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1d.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1e.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1f.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/image1g.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/blog/post/wyglad-powiadomien-web-push/post-cover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/cennik/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/contact/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/czesto-zadawane-pytania/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/dlaczego-pushpushgo/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/faq/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/kompatybilnosc/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/kontakt/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/polityka-prywatnosci/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/poradnik/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/praca-account-manager/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/praca-customer-service/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/praca-new-business-specialist/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/praca-software-developer/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/praca/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/pricing/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/program-partnerski/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/program-partnerski/regulamin/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/regulamin/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/rodo/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/webinar-form/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/webinar/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/work/index.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/zespol/agata.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/zespol/dzoana.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/zespol/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/zespol/jarek.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/pl/pages/zespol/mateusz.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sw.js" afterPath="$PROJECT_DIR$/assets/sw.js" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -285,11 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_redirects" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_redirects" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/_redirects">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -349,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/dato.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-449">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -436,6 +218,7 @@
         <option value="$PROJECT_DIR$/metalsmith.js" />
         <option value="$PROJECT_DIR$/dato.config.js" />
         <option value="$PROJECT_DIR$/assets/_redirects" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -621,12 +404,12 @@
       <workItem from="1528898632630" duration="67000" />
       <workItem from="1529331158514" duration="9000" />
       <workItem from="1529573737871" duration="714000" />
-      <workItem from="1530250353826" duration="10480000" />
+      <workItem from="1530250353826" duration="10518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34692000" />
+    <option name="totallyTimeSpent" value="34730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="-18" width="1924" height="1100" extended-state="6" />
@@ -667,14 +450,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/layouts/webinar-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/en/pages/partnership-archived/index.md" />
     <entry file="file://$PROJECT_DIR$/src/pl/pages/program-partnerski-archived/index.md" />
     <entry file="file://$PROJECT_DIR$/layouts/partnership.html">
@@ -1019,7 +794,7 @@
     <entry file="file://$PROJECT_DIR$/dato.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-449">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1036,6 +811,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding />
         </state>
       </provider>
