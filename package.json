@@ -5,9 +5,12 @@
   "license": "ISC",
   "scripts": {
     "dev": "PORT=8082 ./node_modules/metalsmith-start/bin/metalsmith-start",
+    "staging": "./node_modules/.bin/dato dump --preview",
+    "production": "./node_modules/.bin/dato dump",
     "build": "rm -fr release/ && node metalsmith.js"
   },
   "devDependencies": {
+    "datocms-client": "^0.5.4",
     "glob-watcher": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-rev-all": "^0.9.7",
