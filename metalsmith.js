@@ -39,6 +39,9 @@ Handlebars.registerHelper("__", function(key) {
 });
 
 Handlebars.registerHelper("link", function(value, locale, opts) {
+  if (!value)
+    return;
+
   if (value.indexOf('http') !== -1)
     return value;
 

@@ -31,55 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9063f2b0-9907-4eab-b0c4-640a99260315" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/layouts/content.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/images/logo.svg" afterPath="$PROJECT_DIR$/assets/images/logo.svg" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/components/_features-silder.less" afterPath="$PROJECT_DIR$/assets/styles/components/_features-silder.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/assets/styles/fonts/icomoon.eot" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/assets/styles/fonts/icomoon.svg" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/assets/styles/fonts/icomoon.ttf" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/assets/styles/fonts/icomoon.woff" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/helpers/_icons.less" afterPath="$PROJECT_DIR$/assets/styles/helpers/_icons.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_layout.less" afterPath="$PROJECT_DIR$/assets/styles/layout/_layout.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/main.less" afterPath="$PROJECT_DIR$/assets/styles/main.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/pages/_documentation.less" afterPath="$PROJECT_DIR$/assets/styles/pages/_guide.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/pages/_faq.less" afterPath="$PROJECT_DIR$/assets/styles/pages/_faq.less" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/pages/_gdpr.less" afterPath="$PROJECT_DIR$/assets/styles/pages/_gdpr.less" />
-      <change beforePath="$PROJECT_DIR$/dato.config.js" afterPath="$PROJECT_DIR$/dato.config.js" />
-      <change beforePath="$PROJECT_DIR$/layouts/404.html" afterPath="$PROJECT_DIR$/layouts/404.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/blog.html" afterPath="$PROJECT_DIR$/layouts/blog.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/career.html" afterPath="$PROJECT_DIR$/layouts/career.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/choose-us.html" afterPath="$PROJECT_DIR$/layouts/choose-us.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/contact.html" afterPath="$PROJECT_DIR$/layouts/contact.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/documentation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layouts/faq-en.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layouts/faq.html" afterPath="$PROJECT_DIR$/layouts/faq.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/gdpr.html" afterPath="$PROJECT_DIR$/layouts/gdpr.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/guide.html" afterPath="$PROJECT_DIR$/layouts/guide.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/job-offer.html" afterPath="$PROJECT_DIR$/layouts/job-offer.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/footer-menu.html" afterPath="$PROJECT_DIR$/layouts/partials/footer-menu.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/footer.html" afterPath="$PROJECT_DIR$/layouts/partials/footer.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/header.html" afterPath="$PROJECT_DIR$/layouts/partials/header.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/calltoaction-landing.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/calltoaction-landing.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/features.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/features.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/intro.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/intro.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/pricing-simple.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/pricing-simple.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/pricing.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/pricing.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/push.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/push.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/recent-posts.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/recent-posts.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/landing/webinar.html" afterPath="$PROJECT_DIR$/layouts/partials/landing/webinar.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/menu.html" afterPath="$PROJECT_DIR$/layouts/partials/menu.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partials/webinar-menu.html" afterPath="$PROJECT_DIR$/layouts/partials/webinar-menu.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/partnership.html" afterPath="$PROJECT_DIR$/layouts/partnership.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/post.html" afterPath="$PROJECT_DIR$/layouts/post.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/tag.html" afterPath="$PROJECT_DIR$/layouts/tag.html" />
-      <change beforePath="$PROJECT_DIR$/layouts/webinar-form.html" afterPath="$PROJECT_DIR$/layouts/webinar-form.html" />
-      <change beforePath="$PROJECT_DIR$/locales/en.json" afterPath="$PROJECT_DIR$/locales/en.json" />
-      <change beforePath="$PROJECT_DIR$/locales/pl.json" afterPath="$PROJECT_DIR$/locales/pl.json" />
       <change beforePath="$PROJECT_DIR$/metalsmith.js" afterPath="$PROJECT_DIR$/metalsmith.js" />
-      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -143,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer-menu.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer-menu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/layouts/partials/footer-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="288">
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -173,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metalsmith.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metalsmith.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/metalsmith.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+            <state relative-caret-position="213">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,9 +243,9 @@
         <option value="$PROJECT_DIR$/assets/styles/helpers/_icons.less" />
         <option value="$PROJECT_DIR$/layouts/guide.html" />
         <option value="$PROJECT_DIR$/layouts/partials/menu.html" />
-        <option value="$PROJECT_DIR$/metalsmith.js" />
         <option value="$PROJECT_DIR$/dato.config.js" />
         <option value="$PROJECT_DIR$/layouts/partials/footer-menu.html" />
+        <option value="$PROJECT_DIR$/metalsmith.js" />
       </list>
     </option>
   </component>
@@ -554,22 +507,23 @@
       <workItem from="1529331158514" duration="9000" />
       <workItem from="1529573737871" duration="714000" />
       <workItem from="1530250353826" duration="16660000" />
-      <workItem from="1530688169750" duration="22761000" />
+      <workItem from="1530688169750" duration="22966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87421000" />
+    <option name="totallyTimeSpent" value="87626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="-18" width="1924" height="1100" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889115" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889115" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13263159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -986,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metalsmith.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dato.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -1012,8 +958,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/layouts/partials/footer-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metalsmith.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
