@@ -4,8 +4,8 @@
 	<div class="content-limiter">
 
 		<div class="blog-breadcrumbs">
-			<a href="/">Home</a> <span class="divider">/</span>
-			<a href="/blog">Blog</a> <span class="divider">/</span>
+			<a href="{{link '' locale}}">Home</a> <span class="divider">/</span>
+			<a href="{{link 'blog/page/1' locale}}">Blog</a> <span class="divider">/</span>
 			<span>Post</span>
 		</div>
 
@@ -28,7 +28,7 @@
 
 				{{#if image}}
 				<a href="/{{link path}}">
-					<img src="{{image this}}" class="blog-post-item-image">
+					<img src="{{image}}" class="blog-post-item-image">
 				</a>
 				{{/if}}
 

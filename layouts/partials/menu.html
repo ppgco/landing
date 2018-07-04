@@ -7,40 +7,35 @@
       </a>
     </div>
 
-    <span class="ppg-icon-menu main-menu-toggle"></span>
+    <span class="icon-menu main-menu-toggle"></span>
 
     <div class="main-menu flex space-between">
       <nav class="main-nav">
-        {{#ifCond locale 'pl'}}
-          <div class="expandable-link">
-            <span class="nav-link">Wiedza <span class="m5l size10 ppg-icon-arrow-down text-green"></span> </span>
-            <ul class="well">
-              <li><a class="nav-link" href="/pl/blog/page/1"><span class="ppg-icon-pencil-and-ruler size18 m10r"></span> Blog</a></li>
-              <li><a class="nav-link" href="https://edu.pushpushgo.com/pl/poradnik/start"><span class="ppg-icon-mortarboard size18 m10r"></span> Poradnik</a></li>
-              <li><a class="nav-link" href="https://edu.pushpushgo.com/pl/faq"><span class="ppg-icon-help size18 m10r"></span> FAQ</a></li>
-              <li><a class="nav-link" href="{{linkLocale 'pages/webinar-form' locale}}"><span class="ppg-icon-microphone size18 m10r"></span>Webinaria</a></li>
-            </ul>
-          </div>
-          <a class="nav-link {{#ifCond page 'choose-us' }} active {{/ifCond}}" href="/pl/pages/dlaczego-pushpushgo">Dlaczego PushPushGo?</a>
-          <a class="nav-link {{#ifCond page 'pricing' }} active {{/ifCond}}" href="/pl/pages/cennik">Cennik</a>
-        {{/ifCond}}
-        {{#ifCond locale 'en'}}
-          <div class="expandable-link">
-            <span class="nav-link">Resources <span class="m5l size10 ppg-icon-arrow-down text-green"></span> </span>
-            <ul class="well">
-              <li><a class="nav-link" href="/en/blog/page/1"><span class="ppg-icon-pencil-and-ruler size18 m10r"></span> Blog</a></li>
-              <li><a class="nav-link" href="https://edu.pushpushgo.com/user-guide/start"><span class="ppg-icon-mortarboard size18 m10r"></span> User guide</a></li>
-              <li><a class="nav-link" href="https://edu.pushpushgo.com/faq"><span class="ppg-icon-help size18 m10r"></span> FAQ</a></li>
-            </ul>
-          </div>
-          <a class="nav-link {{#ifCond page 'choose-us' }} active{{/ifCond}}" href="/{{locale}}/pages/choose-us">{{__ 'Dlaczego PushPushGo?' }}</a>
-          <a class="nav-link {{#ifCond page 'pricing' }} active {{/ifCond}}" href="/{{locale}}/pages/pricing">{{__ 'Cennik' }}</a>
-        {{/ifCond}}
+        <div class="expandable-link">
+          <span class="nav-link">{{__ 'Resources'}} <span class="m5l size10 icon-arrow-down text-green"></span> </span>
+          <ul class="well">
+            {{#each settings.menu.resources locale}}
+              <li>
+                <a class="nav-link {{#ifCond slug ../slug}} active {{/ifCond}}" href="{{link link locale}}">
+                  {{#if icon}} <span class="icon {{icon}} size18 m10r"></span> {{/if}}
+                  {{ title }}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+
+        {{#each settings.menu.header locale}}
+          <a class="nav-link {{#ifCond slug ../slug}} active {{/ifCond}}" href="{{link link locale}}">
+            {{#if icon}} <span class="icon {{icon}} size18 m10r"></span> {{/if}}
+            {{title}}
+          </a>
+        {{/each}}
       </nav>
 
       <nav class="auth-nav">
         <span class="call-us">
-          <span class="ppg-icon-telephone m5r"></span>
+          <span class="icon-telephone m5r"></span>
           <a href="tel:+48123125213">+48 12 312 5213</a>
         </span>
 
@@ -51,10 +46,12 @@
         <div class="language-toggle">
           <div class="language-toggle-list">
             {{#ifCond locale 'pl'}}
-            <a href="/en">EN</a>
-            <a href="/pl" class="active">PL</a> {{else}}
-            <a href="/en" class="active">EN</a>
-            <a href="/pl">PL</a> {{/ifCond}}
+              <a href="/en">EN</a>
+              <a href="/pl" class="active">PL</a>
+            {{else}}
+              <a href="/en" class="active">EN</a>
+              <a href="/pl">PL</a>
+            {{/ifCond}}
           </div>
         </div>
 
@@ -63,6 +60,8 @@
   </div>
 </header>
 
-<!-- <a href="{{linkLocale 'pages/praca' locale}}">
-  <div class="hire-ribbon">{{__ 'Rekrutujemy'}}</div>
-</a> -->
+{{#if settings.jobOffersBadge}}
+  <a href="{{link 'pages/praca' locale}}">
+    <div class="hire-ribbon">{{__ 'Rekrutujemy'}}</div>
+  </a>
+{{/if}}

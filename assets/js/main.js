@@ -313,7 +313,7 @@ $(function() {
       var self = this;
       var date = new Date(webinar.createdAt).toJSON();
       var el = document.createElement('p');
-      el.innerHTML = '<div class="webinar-list-item"><div class="m10b">' + webinar.name + '<span class="webinar-list-item__time">' + date.slice(0, 10) + ' o godzinie ' + date.slice(11, 16) + '</span></div> <div class="webinar-list-item__play">Odtwórz <span class="ppg-icon-play size20 m5l vam"></span></div></div>';
+      el.innerHTML = '<div class="webinar-list-item"><div class="m10b">' + webinar.name + '<span class="webinar-list-item__time">' + date.slice(0, 10) + ' o godzinie ' + date.slice(11, 16) + '</span></div> <div class="webinar-list-item__play">Odtwórz <span class="icon-play size20 m5l vam"></span></div></div>';
       el.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -479,8 +479,6 @@ $(function() {
       carouselButton: $('.push-carousel-nav-button'),
       headerMenu: $('.main-menu'),
       toggleMenuBtn: $('.main-menu-toggle'),
-      sideNav: $('.side-nav'),
-      sideNavLink: $('.side-nav a'),
       registerButton: $('.register'),
       testPushBtn: $('.app-test-push'),
       ppgTabTrigger: $('.ppg-tab-trigger'),
@@ -520,11 +518,6 @@ $(function() {
       this.el.window.on('scroll', (function(_this) {
         return function(event) {
           return _this.toggleInVieport(event);
-        };
-      })(this));
-      this.el.window.on('scroll', (function(_this) {
-        return function(event) {
-          return _this.updateSideNav(event);
         };
       })(this));
       this.el.toggleMenuBtn.on('click', (function(_this) {
@@ -620,13 +613,6 @@ $(function() {
     },
     toggleScrollClass: function() {
       return this.el.body.toggleClass('scrolled', this.el.window.scrollTop() > 0);
-    },
-    updateSideNav: function() {
-      var shouldStick;
-      if (this.el.sideNav.length > 0) {
-        shouldStick = this.el.sideNav.offset().top - 100 < this.el.window.scrollTop();
-        return this.el.sideNav.toggleClass('fixed', shouldStick);
-      }
     },
     toggleMenu: function() {
       return this.el.headerMenu.toggle();

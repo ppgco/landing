@@ -11,9 +11,9 @@
   <div class="content-limiter">
 
   <div class="blog-breadcrumbs">
-    <a href="/">Home</a>
+    <a href="{{link '' locale}}">Home</a>
     <span class="divider">/</span>
-    <span>Tag</span>
+    <span>Tags</span>
     <span class="divider">/</span>
     <span>{{tag}}</span>
   </div>
@@ -21,7 +21,7 @@
     <div class="blog-post-item">
       {{#if this.image}}
       <a href="/{{link this.path}}">
-        <img src="{{image this}}" class="blog-post-item-image">
+        <img src="{{image}}" class="blog-post-item-image">
       </a>
       {{/if}}
       <div class="blog-post-item-text">
@@ -33,17 +33,17 @@
             <a href="/tag/{{this.slug}}/">{{this.name}}</a>&nbsp;
           {{/each}}
         </span>
-        <p class="blog-post-item-description">{{{part this.contents}}} </p>
+        <p class="blog-post-item-description">{{{this.description}}} </p>
         <a class="btn btn--medium" href="/{{link this.path}}">{{__ 'Czytaj dalej' }}</a>
         <div class="blog-post-item-stats">
           <span class="stat-item">
             {{__ 'Czas czytania:' }} {{this.readingTime}}
           </span>
           <!--<span class="stat-item">
-            <span class="ppg-icon-message"></span> 12
+            <span class="icon-message"></span> 12
           </span>
           <span class="stat-item">
-            <span class="ppg-icon-share"></span> 3
+            <span class="icon-share"></span> 3
           </span>-->
         </div>
       </div>

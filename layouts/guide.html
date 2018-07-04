@@ -1,62 +1,35 @@
 {{>header}} {{>menu}}
 
 <section class="page-intro">
-  <div class="content-limiter">
-    <h1>User Guide</h1>
-    <p>Your first steps in PushPushGo</p>
-  </div>
+    <div class="content-limiter">
+        <h1>User Guide</h1>
+        <p>Your first steps in PushPushGo</p>
+    </div>
 </section>
 
-<section class="documentation">
-  <div class="content-limiter">
-    <div class="side-nav">
-      <nav>
-        <a href="#about-pushpushgo">About PushPushGo</a>
-        <a href="#start">Start</a>
-        <div class="sublinks">
-          <a href="#opening-an-account">Opening an account</a>
-          <a href="#creating-a-project">Creating a project</a>
-          <a href="#page-integration">Page integration</a>
+<div class="content-limiter">
+    <!--<div class="row">-->
+        <!--<div class="breadcrumbs"><a href="">Centrum wiedzy</a> &gt; Poradnik Użytkownika-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="row top">
+        <div class="column column-20">
+            <section class="user-guide">
+                <div class="menu-wrapper">
+                    {{#each collections.guides locale}}
+                        {{#if index}}
+                            <a href="/{{link path}}" class="{{#ifCond title category}}category{{else}}sub{{/ifCond}} {{#ifCond  ../slug slug}}active{{/ifCond}}">{{title}}</a>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </section>
         </div>
-        <a href="#widgets">Widgets</a>
-        <div class="sublinks">
-          <a href="#signup-form">Signup form</a>
-          <a href="#recipient-inbox">Recipient Inbox</a>
-          <a href="#subscription-manager">Subscription manager</a>
+        <div class="column column-80">
+            <div class="user-guide__content">
+                {{{contents}}}
+            </div>
         </div>
-        <a href="#sending-campaigns">Sending Campaigns</a>
-        <div class="sublinks">
-          <a href="#icon">Icon</a>
-          <a href="#content">Content</a>
-          <a href="#redirect-url">Redirect url</a>
-          <a href="#utm">UTM</a>
-          <a href="#large-graphics">Large graphics</a>
-          <a href="#actions">Actions</a>
-          <a href="#required-interaction">Required interaction</a>
-          <a href="#sending-time">Sending Time</a>
-          <a href="#campaign-targeting">Campaign targeting</a>
-        </div>
-        <a href="#automation">Automation</a>
-        <div class="sublinks">
-          <a href="#collecting-data-in-the-automation-module">Collecting data</a>
-          <a href="#scenario-1">Scenario 1</a>
-          <a href="#scenario-2">Scenario 2</a>
-          <a href="#scenario-3">Scenario 3</a>
-          <a href="#scenario-4">Scenario 4</a>
-          <a href="#scenario-5">Scenario 5</a>
-        </div>
-        <a href="#subscribers">Subscribers</a>
-        <div class="sublinks">
-          <a href="#tagging">Tagging</a>
-          <a href="#table-appearance">Table appearance</a>
-        </div>
-      </nav>
     </div>
-
-    <div class="content">
-       {{{contents}}}
-    </div>
-  </div>
-</section>
+</div>
 
 {{>footer}}

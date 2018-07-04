@@ -1,60 +1,24 @@
-{{#ifCond locale 'pl'}}
-  <div class="nav-column column">
-    <div class="footer-title">{{__ 'Aplikacja'}}</div>
-    <nav>
-      <a href="{{linkLocale 'pages/dlaczego-pushpushgo' locale}}">{{__ 'Dlaczego PushPushGo?' }}</a>
-      <a href="{{linkLocale 'pages/cennik' locale}}">{{__ 'Cennik' }}</a>
-      <a href="{{linkLocale 'pages/kompatybilnosc' locale}}">{{__ 'Kompatybilność' }}</a>
-      <a href="https://pushpushgo.canny.io" target="_blank">{{__ 'Plan rozwoju' }}</a>
-      <a href="{{envlink 'https://docs.HOST_DOMAIN/' NODE_ENV}}">{{__ 'API' }}</a>
-      <a href="http://status.pushpushgo.com/">{{__ 'Status' }} </a>
-    </nav>
-  </div>
-  <div class="nav-column column">
-    <div class="footer-title">{{__ 'Wiedza'}}</div>
-    <nav>
-      <a href="{{linkLocale 'blog/page/1' locale}}">{{__ 'Blog' }}</a>
-      <a href="https://edu.pushpushgo.com/pl/poradnik/start">{{__ 'Poradnik użytkownika' }}</a>
-      <a href="https://edu.pushpushgo.com/pl/faq">{{__ 'FAQ' }}</a>
-      <a href="{{linkLocale 'pages/webinar-form' locale}}" class="link-important">{{__ 'Webinaria' }} <span class="ppg-icon-microphone icon"></span></a>
-    </nav>
-  </div>
-  <div class="nav-column column">
-    <div class="footer-title">{{__ 'Firma'}}</div>
-    <nav>
-      <a href="{{linkLocale 'pages/kontakt' locale}}">{{__ 'Kontakt' }} </a>
-      <a href="{{linkLocale 'pages/program-partnerski' locale}}">{{__ 'Program Partnerski' }} </a>
-      <a href="https://edu.pushpushgo.com/pl/praca">{{__ 'Praca' }} </a>
-      <a href="{{linkLocale 'pages/polityka-prywatnosci' locale}}">{{__ 'Polityka prywatności' }}</a>
-      <a href="{{linkLocale 'pages/rodo' locale}}">{{__ 'RODO' }}</a>
-      <a href="{{linkLocale 'pages/regulamin' locale}}">{{__ 'Regulamin serwisu' }}</a>
-    </nav>
-  </div>
-{{else}}
-  <div class="nav-column column">
-    <nav>
-      <a href="{{linkLocale 'pages/choose-us' locale}}">{{__ 'Dlaczego PushPushGo?' }} </a>
-      <a href="{{linkLocale 'pages/pricing' locale}}">{{__ 'Cennik' }}</a>
-      <a href="{{linkLocale 'pages/privacy' locale}}">{{__ 'Polityka prywatności' }}</a>
-      <!--<a href="{{linkLocale 'pages/gdpr' locale}}">{{__ 'GDPR' }}</a>-->
-      <a href="{{linkLocale 'pages/rules' locale}}">{{__ 'Regulamin serwisu' }}</a>
-    </nav>
-  </div>
-  <div class="nav-column column">
-    <nav>
-      <a href="https://edu.pushpushgo.com/user-guide/start">{{__ 'Poradnik użytkownika' }}</a>
-      <!--<a href="{{linkLocale 'pages/webinar' locale}}" class="link-important">{{__ 'Webinaria' }}</a>-->
-      <a href="{{linkLocale 'blog/page/1' locale}}">{{__ 'Blog' }}</a>
-      <a href="https://pushpushgo.canny.io" target="_blank">{{__ 'Plan rozwoju' }}</a>
-      <a href="https://edu.pushpushgo.com/faq">{{__ 'F.A.Q.' }}</a>
-    </nav>
-  </div>
-  <div class="nav-column column">
-    <nav>
-      <a href="{{linkLocale 'pages/compatibility' locale}}">{{__ 'Kompatybilność' }}</a>
-      <a href="{{envlink 'https://docs.HOST_DOMAIN/' NODE_ENV}}">{{__ 'API' }}</a>
-      <!--<a href="{{linkLocale 'pages/partnership' locale}}">{{__ 'Program Partnerski' }} </a>-->
-      <a href="{{linkLocale 'pages/contact' locale}}">{{__ 'Kontakt' }} </a>
-    </nav>
-  </div>
-{{/ifCond}}
+<div class="nav-column column">
+  <div class="footer-title">{{__ 'Aplikacja'}}</div>
+  <nav>
+    {{#each settings.menu.footer1 locale}}
+      <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>
+<div class="nav-column column">
+  <div class="footer-title">{{__ 'Wiedza'}}</div>
+  <nav>
+    {{#each settings.menu.footer2 locale}}
+      <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>
+<div class="nav-column column">
+  <div class="footer-title">{{__ 'Firma'}}</div>
+  <nav>
+    {{#each settings.menu.footer3 locale}}
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>

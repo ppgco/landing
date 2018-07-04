@@ -11,10 +11,10 @@
 
 			{{>footer-menu}}
 			<div class="socials-column column">
-				<a href="https://www.linkedin.com/company/10915197" class="ppg-icon-linkedin" target="_blank"></a>
-				<a href="http://twitter.com/PushPushGo1" class="ppg-icon-twitter" target="_blank"></a>
-				<a href="https://www.facebook.com/PushPushGo/" target="_blank" class="ppg-icon-facebook" target="_blank"></a>
-				<a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="ppg-icon-youtube" target="_blank"></a>
+				<a href="https://www.linkedin.com/company/10915197" class="icon-linkedin" target="_blank"></a>
+				<a href="http://twitter.com/PushPushGo1" class="icon-twitter" target="_blank"></a>
+				<a href="https://www.facebook.com/PushPushGo/" target="_blank" class="icon-facebook" target="_blank"></a>
+				<a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="icon-youtube" target="_blank"></a>
 			</div>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 <div class="c2c-modal hide" id="c2c-modal">
 	<div class="c2c-modal-backdrop"></div>
 	<div class="c2c-modal-box">
-		<span class="ppg-icon-telephone size30 text-light"></span>
+		<span class="icon-telephone size30 text-light"></span>
 		<h2 class="title--uppercase">{{__ 'Potrzebujesz konsultacji?'}}</h2>
 		<p>{{__ 'Wpisz swój numer telefonu, oddzwonimy tak szybko jak to możliwe, zwykle za kilka sekund'}}</p>
 		<input class="c2c-input" id="c2c-input" value="+48"/>
@@ -39,35 +39,6 @@
 		</p>
 	</div>
 </div>
-<script type='application/ld+json'>
-{
-  "@context": "http://www.schema.org",
-  "@type": "Organization",
-  "name": "PushPushGo",
-  "url": "https://pushpushgo.com/pl/",
-  "sameAs": [
-    "https://pushpushgo.com/en/"
-  ],
-  "logo": "https://pushpushgo.com/images/logo_small.png",
-  "description": "Platforma do wysyłki notyfikacji web push",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ostatnia 1C / 2B",
-    "addressLocality": "Kraków",
-    "addressRegion": "MP",
-    "postalCode": "31-444",
-    "addressCountry": "Polska"
-  },
-  "hasMap": "https://www.google.pl/maps/place/Aleja+Pokoju+1A,+Krak%C3%B3w/@50.0572998,19.9606544,17z/data=!4m5!3m4!1s0x47165b3be0af0a3d:0xed2ebcd9e74c6dd9!8m2!3d50.05741!4d19.961384",
-  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su 01:00-01:00",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": " +48 12 312 5213",
-    "contactType": "Support"
-	"email": "support@pushpushgo.com"
-  }
-}
- </script>
 
 </body>
 </html>
@@ -84,8 +55,8 @@
 
 <div class="ppg-cookies">
 	{{#ifCond locale 'pl'}}
-	Nasza strona używa ciasteczek (cookies). <span class="link ppg-cookies__close">Zamknij</span> <a href="{{linkLocale 'pages/polityka-prywatnosci' locale}}">Dowiedz się więcej</a>
+	Nasza strona używa ciasteczek (cookies). <span class="link ppg-cookies__close">Zamknij</span> <a href="{{link 'pages/polityka-prywatnosci' locale}}">Dowiedz się więcej</a>
 	{{else}}
-	Our website is using cookies. <span class="link ppg-cookies__close">Close</span> <a href="{{linkLocale 'pages/privacy' locale}}">Read more</a>
+	Our website is using cookies. <span class="link ppg-cookies__close">Close</span> <a href="{{link 'pages/privacy' locale}}">Read more</a>
 	{{/ifCond}}
 </div>
