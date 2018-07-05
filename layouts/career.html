@@ -2,8 +2,8 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>Oferty pracy</h1>
-    <p>Dołącz do naszego zespołu PushPushGo</p>
+    <h1>{{ header }}</h1>
+    <p>{{ subheader }}</p>
   </div>
 </section>
 
@@ -15,90 +15,41 @@
   <table class="career-table">
     <tr>
       <th>
-        Stanowisko
+        {{ role }}
       </th>
       <th>
-        Miejsce
+        {{ location }}
       </th>
       <th>
-        Wymiar godzinowy
+        {{ workTime }}
       </th>
       <th>
-        Data dodania
+        {{ endDate }}
       </th>
     </tr>
 
-    <tr>
-      <td>
-        <a href="{{link 'pages/praca-account-manager' locale}}">
-          Account Manager
-        </a>
-      </td>
-      <td>
-        <span class="icon-location"></span>
-        Kraków
-      </td>
-      <td>
-        Pełny etat
-      </td>
-      <td>
-        21 grudnia 2017
-      </td>
-    </tr>
+    {{#each collections.jobs locale}}
+      {{#if category}}
+        <tr>
+          <td>
+            <a href="/{{link path}}">
+              {{ title }}
+            </a>
+          </td>
+          <td>
+            <span class="icon-location"></span>
+             {{ location }}
+          </td>
+          <td>
+            {{ category }}
+          </td>
+          <td>
+            {{ date }}
+          </td>
+        </tr>
+      {{/if}}
+    {{/each}}
 
-    <!--<tr>
-      <td>
-        <a href="{{link 'pages/praca-software-developer' locale}}">
-          Software Developer
-        </a>
-      </td>
-      <td>
-        <span class="icon-location"></span>
-        Kraków
-      </td>
-      <td>
-        Pełny etat
-      </td>
-      <td>
-        23 listopada 2017
-      </td>
-    </tr>-->
-<!--
-    <tr>
-      <td>
-        <a href="{{link 'pages/praca-customer-service' locale}}">
-          Customer Success Manager
-        </a>
-      </td>
-      <td>
-        <span class="icon-location"></span>
-        Kraków
-      </td>
-      <td>
-        Pełny etat
-      </td>
-      <td>
-        08 sierpnia 2017
-      </td>
-    </tr>-->
-
-    <!-- <tr>
-      <td>
-        <a href="{{link 'pages/praca-new-business-specialist' locale}}">
-          New Business Specialist
-        </a>
-      </td>
-      <td>
-        <span class="icon-location"></span>
-        Warszawa
-      </td>
-      <td>
-        Pełny etat
-      </td>
-      <td>
-        08 sierpnia 2017
-      </td>
-    </tr> -->
   </table>
 </div>
 
@@ -107,8 +58,7 @@
 <br>
 
 <div class="text-center">
-  Napisz do nas na adres: <a href="mailto:jobs@pushpushgo.com">jobs@pushpushgo.com</a> <br/>
-  i wyślij swoje CV lub po prostu opowiedz nam o sobie :)
+  {{{action}}}
 </div>
 
 <br>

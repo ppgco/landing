@@ -2,8 +2,8 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>{{__ 'Kompatybilność'}}</h1>
-    <p>{{__ 'Sprawdź jakie przeglądarki wpiera nasza platforma'}}</p>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
   </div>
 </section>
 
@@ -51,7 +51,7 @@
           <tr>
             <th>Desktop Windows</th>
             <td></td>
-            <td class="orange-lighter">+</td>
+            <td class="orange">14</td>
             <td class="green">44 </td>
             <td class="green">42 </td>
             <td></td>
@@ -95,21 +95,13 @@
     <div class="column column-40">
       <div class="legend">
         <div>
-          <span class="legend-sample bg-green"></span> {{__ 'Wspierane przez przeglądarkę i PushPushGo od podanej wersji'}}
+          <span class="legend-sample bg-green"></span> {{supported}}
         </div>
         <div>
-          <span class="legend-sample bg-green-lighter"></span> {{__ 'Wspierane przez przeglądarkę od podanej wersji, trwają
-          beta testy w PushPushGo'}}
+          <span class="legend-sample bg-orange"></span> {{inProgress}}
         </div>
         <div>
-          <span class="legend-sample bg-orange"></span> {{__ 'Wspierane przez przeglądarkę od podanej wersji, trwa implementacjaw
-          PushPushGo'}}
-        </div>
-        <div>
-          <span class="legend-sample bg-orange-lighter"></span> {{__ 'Wkrótce wspierane przez przeglądarkę'}}
-        </div>
-        <div>
-          <span class="legend-sample legend-empty"></span> {{__ 'Brak wsparcia przez przeglądarkę'}}
+          <span class="legend-sample legend-empty"></span> {{notSupported}}
         </div>
       </div>
     </div>

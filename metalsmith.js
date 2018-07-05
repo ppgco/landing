@@ -25,14 +25,6 @@ const metadata = require('metalsmith-metadata');
 const urlProd = 'pushpushgo.com';
 const urlStag = 'stppg.co';
 
-const i18nConfig = {
-  updateFiles: true,
-  syncFiles: true,
-  default: 'en',
-  locales: ['en', 'pl'],
-  directory: 'locales'
-}
-
 // TODO: REMOVE
 Handlebars.registerHelper("__", function(key) {
   return key;
@@ -167,15 +159,20 @@ const config = {
       sortBy: 'index',
       reverse: false
     },
-    employee: {
-      pattern: '**/employee/**/*.md',
-      sortBy: 'date',
+    employees: {
+      pattern: '**/employees/**/*.md',
+      sortBy: 'index',
+      reverse: true
+    },
+    jobs: {
+      pattern: '**/{jobs,praca}/**/*.md',
+      sortBy: 'index',
       reverse: true
     },
     faq: {
       pattern: '**/faq/**/*.md',
-      sortBy: 'date',
-      reverse: true
+      sortBy: 'index',
+      reverse: false
     },
     pages: {
       pattern: '**/pages/**/*.md',
@@ -223,7 +220,7 @@ const config = {
 
 const defaultVariables = function(files, metalsmith, done) {
   lodash.map(files, function(file) {
-    file.locale = (!file.locale) ? i18nConfig.default : file.locale;
+    file.locale = (!file.locale) ? 'en' : file.locale;
   })
   done();
 }
@@ -254,9 +251,10 @@ const app = Metalsmith(__dirname)
     metalsmith._metadata.collections = null
     metalsmith._metadata.posts = null
     metalsmith._metadata.guides = null
-    metalsmith._metadata.employee = null
+    metalsmith._metadata.employees = null
     metalsmith._metadata.faq = null
     metalsmith._metadata.pages = null
+    metalsmith._metadata.jobs = null
     done();
   })
   .use(collections(config.collections))

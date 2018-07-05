@@ -3,7 +3,7 @@
 
 <header class="section-header">
   <span class="icon-microphone header-icon size36"></span>
-  <h1 class="title--uppercase">{{{__ 'Zapisz się na webinarium'}}}</h1>
+  <h1 class="title--uppercase">{{{ heading }}}</h1>
 </header>
 
 <section class="main section--webinar">
@@ -15,27 +15,25 @@
         </div>
       </div>
       <div class="column">
-        <form id="shtzu" class="webinar-form">
-          <p><b>{{{__ 'Wypełnij formularz zapisu, a otrzymasz od nas'}}}:</b></p>
+        <form class="webinar-form">
+          <p><b>{{ signInHeading }}:</b></p>
 
           <ul class="color-dot-list">
-            <li>{{{__ 'Email z <b>linkiem</b> do webinarium'}}},</li>
-            <li>{{{__ '<b>SMS</b> przypominający na 15 minut przed rozpoczęciem transmisji'}}},</li>
-            <li>{{{__ 'Po zakończeniu webinarium, link do <b>nagrania</b>'}}}.</li>
+            <li>{{{ firstGift }}},</li>
+            <li>{{{ secondGift }}},</li>
+            <li>{{{ thirdGift}}}.</li>
           </ul>
 
-          <input type="text" placeholder="Imię i nazwisko" name="name" required/>
-          <input type="email" placeholder="Email" name="email" required/>
-          <input type="tel" placeholder="Telefon" name="phone" required />
-          <select id="webinar__options" name="webinar">
-            <option value="" selected>{{{__ 'Wszystkie webinaria'}}}</option>
-          </select>
+          <input type="text" placeholder="{{inputFullNamePlaceholder}}" name="name" required/>
+          <input type="email" placeholder="{{inputEmailPlaceholder}}" name="email" required/>
+          <input type="tel" placeholder="{{inputMobilePlaceholder}}" name="phone" required />
+
           <div class="g-recaptcha" data-sitekey="6LcEHiUUAAAAADuG66YjUcrPMBcKY5VBhid1t_yL"></div>
           <br>
           <div>
-            <p style="font-size: 10px; line-height: 12px">{{{__ 'Szanujemy Twoją prywatność. Pamiętaj, że zostawiając swoje dane'}}}:</p>
-            <p style="font-size: 10px; line-height: 12px">1. {{{__ 'Wyrażasz zgodę na przetwarzanie podanych danych przez PushPushGo sp. z o.o. z siedzibą w Krakowie (31-548), przy Alei Pokoju 1A/C oraz Refericon sp. z o.o. z siedzibą w Poznaniu (60-524), przy ul. Staszica 26/2 w celach marketingowych, w tym również w celu marketingu bezpośredniego.'}}}</p>
-            <p style="font-size: 10px; line-height: 12px">2. {{{__ 'Wyrażasz zgodę na otrzymywanie drogą elektroniczną, na podany adres e-mail, informacji handlowych wysyłanych przez PushPushGo sp. z o.o. z siedzibą w Krakowie (31-548), przy Alei Pokoju 1A/C oraz Refericon sp. z o.o. z siedzibą w Poznaniu (60-524), przy ul. Staszica 26/2.'}}}</p>
+            <p style="font-size: 10px; line-height: 12px">{{agreementIntro}}:</p>
+            <p style="font-size: 10px; line-height: 12px">1. {{agreementOne}}</p>
+            <p style="font-size: 10px; line-height: 12px">2. {{agreementTwo}}</p>
           </div>
           <button type="submit" class="btn w100 m20t">{{{__ 'Zapisuję się'}}}</button>
           <br>

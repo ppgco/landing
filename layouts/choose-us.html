@@ -2,15 +2,15 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>{{{__ 'Dlaczego PushPushGo?' }}}</h1>
-    <p>{{{__ 'Zobacz co sprawia, że wyróżniamy się pośród innych aplikacji do wysyłki web push. <br>Podczas <b>14-dniowego bezpłatnego okresu testowego</b>      przekonasz się, <br> dlaczego <b>95% Klientów</b> zostaje z nami na stałe' }}}</hp>
+    <h1>{{title}}</h1>
+    <p>{{{subtitle}}}</hp>
   </div>
 </section>
 
 
 <header class="section-header">
   <span class="icon-goal header-icon size36"></span>
-  <h2 class="title--uppercase">{{{__ 'Jesteśmy skuteczni'}}}</h2>
+  <h2 class="title--uppercase">{{ goalHeader }}</h2>
 </header>
 
 <section class="main">
@@ -24,7 +24,7 @@
             <div class="right-side half-circle"></div>
           </div>
         </div>
-        <div class="stat-name">{{{__ 'wskaźnika klikalności <br><br> CTR web push jest <b>5 razy wyższy</b> niż w przypadku newslettera'}}}</div>
+        <div class="stat-name">{{{goalClick}}}</div>
       </div>
 
       <div class="stat-item">
@@ -35,7 +35,7 @@
             <div class="right-side half-circle"></div>
           </div>
         </div>
-        <div class="stat-name">{{{__ 'wskaźnika zapisów <br><br> zbudujesz własną bazę odbiorców <b> 2 razy szybciej </b> niż poprzez email '}}}</div>
+        <div class="stat-name">{{{goalSignUp}}}</div>
       </div>
 
       <div class="stat-item">
@@ -46,7 +46,7 @@
             <div class="right-side half-circle"></div>
           </div>
         </div>
-        <div class="stat-name">{{{__ 'użytkowników internetu <br><br> wysyłaj powiadomienia na ekrany komputerów i <b>urządzeń mobilnych</b>'}}}</div>
+        <div class="stat-name">{{{goalArea}}}</div>
       </div>
 
       <div class="stat-item">
@@ -57,17 +57,90 @@
             <div class="right-side half-circle"></div>
           </div>
         </div>
-        <div class="stat-name">{{{__ 'wzrostu konwersji <br><br> nawet o tyle <b>podniesiemy konwersję</b> w Twoim e-sklepie lub na stronie www'}}}</div>
+        <div class="stat-name">{{{goalConvertion}}}</div>
       </div>
     </div>
   </div>
 </section>
 
-{{>landing/features}}
+<header class="section-header grey-bg" id="features">
+  <span class="icon-computer header-icon  size36"></span>
+  <h2 class="title--uppercase">{{featuresTitle}}</h2>
+</header>
+
+<section class="main features grey-bg">
+  <div class="content-limiter">
+    <ul class="features-list">
+      <li>
+        <h4 class="title--bolded text-green">{{features1Title}}</h4>
+        <p>{{features1Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-pencil-and-ruler"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features2Title}}</h4>
+        <p>{{features2Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-magic-wand"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features3Title}}</h4>
+        <p>{{features3Content}} </p>
+        <span class="feature-icon">
+          <span class="icon-reports"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features4Title}}</h4>
+        <p>{{features4Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-inbox"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features5Title}}</h4>
+        <p>{{features5Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-subscribers"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features6Title}}</h4>
+        <p>{{features6Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-play"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features7Title}}</h4>
+        <p>{{features7Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-globe"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features8Title}}</h4>
+        <p>{{features8Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-rss"></span>
+        </span>
+      </li>
+      <li>
+        <h4 class="title--bolded text-green">{{features9Title}}</h4>
+        <p>{{features9Content}}</p>
+        <span class="feature-icon">
+          <span class="icon-link"></span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
 
 <header class="section-header" id="features">
   <span class="icon-winner-cup header-icon size36"></span>
-  <h2 class="title--uppercase">{{{__ 'Wyróżniamy się'}}}</h2>
+  <h2 class="title--uppercase">{{chooseUsTitle}}</h2>
 </header>
 
 <section class="main">
@@ -77,51 +150,48 @@
       <li>
         <span class="list-icon icon-help"></span>
         <span class="list-content">
-          {{{__ 'Wsparcie 24 h na dobę, 7 dni w tygodniu: telefon, chat, e-mail'}}}
+          {{chooseUsFeature1}}
         </span>
         <span class="list-tick">
-          <span class="icon-ok-icon text-green" title="Tylko w PushPushGo"></span>
+          <span class="icon-ok-icon text-green" title="{{onlyInPPG}}"></span>
         </span>
       </li>
       <li>
         <span class="list-icon icon-telemarketer"></span>
         <span class="list-content">
-          {{{__ 'Twój dedykowany opiekun przeprowadzi dla Ciebie darmowe szkolenie z obsługi systemu'}}}
+          {{chooseUsFeature2}}
         </span>
         <span class="list-tick">
-          <span class="icon-ok-icon text-green" title="Tylko w PushPushGo"></span>
+          <span class="icon-ok-icon text-green" title="{{onlyInPPG}}"></span>
         </span>
       </li>
       <li>
         <span class="list-icon icon-code-laptop"></span>
         <span class="list-content">
-          {{{__ 'Wysokiej jakości kod integracyjny, który nie spowalnia ładowania Twojej strony'}}}
+          {{chooseUsFeature3}}
         </span>
         <span class="list-tick">
-          <span class="icon-ok-icon text-green" title="Tylko w PushPushGo"></span>
+          <span class="icon-ok-icon text-green" title="{{onlyInPPG}}"></span>
         </span>
       </li>
       <li>
         <span class="list-icon icon-license-document"></span>
         <span class="list-content">
-          {{{__ 'Nie korzystamy z pośredników, spełniamy normy legalne UE a dane Twoich klientów są bezpieczne'}}}
+          {{chooseUsFeature4}}
         </span>
         <span class="list-tick">
-          <span class="icon-ok-icon text-green" title="Tylko w PushPushGo"></span>
+          <span class="icon-ok-icon text-green" title="{{onlyInPPG}}"></span>
         </span>
       </li>
-
-      {{#ifCond locale 'pl'}}
       <li>
         <span class="list-icon icon-play"></span>
         <span class="list-content">
-          {{{__ 'Jako jedyni w Polsce oferujemy dedykowaną platformę web push automation'}}}
+          {{chooseUsFeature5}}
         </span>
         <span class="list-tick">
-          <span class="icon-ok-icon text-green" title="Tylko w PushPushGo"></span>
+          <span class="icon-ok-icon text-green" title="{{onlyInPPG}}"></span>
         </span>
       </li>
-      {{/ifCond}}
     </ul>
   </div>
 </section>

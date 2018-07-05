@@ -1,5 +1,36 @@
-{{>landing/ebook-popup}}
-{{>landing/calltoaction-landing}}
+<div class="popup" id="ebook-popup">
+	<div class="popup__backdrop"></div>
+	<div class="popup__wrapper">
+		<div class="popup__close"></div>
+		<a href="https://edu.pushpushgo.com/ebook-o-rodo" target="_blank" >
+			<div style="text-transform: uppercase; font-weight: 600;">{{__ 'Bezpłatny EBOOK'}}</div>
+			<br/>
+			<h4>
+				24 zmiany, które RODO wprowadzi <br/>
+				w Twoich działaniach marketingowych
+			</h4>
+			i dlaczego nie dotyczą one notyfikacji web push
+			<br/>
+			<br/>
+			<img src="/images/ebook-vizu.png" alt="">
+			<br/>
+			<button class="btn">Pobieram EBOOK</button>
+			<br/>
+			<br/>
+			<div>#wiedzaktórasięprzydaje</div>
+		</a>
+	</div>
+</div>
+
+<section class="call-to-action">
+	<div class="content">
+		<h3 class="title--uppercase">{{__ 'Przetestuj web push na swojej stronie'}}</h3>
+		<p>{{__ 'Załóż konto i skorzystaj z 14-dniowej darmowej wersji'}}</p>
+		<a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}" class="btn register">{{__ 'Testuję za darmo'}}</a>
+		<p class="light"> <span class="icon-key text-green"></span> {{__ 'Darmowa wersja zawiera wszystkie funkcjonalności systemu'}}</p>
+	</div>
+	<div class="bg-img"></div>
+</section>
 
 <footer class="main-footer" id="contact">
 	<div class="content-limiter">
@@ -42,21 +73,13 @@
 
 </body>
 </html>
+
 <link rel="stylesheet" type="text/css" href="/styles/main.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
 <script src="/js/main.js" async="true"></script>
-<script charset="UTF-8" src="https://cdn.pushpushgo.com/js/57a04ba53f29062f1fed6d8f.js" async="true"></script>
 
-<!-- Facebook Pixel Code -->
-<noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1959134684349655&ev=PageView&noscript=1"
-    /></noscript>
-<!-- End Facebook Pixel Code -->
+{{{ settings.htmlCodes }}}
 
 <div class="ppg-cookies">
-	{{#ifCond locale 'pl'}}
 	Nasza strona używa ciasteczek (cookies). <span class="link ppg-cookies__close">Zamknij</span> <a href="{{link 'pages/polityka-prywatnosci' locale}}">Dowiedz się więcej</a>
-	{{else}}
-	Our website is using cookies. <span class="link ppg-cookies__close">Close</span> <a href="{{link 'pages/privacy' locale}}">Read more</a>
-	{{/ifCond}}
 </div>

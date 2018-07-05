@@ -6,8 +6,8 @@
     <br>
     <br>
     <div class="size40">Ups!</div>
-    <p>{{__ 'Strona o podanym adresie nie istnieje'}}</p>
-    <a href="{{link '/' locale}}" class="btn m20t">{{__ 'Przejdź do strony głównej'}}</a>
+    <p>{{ notFoundMessage }}</p>
+    <a href="{{link '/' locale}}" class="btn m20t">{{ backToMainPage }}</a>
   </div>
 
 {{>footer}}

@@ -3,7 +3,7 @@
 <section>
 
   <header class="section-header">
-    <h2 class="title--uppercase">{{{__ 'Kontakt'}}}</h2>
+    <h2 class="title--uppercase">{{{title}}}</h2>
   </header>
 
   <br>
@@ -13,23 +13,23 @@
     <div class="map-layer">
       <p>
         <div class="size20 m10b">
-          <b>PushPushGo sp. z o.o.</b>
+          <b>{{registerName}}</b>
         </div>
-        Aleja Pokoju 1a lok. C<br> 31-548 Kraków<br> {{__ 'Polska'}}
+        {{contactAddress}}<br>{{contactPostCode}}<br>{{contactCountry}}
       </p>
 
       <br>
 
       <p>
         <div class="icon-msg m10r"></div>
-        {{{__ 'Napisz do nas'}}}: <br>
-        <b><a href="mailto:hello@pushpushgo.com">hello@pushpushgo.com</a></b>
+        {{contactWithUs}}: <br>
+        <b><a href="mailto:{{contactEmail}}">{{contactEmail}}</a></b>
       </p>
       <p>
         <div class="icon-telephone m10r"></div>
-        {{{__ '24-godzinne Wsparcie Klienta'}}}: <br/>
-        <b><a href="tel:+48123125213"> +48 12 312 5213</a></b>
-        <b><a href="mailto:support@pushpushgo.com">support@pushpushgo.com</a></b>
+        {{supportTitle}}: <br/>
+        <b><a href="tel:{{supportPhone}}">{{supportPhone}}</a></b>
+        <b><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></b>
       </p>
       </ul>
     </div>
@@ -38,7 +38,7 @@
 
   <script>
     function initMap() {
-      var myLatLng = { lat: 50.057120, lng: 19.961132 };
+      var myLatLng = { lat: {{settings.officeLocation.latitude}}, lng: {{settings.officeLocation.longitude}} };
 
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
@@ -49,7 +49,7 @@
       var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: 'PushPushGo'
+        title: 'PushPushGo Sp. z o.o.'
       });
     }
   </script>
@@ -64,76 +64,37 @@
   <br>
 
   <div class="team-members">
-
-    <div class="member-item">
-      <img src="/images/team/mateusz-s.jpg" alt="" class="image-normal">
-      <img src="/images/team/mateusz-f.jpg" class="image-funny">
-      <div class="name">Mateusz Worotyński</div>
-      <div class="position">COO</div>
-      <a href="mailto:mateusz@pushpushgo.com">mateusz@pushpushgo.com</a>
-    </div>
-
-    <div class="member-item">
-      <img src="/images/team/joanna-s.jpg" alt="" class="image-normal">
-      <img src="/images/team/joanna-f.jpg" class="image-funny">
-      <div class="name">Joanna Wójcik</div>
-      <div class="position">VP of Communication and Marketing</div>
-      <a href="mailto:joanna@pushpushgo.com">joanna@pushpushgo.com</a>
-    </div>
-
-    <div class="member-item">
-      <img src="/images/team/dawid-s.jpg" alt="" class="image-normal">
-      <img src="/images/team/dawid-f.jpg" class="image-funny">
-      <div class="name">Dawid Mędrek</div>
-      <div class="position">CEO</div>
-      <a href="mailto:dawid@pushpushgo.com">dawid@pushpushgo.com</a>
-    </div>
-
-    <div class="member-item">
-      <img src="/images/team/agata-s.jpg" alt="" class="image-normal">
-      <img src="/images/team/agata-f.jpg" class="image-funny">
-      <div class="name">
-        Agata Wiktor
-      </div>
-      <div class="position">Head of Product Development and UX</div>
-      <a href="mailto:agata@pushpushgo.com">agata@pushpushgo.com</a>
-    </div>
-
-    <div class="member-item">
-      <img src="/images/team/jarek-s.jpg" alt="" class="image-normal">
-      <img src="/images/team/jarek-f.jpg" class="image-funny">
-      <div class="name">
-        Jarosław Kocur
-      </div>
-      <div class="position">CTO</div>
-      <a href="mailto:jarek@pushpushgo.com">jarek@pushpushgo.com</a>
-    </div>
-
-    <!--
+    {{#each collections.employees locale}}
       <div class="member-item">
-        <img src="/images/team/1.jpg" alt=""> Artur Łabanowski: +48 695 299 333 / artur@pushpushgo.com
+          <img src="{{cover}}" alt="" class="image-normal">
+          <img src="{{hover}}" class="image-funny">
+          <div class="name">{{fullname}}</div>
+          <div class="position">{{role}}</div>
+          <a href="mailto:{{email}}">{{email}}</a>
       </div>
-      -->
+    {{/each}}
+
+
   </div>
 
   <header class="section-header">
-    <h2 class="title--uppercase">{{{__ 'Dane firmy'}}}</h2>
+    <h2 class="title--uppercase">{{companyDataTitle}}: </h2>
   </header>
 
   <section>
     <div class="content-limiter">
       <div class="flex justify">
         <div class="p40">
-          <b>PushPushGo sp. z o.o.</b><br><br> Aleja Pokoju 1a lok. C <br> 31-548 Kraków <br> Polska <br>
+          <b>{{registerName}}</b><br><br>{{registerAddress}}<br>{{registerPostCode}}<br>{{registerCountry}}<br>
         </div>
         <div class="p40">
-          <br> KRS: 0000688693
-          <br> NIP / VAT-UE: PL675-160-1766
-          <br> REGON: 367-877-285
+          <br> KRS: {{registerKRS}}
+          <br> VAT-UE: {{registerNIP}}
+          <br> REGON: {{registerREGON}}
           <br>
-          <br> Nazwa: ING Bank SA
-          <br> IBAN: PL 32 1050 1445 1000 0090 3130 4943
-          <br> SWIFT/BIC: INGBPLPW
+          <br> Nazwa: {{registerBank}}
+          <br> IBAN: {{registerIBAN}}
+          <br> SWIFT/BIC: {{registerSWIFT}}
         </div>
       </div>
     </div>

@@ -19,6 +19,15 @@ module.exports = (dato, root, i18n) => {
             menuId: item.menuId,
             locale: lang
           });
+        if (item.footerMenuId)
+          menuItems.push({
+            slug: item.slug,
+            title: item.title,
+            icon: item.icon,
+            link:  item.link || `pages/${item.slug}`,
+            menuId: item.footerMenuId,
+            locale: lang
+          });
       }
 
       const path = `src/${lang}`;
@@ -26,20 +35,46 @@ module.exports = (dato, root, i18n) => {
       root.directory(path, (rootDirectory) => {
 
         /**
+         * Create employee
+         */
+        dato.employees.forEach((employee, index) => {
+          rootDirectory.createPost(
+            `employees/${employee.slug}/index.md`, "yaml", {
+              frontmatter: {
+                layout: 'default.html',
+                unlisted: true,
+                locale: lang,
+                index: index,
+                cover: getImagePath(employee.coverimage),
+                hover: getImagePath(employee.hoverimage),
+                name: employee.fullName,
+                email: employee.email,
+                role: employee.role
+              },
+              content: employee.content || ''
+            }
+          );
+        });
+
+
+        /**
          * Create pages
          */
         dato.pages.forEach(page => {
+          const extendTranslations = page.layout && page.layout.translations || {};
+
           rootDirectory.createPost(
             `pages/${page.slug}/index.md`, "yaml", {
               frontmatter: {
                 layout: page.layout.name,
                 locale: lang,
                 title: page.value && page.value.title || page.title,
-                menu: page.menuId,
                 slug: page.slug,
                 icon: page.icon,
                 description: page.value && page.value.description,
+                ...extendTranslations,
                 ...page.json || {}
+
               },
               content: page.content || ''
             }
@@ -50,6 +85,8 @@ module.exports = (dato, root, i18n) => {
          * Create content
          */
         dato.mainPages.forEach(mainPage => {
+          const extendTranslations = mainPage.layout && mainPage.layout.translations || {};
+
           const pagePath = mainPage.path || 'nospecifiedmainpagepath.md'
           rootDirectory.createPost(
             pagePath, "yaml", {
@@ -59,6 +96,7 @@ module.exports = (dato, root, i18n) => {
                 collection: mainPage.guides,
                 title: mainPage.value && mainPage.value.title,
                 description: mainPage.value && mainPage.value.description,
+                ...extendTranslations
               }
             }
           );
@@ -66,6 +104,7 @@ module.exports = (dato, root, i18n) => {
           if (mainPage.collection) {
             const nestedPath = mainPage.path.replace('index.md', '');
             const collectionLayout = mainPage.collectionLayout && mainPage.collectionLayout.name || 'post.html';
+            const extendTranslations = mainPage.collectionLayout && mainPage.collectionLayout.translations || {};
             dato[mainPage.collection].forEach((item, index) => {
               rootDirectory.createPost(
                 `${nestedPath}/${item.slug}/index.md`, "yaml", {
@@ -73,13 +112,19 @@ module.exports = (dato, root, i18n) => {
                     layout: collectionLayout,
                     locale: lang,
                     slug: item.slug,
-                    title: item.title,
+                    title: item.title || item.title,
+                    subtitle: item.subtitle,
+                    sneakPeak: item.sneakPeak,
                     category: item.category && item.category.name,
+                    videourl: item.videourl,
+                    date: item.endDate,
                     index: index + 1,
+                    location: item.location,
                     author: item.author && item.author.fullName,
                     image: getImagePath(item.backgroundImage),
                     description: item.sneakPeak,
-                    tags: item.tags && item.tags.map(tag => tag.name).join(', ')
+                    tags: item.tags && item.tags.map(tag => tag.name).join(', '),
+                    ...extendTranslations
                   },
                   content: item.content
                 }
@@ -106,7 +151,7 @@ module.exports = (dato, root, i18n) => {
   root.createDataFile(
     `src/settings.json`, 'json',
     {
-      ...dato.configuration.entity.payload.attribute,
+      ...dato.configuration.entity.payload.attributes,
       menu: menuItems
     }
   );

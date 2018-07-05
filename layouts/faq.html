@@ -2,121 +2,34 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>FAQ</h1>
-    <p>Czesto zadawane pytania</p>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
   </div>
 </section>
 
 <div class="content-limiter">
-  <section class="user-guide">
-    <div class="breadcrumbs"><a href="//edu.pushpushgo.com/pl?hsLang=pl">Centrum wiedzy</a> &gt; Poradnik
-      Użytkownika
+  <!--<div class="row">-->
+  <!--<div class="breadcrumbs"><a href="">Centrum wiedzy</a> &gt; Poradnik Użytkownika-->
+  <!--</div>-->
+  <!--</div>-->
+  <div class="row top">
+    <div class="column column-20">
+      <section class="user-guide">
+        <div class="menu-wrapper">
+          {{#each collections.faq locale}}
+          {{#if index}}
+          <a href="/{{link path}}" class="{{#ifCond title category}}category{{else}}sub{{/ifCond}} {{#ifCond  ../slug slug}}active{{/ifCond}}">{{title}}</a>
+          {{/if}}
+          {{/each}}
+        </div>
+      </section>
     </div>
-
-    <div class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-vertical" role="navigation"
-         data-sitemap-name="Poradnik Użytkownika" aria-label="Navigation Menu">
-      <ul class="active-branch">
-        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="menu">
-          <a href="//edu.pushpushgo.com/pl/poradnik/start" aria-haspopup="true" aria-expanded="false"
-             role="menuitem">Start</a>
-          <ul class="hs-menu-children-wrapper active-branch">
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/zalozenie-konta" role="menuitem">Założenie
-              konta</a></li>
-            <li class="hs-menu-item hs-menu-depth-2 active active-branch"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/integracja" role="menuitem">Integracja strony</a>
-            </li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/ustawienia-projektu" role="menuitem">Ustawienia i
-              udostępnianie projektów</a></li>
-          </ul>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
-          <a href="//edu.pushpushgo.com/pl/poradnik/wyglad-widgetow" aria-haspopup="true"
-             aria-expanded="false" role="menuitem">Widgety</a>
-          <ul class="hs-menu-children-wrapper">
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/formularz-zapisu" role="menuitem">Formularz
-              zapisu</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/skrzynka-odbiorcza" role="menuitem">Skrzynka
-              odbiorcza</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/manager-zapisu" role="menuitem">Manager
-              zapisu</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a href="//edu.pushpushgo.com/pl/poradnik/read-by-push"
-                                                        role="menuitem">ReadByPush</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/analiza-kolorystyczna" role="menuitem">Analiza
-              kolorystyczna</a></li>
-          </ul>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
-          <a href="//edu.pushpushgo.com/pl/poradnik/wysylka-kampanii" aria-haspopup="true"
-             aria-expanded="false" role="menuitem">Wysyłka kampanii</a>
-          <ul class="hs-menu-children-wrapper">
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/tresc-kampanii" role="menuitem">Treść</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/targetowanie-kampanii" role="menuitem">Targetowanie</a>
-            </li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/czas-wysylki-kampanii" role="menuitem">Czas
-              wysyłki</a></li>
-          </ul>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1"><a href="//edu.pushpushgo.com/pl/poradnik/kampania-abx"
-                                                    role="menuitem">Kampania ABX</a></li>
-        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
-          <a href="//edu.pushpushgo.com/pl/poradnik/automation" aria-haspopup="true" aria-expanded="false"
-             role="menuitem">Automation</a>
-          <ul class="hs-menu-children-wrapper">
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/zbieranie-danych" role="menuitem">Zbieranie
-              danych</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/wiadomosc-powitalna" role="menuitem">Wiadomość
-              powitalna</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/akcja-promocyjna" role="menuitem">Akcja
-              promocyjna</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/porzucony-koszyk" role="menuitem">Porzucony
-              koszyk</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/znizka-po-zakupie" role="menuitem">Zniżka na
-              kolejne zakupy</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/dluga-nieobecnosc" role="menuitem">Długa
-              nieobecność</a></li>
-            <li class="hs-menu-item hs-menu-depth-2"><a
-                    href="//edu.pushpushgo.com/pl/poradnik/testowanie-automation" role="menuitem">Testowanie
-              scenariuszy</a></li>
-          </ul>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="menu">
-          <a href="//edu.pushpushgo.com/pl/poradnik/subskrybenci" aria-haspopup="true" aria-expanded="false"
-             role="menuitem">Subskrybenci</a>
-          <ul class="hs-menu-children-wrapper">
-            <li class="hs-menu-item hs-menu-depth-2"><a href="//edu.pushpushgo.com/pl/poradnik/tagowanie"
-                                                        role="menuitem">Tagowanie</a></li>
-          </ul>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1"><a href="//edu.pushpushgo.com/pl/poradnik/rss" role="menuitem">RSS</a>
-        </li>
-        <li class="hs-menu-item hs-menu-depth-1"><a href="//edu.pushpushgo.com/pl/poradnik/linki"
-                                                    role="menuitem">Linki</a></li>
-        <li class="hs-menu-item hs-menu-depth-1"><a href="//edu.pushpushgo.com/pl/poradnik/exporty"
-                                                    role="menuitem">Exporty</a></li>
-        <li class="hs-menu-item hs-menu-depth-1"><a href="//edu.pushpushgo.com/pl/poradnik/testowanie"
-                                                    role="menuitem">Testowanie</a></li>
-      </ul>
+    <div class="column column-80">
+      <div class="user-guide__content">
+        {{{contents}}}
+      </div>
     </div>
-
-    <div class="user-guide__content">
-      {{{contents}}}
-    </div>
-  </section>
+  </div>
 </div>
 
 {{>footer}}

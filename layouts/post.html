@@ -4,9 +4,9 @@
 	<div class="content-limiter">
 
 		<div class="blog-breadcrumbs">
-			<a href="{{link '' locale}}">Home</a> <span class="divider">/</span>
-			<a href="{{link 'blog/page/1' locale}}">Blog</a> <span class="divider">/</span>
-			<span>Post</span>
+			<a href="{{link '' locale}}">{{breadcrumbsHome}}</a> <span class="divider">/</span>
+			<a href="{{link 'blog/page/1' locale}}">{{breadcrumbsBlog}}</a> <span class="divider">/</span>
+			<span>{{title}}</span>
 		</div>
 
 		<div class="blog-single-post">
@@ -22,7 +22,7 @@
 				</header>
 				<div class="blog-post-item-stats">
 					<span class="stat-item">
-          {{__ 'Czas czytania:' }} {{readingTime}}
+          {{readMore}}: {{readingTime}}
         </span>
 				</div>
 
@@ -39,13 +39,13 @@
 					<div class="blog-post-navigation">
 						{{#if this.previous}}
 						<a class="post-prev" href="/{{link this.previous.path}}">
-							<div class="link-description">{{__ 'Czytaj poprzedni: ' }}</div>
+							<div class="link-description">{{nextPage}}:</div>
 							{{this.previous.title}}
 						</a>
 						{{/if}}
 
 						<a class="post-next" href="/{{link this.next.path}}">
-							<div class="link-description">{{__ 'Czytaj następny: ' }}</div>
+							<div class="link-description">{{prevPage}}:</div>
 							{{this.next.title}}
 						</a>
 					</div>

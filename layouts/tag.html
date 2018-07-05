@@ -11,9 +11,9 @@
   <div class="content-limiter">
 
   <div class="blog-breadcrumbs">
-    <a href="{{link '' locale}}">Home</a>
+    <a href="{{link '' locale}}">{{breadcrumbsHome}}</a>
     <span class="divider">/</span>
-    <span>Tags</span>
+    <span>{{tagListHeader}}</span>
     <span class="divider">/</span>
     <span>{{tag}}</span>
   </div>
@@ -28,16 +28,16 @@
         <p class="blog-post-item-title">{{this.title}} </p>
         <span class="blog-post-item-date"> {{this.date}}</span>
         <span class="blog-post-item-tags">
-          {{__ 'Tags'}}:
+          {{ tagListHeader }}:
           {{#each this.tags}}
             <a href="/tag/{{this.slug}}/">{{this.name}}</a>&nbsp;
           {{/each}}
         </span>
         <p class="blog-post-item-description">{{{this.description}}} </p>
-        <a class="btn btn--medium" href="/{{link this.path}}">{{__ 'Czytaj dalej' }}</a>
+        <a class="btn btn--medium" href="/{{link this.path}}">{{ readMore }}</a>
         <div class="blog-post-item-stats">
           <span class="stat-item">
-            {{__ 'Czas czytania:' }} {{this.readingTime}}
+            {{ readingTime }} {{this.readingTime}}
           </span>
           <!--<span class="stat-item">
             <span class="icon-message"></span> 12
@@ -51,11 +51,11 @@
   {{/each}}
     <nav class='page-links'>
       {{#if pagination.previous}}
-        <a class='page page-prev' href='/{{pagination.previous.path}}'> &lt; {{__ 'Poprzednia strona' }}</a>
+        <a class='page page-prev' href='/{{pagination.previous.path}}'> &lt; {{ nextPage }}</a>
       {{/if}}
 
       {{#if pagination.next}}
-        <a class='page page-next' href='/{{pagination.next.path}}'>{{__ 'Następna strona' }} &gt; </a>
+        <a class='page page-next' href='/{{pagination.next.path}}'>{{ prevPage }} &gt; </a>
       {{/if}}
     </nav>
   </div>

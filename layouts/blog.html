@@ -39,11 +39,11 @@
               <span class="blog-post-item-date"> {{ parseDate this.date }}</span>
               <span class="text-small">
                 <span class="icon-stopwatch m5r"></span>
-                {{__ 'Czas czytania' }}: {{this.readingTime}}
+                {{ readingTime }}: {{this.readingTime}}
               </span>
             </div>
             <div class="text-right">
-              <a class="btn btn--medium" href="/{{link this.path}}">{{__ 'Czytaj dalej' }} &#155;</a>
+              <a class="btn btn--medium" href="/{{link this.path}}">{{ nextPage }} &#155;</a>
             </div>
           </div>
         </div>
@@ -52,11 +52,11 @@
     </div>
     <nav class='page-links'>
       {{#if pagination.previous}}
-        <a class='page page-prev' href='/{{link pagination.previous.path}}'> &lt; {{__ 'Poprzednia strona' }}</a>
+        <a class='page page-prev' href='/{{link pagination.previous.path}}'> &lt; {{ prevPage }}</a>
       {{/if}}
 
       {{#if pagination.next}}
-        <a class='page page-next' href='/{{link pagination.next.path}}'>{{__ 'Następna strona' }} &gt; </a>
+        <a class='page page-next' href='/{{link pagination.next.path}}'>{{ readMore }} &gt; </a>
       {{/if}}
     </nav>
   </div>

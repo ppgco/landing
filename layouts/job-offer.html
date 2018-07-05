@@ -2,24 +2,24 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>{{jobTitle}}</h1>
-    <p>{{jobSubtitle}}</p>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
   </div>
 </section>
 
 <div class="content-limiter job-offer">
   <div class="row">
 
-    {{#if jobPicture}}
+    {{#if image}}
     <div class="column column-50">
-      <img src="/images/{{jobPicture}}" alt="">
+      <img src="{{image}}" alt="">
     </div>
     {{/if}}
 
 
     <div class="column">
       <p>
-        {{jobIntro}}
+        {{{sneakPeak}}}
       </p>
     </div>
   </div>
@@ -29,8 +29,8 @@
   <br>
   <br>
 
-  <a href="{{link 'pages/praca' locale}}">
-     Powróć do listy ofert
+  <a href="javascript: window.history.back()">
+     {{ backToOffer }}
   </a>
 </div>
 
