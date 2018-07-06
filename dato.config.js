@@ -138,7 +138,7 @@ module.exports = (dato, root, i18n) => {
                     sneakPeak: item.sneakPeak,
                     category: item.category && item.category.name,
                     video: item.video,
-                    date: item.endDate,
+                    date: item.endDate || item.createdAt,
                     index: index + 1,
                     location: item.location,
                     author: item.author && item.author.fullName,
