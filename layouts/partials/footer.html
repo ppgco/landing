@@ -2,32 +2,16 @@
 	<div class="popup__backdrop"></div>
 	<div class="popup__wrapper">
 		<div class="popup__close"></div>
-		<a href="https://edu.pushpushgo.com/ebook-o-rodo" target="_blank" >
-			<div style="text-transform: uppercase; font-weight: 600;">{{__ 'Bezpłatny EBOOK'}}</div>
-			<br/>
-			<h4>
-				24 zmiany, które RODO wprowadzi <br/>
-				w Twoich działaniach marketingowych
-			</h4>
-			i dlaczego nie dotyczą one notyfikacji web push
-			<br/>
-			<br/>
-			<img src="/images/ebook-vizu.png" alt="">
-			<br/>
-			<button class="btn">Pobieram EBOOK</button>
-			<br/>
-			<br/>
-			<div>#wiedzaktórasięprzydaje</div>
-		</a>
+		{{{prop settings.popup locale}}}
 	</div>
 </div>
 
 <section class="call-to-action">
 	<div class="content">
-		<h3 class="title--uppercase">{{__ 'Przetestuj web push na swojej stronie'}}</h3>
-		<p>{{__ 'Załóż konto i skorzystaj z 14-dniowej darmowej wersji'}}</p>
-		<a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}" class="btn register">{{__ 'Testuję za darmo'}}</a>
-		<p class="light"> <span class="icon-key text-green"></span> {{__ 'Darmowa wersja zawiera wszystkie funkcjonalności systemu'}}</p>
+		<h3 class="title--uppercase">{{footerCallToActionTitle}}</h3>
+		<p>{{footerCallToActionDescription}}</p>
+		<a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}" class="btn register">{{footerCallToActionButtonLabel}}</a>
+		<p class="light"> <span class="icon-key text-green"></span> {{footerCallToActionDisclaimer}}</p>
 	</div>
 	<div class="bg-img"></div>
 </section>
@@ -37,13 +21,13 @@
 		<div class="row">
 			<div class="logo-column column">
 				<a href="{{envlink 'https://HOST_DOMAIN' NODE_ENV}}" class="logo">PushPushGo</a>
-				<p class="copyright">Copyright © 2018 by PushPushGo. All rights reserved.</p>
+				<p class="copyright">{{footerCopy}}</p>
 			</div>
 
 			{{>footer-menu}}
 			<div class="socials-column column">
 				<a href="https://www.linkedin.com/company/10915197" class="icon-linkedin" target="_blank"></a>
-				<a href="http://twitter.com/PushPushGo1" class="icon-twitter" target="_blank"></a>
+				<a href="https://twitter.com/PushPushGo" class="icon-twitter" target="_blank"></a>
 				<a href="https://www.facebook.com/PushPushGo/" target="_blank" class="icon-facebook" target="_blank"></a>
 				<a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="icon-youtube" target="_blank"></a>
 			</div>
@@ -55,18 +39,18 @@
 	<div class="c2c-modal-backdrop"></div>
 	<div class="c2c-modal-box">
 		<span class="icon-telephone size30 text-light"></span>
-		<h2 class="title--uppercase">{{__ 'Potrzebujesz konsultacji?'}}</h2>
-		<p>{{__ 'Wpisz swój numer telefonu, oddzwonimy tak szybko jak to możliwe, zwykle za kilka sekund'}}</p>
-		<input class="c2c-input" id="c2c-input" value="+48"/>
-		<a href="#" class="c2c-call" id="c2c-call">{{__ 'Zamów'}}</a>
+		<h2 class="title--uppercase">{{c2cTitle}}</h2>
+		<p>{{c2cSubtitle}}</p>
+		<input class="c2c-input" id="c2c-input" placeholder="{{c2cPlaceholder}}"/>
+		<a href="#" class="c2c-call" id="c2c-call">{{c2cOrder}}</a>
 
 		<a href="#" class="c2c-modal-close" id="c2c-modal-close"></a>
-		<small> {{__ 'Zostawiając numer telefonu wyrażasz zgodę na przetwarzanie swoich danych oraz jednorazowe oddzwonienie. Twój numer telefonu nie będzie przekazywany żadnym podmiotom trzecim.'}}</small>
+		<small> {{c2cDisclaimer}}</small>
 		<p>
-			<span id="c2c-status-ok" class="c2c-status hide">{{__ 'Rozmowa zamówiona, zaczekaj na połączenie, ten komunikat możesz już zamknąć.'}}</span>
-			<span id="c2c-status-error" class="c2c-status hide">{{__ 'Wystąpił problem, spróbuj jeszcze raz.'}}</span>
-			<span id="c2c-status-validate" class="c2c-status hide">{{__ 'Wpisz poprawny numer telefonu (+YYXXXXXXXXX)'}}</span>
-			<span id="c2c-status-loading" class="c2c-status hide">{{__ 'Trwa łączenie z Joanną'}}</span>
+			<span id="c2c-status-ok" class="c2c-status hide">{{c2cOk}}</span>
+			<span id="c2c-status-error" class="c2c-status hide">{{c2cError}}</span>
+			<span id="c2c-status-validate" class="c2c-status hide">{{c2cValidate}}</span>
+			<span id="c2c-status-loading" class="c2c-status hide">{{c2cLoading}}</span>
 		</p>
 	</div>
 </div>
@@ -81,5 +65,5 @@
 {{{ settings.htmlCodes }}}
 
 <div class="ppg-cookies">
-	Nasza strona używa ciasteczek (cookies). <span class="link ppg-cookies__close">Zamknij</span> <a href="{{link 'pages/polityka-prywatnosci' locale}}">Dowiedz się więcej</a>
+	{{cookiesDescription}} <span class="link ppg-cookies__close">{{cookiesDescriptionClose}}</span> <a href="{{link cookiesDescriptionPath locale}}">{{cookiesDescriptionMore}}</a>
 </div>

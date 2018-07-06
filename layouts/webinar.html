@@ -1,0 +1,37 @@
+{{>header}}
+{{>menu}}
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="content-limiter">
+
+  <div class="blog-breadcrumbs">
+    <a href="{{link '' locale}}">{{breadcrumbsHome}}</a>
+    <span class="divider">/</span>
+    <span>{{breadcrumbsCategory}}</span>
+  </div>
+
+  <div class="webinar">
+    {{#each collections.webinars locale}}
+      {{#if video}}
+        <div class="webinar__video">
+          <iframe id="webinar__video" src="https://www.youtube.com/embed/{{video.providerUid}}" width="600" height="480" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="webinar-list-item">
+          <div class="m10b">
+            {{title}}
+          </div>
+        </div>
+
+      {{/if}}
+    {{/each}}
+    </div>
+  </div>
+</section>
+{{>footer}}

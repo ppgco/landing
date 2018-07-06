@@ -3,7 +3,7 @@
 
     <div class="logo">
       <a href="/" class="white">
-        <img src="/images/logo.svg" alt="PushPushGo - platforma do wysyłki web push i mobile push">
+        <img src="https://www.datocms-assets.com/6307/1530796180-logo.svg" alt="PushPushGo - platforma do wysyłki web push">
       </a>
     </div>
 
@@ -12,7 +12,7 @@
     <div class="main-menu flex space-between">
       <nav class="main-nav">
         <div class="expandable-link">
-          <span class="nav-link">{{__ 'Resources'}} <span class="m5l size10 icon-arrow-down text-green"></span> </span>
+          <span class="nav-link">{{ menuResources }} <span class="m5l size10 icon-arrow-down text-green"></span> </span>
           <ul class="well">
             {{#each settings.menu.resources locale}}
               <li>
@@ -36,25 +36,20 @@
       <nav class="auth-nav">
         <span class="call-us">
           <span class="icon-telephone m5r"></span>
-          <a href="tel:+48123125213">+48 12 312 5213</a>
+          <a href="tel:{{headerOrderCallPhone}}">{{ headerOrderCallPhone }}</a>
         </span>
 
-        <a href="#" class="c2c-btn nav-link" id="c2c-btn">{{__ 'Zamów rozmowę'}}</a>
+        <a href="#" class="c2c-btn nav-link" id="c2c-btn">{{headerOrderCallLabel}}</a>
 
-        <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#login?language={{locale}}" target="_blank" class="nav-link">{{__ 'Zaloguj się' }}</a>
-        <a class="btn btn--medium register" target="_blank" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}">{{__ 'Załóż konto'}}</a>
+        <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#login?language={{locale}}" target="_blank" class="nav-link">{{ headerLogin }}</a>
+        <a class="btn btn--medium register" target="_blank" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}">{{ headerRegister }}</a>
         <div class="language-toggle">
           <div class="language-toggle-list">
-            {{#ifCond locale 'pl'}}
-              <a href="/en">EN</a>
-              <a href="/pl" class="active">PL</a>
-            {{else}}
-              <a href="/en" class="active">EN</a>
-              <a href="/pl">PL</a>
-            {{/ifCond}}
+            {{#each settings.availableLocales}}
+              <a href="/{{name}}" class="{{#ifCond name ../locale}}active{{/ifCond}} uppercase">{{name}}</a>
+            {{/each}}
           </div>
         </div>
-
       </nav>
     </div>
   </div>
@@ -62,6 +57,6 @@
 
 {{#if settings.jobOffersBadge}}
   <a href="{{link 'pages/praca' locale}}">
-    <div class="hire-ribbon">{{__ 'Rekrutujemy'}}</div>
+    <div class="hire-ribbon">{{headerHiring}}</div>
   </a>
 {{/if}}

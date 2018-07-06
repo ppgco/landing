@@ -3,8 +3,8 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>{{__ 'Blog' }}</h1>
-    <p>{{__ 'Dowiedz się jak działają powiadomienia web push i odkryj ich marketingowy potencjał' }}</p>
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
   </div>
 </section>
 
@@ -12,9 +12,9 @@
   <div class="content-limiter">
 
   <div class="blog-breadcrumbs">
-    <a href="{{link '' locale}}">Home</a>
+    <a href="{{link '' locale}}">{{breadcrumbsHome}}</a>
     <span class="divider">/</span>
-    <span>Blog</span>
+    <span>{{breadcrumbsBlog}}</span>
   </div>
 
   <div class="blog-grid">

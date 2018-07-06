@@ -11,12 +11,16 @@
     <div class="row top h-center">
       <div class="column">
         <div class="p40r">
-          <div id="webinar__description" class="webinar-description"></div>
+          <div id="webinar__description" class="webinar-description">
+            {{#each collections.webinars locale 1}}
+             {{{contents}}}
+            {{/each}}
+          </div>
         </div>
       </div>
       <div class="column">
         <form class="webinar-form">
-          <p><b>{{ signInHeading }}:</b></p>
+          <p><b>{{ heading }}:</b></p>
 
           <ul class="color-dot-list">
             <li>{{{ firstGift }}},</li>
@@ -24,9 +28,9 @@
             <li>{{{ thirdGift}}}.</li>
           </ul>
 
-          <input type="text" placeholder="{{inputFullNamePlaceholder}}" name="name" required/>
-          <input type="email" placeholder="{{inputEmailPlaceholder}}" name="email" required/>
-          <input type="tel" placeholder="{{inputMobilePlaceholder}}" name="phone" required />
+          <input type="text" placeholder="{{formInputFullNamePlaceholder}}" name="name" required/>
+          <input type="email" placeholder="{{formInputEmailPlaceholder}}" name="email" required/>
+          <input type="tel" placeholder="{{formInputMobilePlaceholder}}" name="phone" required />
 
           <div class="g-recaptcha" data-sitekey="6LcEHiUUAAAAADuG66YjUcrPMBcKY5VBhid1t_yL"></div>
           <br>
@@ -35,16 +39,15 @@
             <p style="font-size: 10px; line-height: 12px">1. {{agreementOne}}</p>
             <p style="font-size: 10px; line-height: 12px">2. {{agreementTwo}}</p>
           </div>
-          <button type="submit" class="btn w100 m20t">{{{__ 'Zapisuję się'}}}</button>
+          <button type="submit" class="btn w100 m20t">{{formSubmit}}</button>
           <br>
         </form>
       </div>
     </div>
-
     <br>
     <br>
     <p class="text-center">
-      <a href="{{link 'pages/webinar' locale}}">{{{__ 'Zobacz nagrania z naszych poprzednich webinariów'}}}</a>
+      <a href="{{link 'webinar' locale}}">{{lookOldWebinars}}</a>
     </p>
   </div>
 </section>

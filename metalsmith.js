@@ -57,6 +57,10 @@ Handlebars.registerHelper("stripPath", function(path) {
   return pathArr.join('/')
 });
 
+Handlebars.registerHelper('prop', function(object, prop) {
+  return object[prop];
+});
+
 Handlebars.registerHelper('ifCond', function(v1, v2, options) {
   if (v1 === v2) {
     return options.fn(this);
@@ -164,6 +168,11 @@ const config = {
       sortBy: 'index',
       reverse: true
     },
+    webinars: {
+      pattern: '**/webinar/**/*.md',
+      sortBy: 'index',
+      reverse: true
+    },
     jobs: {
       pattern: '**/{jobs,praca}/**/*.md',
       sortBy: 'index',
@@ -252,6 +261,7 @@ const app = Metalsmith(__dirname)
     metalsmith._metadata.posts = null
     metalsmith._metadata.guides = null
     metalsmith._metadata.employees = null
+    metalsmith._metadata.webinars = null
     metalsmith._metadata.faq = null
     metalsmith._metadata.pages = null
     metalsmith._metadata.jobs = null

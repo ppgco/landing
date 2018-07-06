@@ -8,8 +8,8 @@
 <section class="intro" id="intro">
   <div class="intro-content">
     <div class="intro-animate-area">
-      <img src="/images/laptop.png" alt="" class="laptop">
-      <img src="/images/iphone.png" alt="" class="iphone">
+      <img src="https://www.datocms-assets.com/6307/1530870397-laptop.png" alt="" class="laptop">
+      <img src="https://www.datocms-assets.com/6307/1530870401-iphone.png" alt="" class="iphone">
       <div class="push-fake push-mobile">
         <div class="push-icon">
           <span class="icon-bell"></span>
@@ -23,12 +23,12 @@
     </div>
     <div class="intro-text">
       <h1>
-        {{__ 'Generuj ruch i zwiększaj zyski'}}
+        {{introTitle}}
       </h1>
       <p>
-        {{{__ 'Zyskuj codziennie nowych subskrybentów'}}}
+        {{introSubtitle}}
       </p>
-      <a class="btn get-program" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}">{{__ 'Testuję za darmo'}}</a>
+      <a class="btn get-program" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}">{{introCallToAction}}</a>
     </div>
     <div class="intro-icons">
       <span class="intro-icon-item">
@@ -75,14 +75,14 @@
 </section>
 
 <div class="flex space-between client-logos p20">
-  <div class="m5b">{{__ 'Wysyłają nasze powiadomienia'}}</div>
-  <img src="/images/logos/interia.png">
-  <img src="/images/logos/travelist.png">
-  <img src="/images/logos/sportpl.png">
-  <img src="/images/logos/gazetapl.png">
-  <img src="/images/logos/secretescapes.png">
-  <img src="/images/logos/stileo.png">
-  <img src="/images/logos/pandora.png">
+  <div class="m5b">{{clientHeader}}</div>
+  <img src="{{clientLogo1}}">
+  <img src="{{clientLogo2}}">
+  <img src="{{clientLogo3}}">
+  <img src="{{clientLogo4}}">
+  <img src="{{clientLogo5}}">
+  <img src="{{clientLogo6}}">
+  <img src="{{clientLogo7}}">
 </div>
 
 <br>
@@ -93,28 +93,19 @@
     <div class="row">
       <div class="column text-bigger">
 
-        <h4 class="title--big-green">{{__ 'Pierwsze kroki'}} </h4>
-        <p class="">{{{__ 'PushPushGo to platforma do wysyłki i automatyzacji <b>powiadomień push i web push</b>.
-          Nasz wygodny panel, pozwoli Ci już w <b>5 minut</b> zacząć zbierać zapisy na powiadomienia.'}}}</p>
+        <h4 class="title--big-green">{{ videoTitle }} </h4>
+        <p class="">{{{videoSubtitle}}}</p>
 
-        <p>{{{__ '<b>Obejrzyj film</b> i zobacz jakie to proste!'}}}</p>
+        <p>{{{videoSneakPeak}}}</p>
         <br>
         <br>
 
         <div>
-          {{#ifCond locale 'pl'}}
-          <a href="https://edu.pushpushgo.com/pl/poradnik/start"  class="btn">{{{__ 'Przejdź do poradnika'}}} &#155;</a>
-          {{else}}
-          <a href="https://edu.pushpushgo.com/user-guide/start"  class="btn">{{{__ 'Przejdź do poradnika'}}} &#155;</a>
-          {{/ifCond}}
+          <a href="{{videoGoToGuideUrl}}"  class="btn">{{videoGoToGuide}} &#155;</a>
         </div>
       </div>
       <div class="column">
-        {{#ifCond locale 'pl'}}
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/T4sMdzsvrcE?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        {{else}}
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/FOA7FL7bhww?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        {{/ifCond}}
+        <iframe width="800" height="450" src="{{videoEmbedUrl}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -124,27 +115,27 @@
     <div class="text-center">
       <div class="inline-block p30">
         <div class="count-circle green m10b">1</div>
-        <div>{{{__ 'Załóż konto <br>w aplikacji'}}}</div>
+        <div>{{{step1}}}</div>
       </div>
       <div class="inline-block p30">
         <div class="count-circle green m10b">2</div>
-        <div>{{{__ 'Wklej skrypt <br>na swoją stronę'}}}</div>
+        <div>{{{step2}}}</div>
       </div>
       <div class="inline-block p30">
         <div class="count-circle green m10b">3</div>
-        <div>{{{__ 'Skonfiguruj <br>formularz zapisu'}}}</div>
+        <div>{{{step3}}}</div>
       </div>
       <div class="inline-block p30">
         <div class="count-circle green m10b">4</div>
-        <div>{{{__ 'Ustaw <br>scenariusze automation'}}}</div>
+        <div>{{{step4}}}</div>
       </div>
       <div class="inline-block p30">
         <div class="count-circle green m10b">5</div>
-        <div>{{{__ 'Buduj bazę <br>odbiorców'}}}</div>
+        <div>{{{step5}}}</div>
       </div>
       <div class="inline-block p30">
         <div class="count-circle green m10b">6</div>
-        <div>{{{__ 'Wysyłaj masowe <br>lub targetowane kampanie'}}}</div>
+        <div>{{{step6}}}</div>
       </div>
     </div>
 
@@ -153,7 +144,7 @@
 </section>
 
 <section class="main grey-bg">
-  <h2 class="title--uppercase text-center">{{__ 'Wybierz sposób wysyłki'}}</h2>
+  <h2 class="title--uppercase text-center">{{chooseTypeTitle}}</h2>
 
   <div class="content-limiter">
     <div class="row">
@@ -161,14 +152,10 @@
       <div class="column column-33">
         <div class="text-center">
           <span class="usage-icon usage-icon--mass"></span>
-          <h4 class="title--bolded text-green">{{{__ 'Masowe kampanie'}}}</h4>
-          <p>{{{__ 'Wysyłaj komunikaty <br>do dowolnej liczby odbiorców <br>w parę sekund.'}}}</p>
+          <h4 class="title--bolded text-green">{{{chooseTypeMass}}}</h4>
+          <p>{{{chooseTypeMassDesc}}}</p>
 
-          {{#ifCond locale 'pl'}}
-          <a href="https://edu.pushpushgo.com/pl/poradnik/wysylka-kampanii" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{else}}
-          <a href="https://edu.pushpushgo.com/user-guide/campaign-creator" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{/ifCond}}
+          <a href="{{chooseTypeMassMoreUrl}}" class="btn btn--medium m10t">{{chooseTypeMassMore}} &#155;</a>
         </div>
 
       </div>
@@ -176,14 +163,9 @@
       <div class="column column-33">
         <div class="text-center">
           <span class="usage-icon usage-icon--targeting"></span>
-          <h4 class="title--bolded text-green">{{{__ 'Kampanie targetowane'}}}</h4>
-          <p>{{{__ 'Zawężaj grupę odbiorców<br> na podstawie ich zainteresowań <br>i wysyłaj do nich stargetowane komunikaty.'}}}</p>
-
-          {{#ifCond locale 'pl'}}
-          <a href="https://edu.pushpushgo.com/pl/poradnik/targetowanie-kampanii" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{else}}
-          <a href="https://edu.pushpushgo.com/user-guide/campaign-target" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{/ifCond}}
+          <h4 class="title--bolded text-green">{{chooseTypeTarget}}</h4>
+          <p>{{chooseTypeTargetDesc}}</p>
+          <a href="{{chooseTypeTargetMoreUrl}}" class="btn btn--medium m10t">{{chooseTypeMore}} &#155;</a>
         </div>
 
       </div>
@@ -191,14 +173,10 @@
       <div class="column column-33">
         <div class="text-center">
           <span class="usage-icon usage-icon--automation"></span>
-          <h4 class="title--bolded text-green">{{{__ 'Push automation'}}}</h4>
-          <p>{{{__ 'Projektuj scenariusze i wysłaj <br>do swoich użytkowników automatyczne, <br>spersonalizowane kampanie.'}}}</p>
+          <h4 class="title--bolded text-green">{{chooseTypeAuto}}</h4>
+          <p>{{chooseTypeAutoDesc}}</p>
 
-          {{#ifCond locale 'pl'}}
-          <a href="https://edu.pushpushgo.com/pl/poradnik/automation" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{else}}
-          <a href="https://edu.pushpushgo.com/user-guide/automation" class="btn btn--medium m10t">{{{__ 'Więcej'}}} &#155;</a>
-          {{/ifCond}}
+          <a href="{{chooseTypeAutoMoreUrl}}" class="btn btn--medium m10t">{{chooseTypeMore}} &#155;</a>
         </div>
       </div>
     </div>
@@ -212,17 +190,17 @@
 
 
 <section class="main features">
-  <h2 class="title--uppercase text-center">{{__ 'Poznaj możliwości Web Push Automation'}}</h2>
+  <h2 class="title--uppercase text-center">{{featuresTitle}}</h2>
   <div class="content-limiter">
 
     <div class="features-slider ppg-tabs">
       <div class="text-center">
         <div class="features-slider__tabs">
-          <span class="ppg-tab-trigger active" data-tab="returning">{{__ 'Powracalność'}}</span>
-          <span class="ppg-tab-trigger" data-tab="cart">{{__ 'Porzucone koszyki'}}</span>
-          <span class="ppg-tab-trigger" data-tab="segmentation">{{__ 'Segmentacja'}}</span>
-          <span class="ppg-tab-trigger" data-tab="selling">{{__ 'Cross-selling'}}</span>
-          <span class="ppg-tab-trigger" data-tab="loyalty">{{__ 'Lojalność'}}</span>
+          <span class="ppg-tab-trigger active" data-tab="returning">{{featuresSlider1}}</span>
+          <span class="ppg-tab-trigger" data-tab="cart">{{featuresSlider2}}</span>
+          <span class="ppg-tab-trigger" data-tab="segmentation">{{featuresSlider3}}</span>
+          <span class="ppg-tab-trigger" data-tab="selling">{{featuresSlider4}}</span>
+          <span class="ppg-tab-trigger" data-tab="loyalty">{{featuresSlider5}}</span>
         </div>
       </div>
 
@@ -237,28 +215,23 @@
               </div>
               <div class="fake-push__content">
                 <div class="fake-push__title">
-                  {{__ 'Dawno Cię u nas nie było'}}
+                  {{featuresSlider1PushTitle}}
                 </div>
                 <div class="fake-push__body">
-                  {{__ 'Kliknij i sprawdź jakie oferty ominęły Cię od czasu ostatniej nieobecności.'}}
+                  {{featuresSlider1PushContent}}
                 </div>
-
                 <div class="fake-push__domain">
-                  pushpushgo.com
+                  {{featuresSlider1PushDomain}}
                 </div>
               </div>
             </div>
           </div>
           <div class="features-slider__description">
-            <h4 class="title--big-green">{{__ 'Zwiększaj powracalność'}}</h4>
+            <h4 class="title--big-green">{{featuresSlider1DescriptionTitle}}</h4>
 
-            <p>{{__ 'Generuj większy ruch na stronie internetowej i buduj lojalność subskrybentów, dzięki automatycznym notyfikacjom'}}</p>
+            <p>{{featuresSlider1DescriptionDescription}}</p>
 
-            {{#ifCond locale 'pl'}}
-            <a href="https://edu.pushpushgo.com/pl/poradnik/dluga-nieobecnosc">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{else}}
-            <a href="https://edu.pushpushgo.com/user-guide/automation-long-absence">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{/ifCond}}
+            <a href="{{featuresSlider1DescriptionGuideLink}}">{{ featuresReadMore }} &#155;</a>
           </div>
         </div>
 
@@ -271,28 +244,24 @@
               </div>
               <div class="fake-push__content">
                 <div class="fake-push__title">
-                  {{__ '3 produkty czekają na Ciebie w koszyku'}}
+                  {{featuresSlider2PushTitle}}
                 </div>
                 <div class="fake-push__body">
-                  {{__ 'Kliknij by dokończyć zamówienie.'}}
+                  {{featuresSlider2PushContent}}
                 </div>
                 <div class="fake-push__domain">
-                  pushpushgo.com
+                  {{featuresSlider2PushDomain}}
                 </div>
               </div>
             </div>
 
           </div>
           <div class="features-slider__description">
-            <h4 class="title--big-green">{{__ 'Ratuj porzucone koszyki'}}</h4>
+            <h4 class="title--big-green">{{featuresSlider2DescriptionTitle}}</h4>
 
-            <p>{{__ 'Wysyłaj przypomnienia do odbiorców chwilowo rezygnujących z zakupów, aby nie zapomnieli o rozpoczętej transakcji'}}</p>
+            <p>{{featuresSlider2DescriptionDescription}}</p>
 
-            {{#ifCond locale 'pl'}}
-            <a href="https://edu.pushpushgo.com/pl/poradnik/porzucony-koszyk">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{else}}
-            <a href="https://edu.pushpushgo.com/user-guide/automation-abandoned-cart">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{/ifCond}}
+            <a href="{{featuresSlider2DescriptionGuideLink}}">{{ featuresReadMore }} &#155;</a>
           </div>
         </div>
 
@@ -305,22 +274,22 @@
               </div>
               <div class="fake-push__content">
                 <div class="fake-push__title">
-                  {{__ 'Dobierz drugi produkt'}}
+                  {{featuresSlider3PushTitle}}
                 </div>
                 <div class="fake-push__body">
-                  {{__ 'Tylko dzisiaj, przy zakupie dwóch produktów, cenę tańszego obniżamy o 50%.'}}
+                  {{featuresSlider3PushContent}}
                 </div>
                 <div class="fake-push__domain">
-                  pushpushgo.com
+                  {{featuresSlider3PushDomain}}
                 </div>
               </div>
             </div>
 
           </div>
           <div class="features-slider__description">
-            <h4 class="title--big-green">{{__ 'Sprzedawaj więcej'}}</h4>
+            <h4 class="title--big-green">{{featuresSlider3DescriptionTitle}}</h4>
 
-            <p>{{__ 'Wysyłaj powiadomienia o nowych promocjach do wybranych subskrybentów. Wykorzystuj cross-selling by zwiększyć zyski'}}
+            <p>{{featuresSlider3DescriptionDescription}}
             </p>
           </div>
         </div>
@@ -334,22 +303,21 @@
               </div>
               <div class="fake-push__content">
                 <div class="fake-push__title">
-                  {{__ 'Dziękujemy za wybór naszego sklepu'}}
+                  {{featuresSlider4PushTitle}}
                 </div>
                 <div class="fake-push__body">
-                  {{__ 'Kliknij by wypełnić ankietę na temat naszej obsługi klienta.'}}
+                  {{featuresSlider4PushContent}}
                 </div>
                 <div class="fake-push__domain">
-                  pushpushgo.com
+                  {{featuresSlider4PushDomain}}
                 </div>
               </div>
             </div>
 
           </div>
           <div class="features-slider__description">
-            <h4 class="title--big-green">{{__ 'Zadbaj o obsługę klienta'}}</h4>
-
-            <p>{{__ 'Monitoruj zadowolenie klientów dzięki krótkim ankietom po każdej transakcji oraz buduj więź za pomocą spersonalizowanych powiadomień'}}
+            <h4 class="title--big-green">{{featuresSlider4DescriptionTitle}}</h4>
+            <p>{{featuresSlider4DescriptionDescription}}
             </p>
           </div>
         </div>
@@ -362,31 +330,25 @@
               </div>
               <div class="fake-push__content">
                 <div class="fake-push__title">
-                  {{__ 'Kuchnia wegetariańska'}}
+                  {{featuresSlider5PushTitle}}
                 </div>
                 <div class="fake-push__body">
-                  {{__ 'Najnowsza książka z przepisami dla wegetarian już w sprzedaży.'}}
+                  {{featuresSlider5PushContent}}
                 </div>
                 <div class="fake-push__domain">
-                  pushpushgo.com
+                  {{featuresSlider5PushDomain}}
                 </div>
               </div>
             </div>
           </div>
           <div class="features-slider__description">
-            <h4 class="title--big-green">{{__ 'Poznaj zainteresowania subskrybentów'}}</h4>
+            <h4 class="title--big-green">{{featuresSlider5DescriptionTitle}}</h4>
 
-            <p>{{__ 'Śledź zachowania odbiorców na stronie w czasie rzeczywistym i reaguj na nie. Nadawaj tagi na podstawie rozpoznanych zainteresowań i buduj segmenty klientów'}}
-            </p>
+            <p>{{featuresSlider5DescriptionDescription}}</p>
 
-            {{#ifCond locale 'pl'}}
-            <a href="https://edu.pushpushgo.com/pl/poradnik/tagowanie">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{else}}
-            <a href="https://edu.pushpushgo.com/user-guide/tagging">{{__ 'Dowiedz się więcej' }} &#155;</a>
-            {{/ifCond}}
+            <a href="{{featuresSlider5DescriptionGuideLink}}">{{ featuresReadMore }} &#155;</a>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -397,25 +359,21 @@
 </section>
 
 <header class="section-header grey-bg">
-  <h2 class="title--uppercase">{{__ 'Integracja powiadomień na Twojej stronie'}}</h2>
+  <h2 class="title--uppercase">{{integrationTitle}}</h2>
 </header>
 <section class="main grey-bg">
   <div class="content-limiter">
     <div class="text-center">
-      <img src="/images/paste-code.png" class="shadow" alt="">
+      <img src="https://www.datocms-assets.com/6307/1530872050-paste-code.png" class="shadow" alt="">
       <br>
       <br>
-      {{#ifCond locale 'pl'}}
-      <a href="https://edu.pushpushgo.com/pl/poradnik/integracja" class="btn btn--medium">{{__ 'Zobacz instrukcję'}} &#155;</a>
-      {{else}}
-      <a href="https://edu.pushpushgo.com/user-guide/page-integration" class="btn btn--medium">{{__ 'Zobacz instrukcję'}} &#155;</a>
-      {{/ifCond}}
+      <a href="{{integrationLinkToGuide}}" class="btn btn--medium">{{integrationLinkLabel}} &#155;</a>
     </div>
   </div>
 </section>
 
 <header class="section-header" id="recent-posts">
-  <h2 class="title--uppercase">{{__ 'Dowiedz się więcej o Web Push'}}</h2>
+  <h2 class="title--uppercase">{{blogTitle}}</h2>
 </header>
 
 <section class="main recent-posts">
@@ -427,7 +385,7 @@
           <a class="post-layer" href="/{{link this.path}}">
             <div>
               <p class="post-description"> {{{description}}} </p>
-              <div class="post-read-more">{{__ 'Czytaj'}}</div>
+              <div class="post-read-more">{{blogReadMore}}</div>
             </div>
           </a>
         </div>
@@ -446,12 +404,12 @@
   <br>
 
   <div class="text-center">
-    <a href="{{link 'blog/page/1' locale}}" class="btn">{{__ 'Przejdź do bloga'}}  &#155;</a>
+    <a href="{{link 'blog/page/1' locale}}" class="btn">{{blogGoTo}}  &#155;</a>
   </div>
 </section>
 
 <header class="section-header grey-bg" id="testimonials">
-  <h2 class="title--uppercase">{{__ 'Mówią o nas'}}</h2>
+  <h2 class="title--uppercase">{{testimonialsTitle}}</h2>
 </header>
 
 <section class="main grey-bg testimonials">
@@ -459,38 +417,36 @@
 
     <div class="testimonial-item">
       <div class="testimonial-quote">
-        <div class="m10b text-green"><b>{{__ 'Skuteczne narzędzie'}}</b></div>
-        <p>{{__ 'Używam PushPushGo od kilku miesięcy i jestem pod wrażeniem. To skuteczne narzędzie do przyciągania czytelników na blog.'}}.</p>
+        <div class="m10b text-green"><b>{{testimonial1Title}}</b></div>
+        <p>{{testimonial1Review}}.</p>
 
         <div class="testimonial-footer">
-          <div style="background-image: url(/images/marek-mwf.png);" class="testimonial-icon"></div>
-          <div class="testimonial-autor">Marek Jankowski <span class="autor-position">{{__ 'autor bloga i podcastu'}} <a href="http://www.malawielkafirma.pl"  rel="nofollow" target="_blank">MalaWielkaFirma.pl</a></span> </div>
+          <div style="background-image: url({{testimonial1Avatar}});" class="testimonial-icon"></div>
+          <div class="testimonial-autor">{{{testimonial1Author}}}</div>
         </div>
       </div>
     </div>
 
     <div class="testimonial-item">
       <div class="testimonial-quote">
-        <div class="m10b text-green"><b>{{__ 'Świetna obsługa klienta'}}</b></div>
-        <p>{{__ 'PushPushGo zapewnia nam profesjonalną obsługę, dostępną 7 dni w tygodniu i natychmiastową reakcję na nasze zapytania'}}.</p>
+        <div class="m10b text-green"><b>{{testimonial2Title}}</b></div>
+        <p>{{testimonial2Review}}.</p>
 
         <div class="testimonial-footer">
-          <div style="background-image:  url(/images/olga-czas-na-buty.jpg);" class="testimonial-icon"></div>
-          <div class="testimonial-autor">Olga Spandel-Machnik <span class="autor-position">
-            <a href="http://czasnabuty.pl" rel="nofollow" target="_blank">CzasNaButy.pl</a> </span>
-          </div>
+          <div style="background-image:  url({{testimonial2Avatar}});" class="testimonial-icon"></div>
+          <div class="testimonial-autor">{{{testimonial2Author}}}</div>
         </div>
       </div>
     </div>
 
     <div class="testimonial-item">
       <div class="testimonial-quote">
-        <div class="m10b text-green"><b>{{__ 'Przejrzysta i przyjazna platforma'}}</b></div>
-        <p>{{__ 'PushPushGo to świetne narzędzie szybkiego reagowania :) Platforma jest przejrzysta i bardzo pomocna'}}.</p>
+        <div class="m10b text-green"><b>{{testimonial3Title}}</b></div>
+        <p>{{testimonial3Review}}.</p>
 
         <div class="testimonial-footer">
-          <div class="testimonial-icon" style="background-image:  url(/images/yeah-bunny.png)"></div>
-          <div class="testimonial-autor">Kacper Kuziora, <span class="autor-position">Brand Manager, <a href="http://yeah-bunny.pl"  rel="nofollow" target="_blank">yeah-bunny.pl</a></span></div>
+          <div class="testimonial-icon" style="background-image:  url({{testimonial3Avatar}})"></div>
+          <div class="testimonial-autor">{{{testimonial3Author}}}</div>
         </div>
       </div>
     </div>

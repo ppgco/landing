@@ -1,5 +1,6 @@
 module.exports = (dato, root, i18n) => {
   let menuItems = [];
+  let popup = {};
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -7,6 +8,7 @@ module.exports = (dato, root, i18n) => {
        * Menu Generation
        * @type {Array}
        */
+      popup[lang] = dato.configuration.popup;
 
       for (let id in dato.itemsById) {
         const item = dato.itemsById[id];
@@ -116,7 +118,7 @@ module.exports = (dato, root, i18n) => {
                     subtitle: item.subtitle,
                     sneakPeak: item.sneakPeak,
                     category: item.category && item.category.name,
-                    videourl: item.videourl,
+                    video: item.video,
                     date: item.endDate,
                     index: index + 1,
                     location: item.location,
@@ -152,6 +154,8 @@ module.exports = (dato, root, i18n) => {
     `src/settings.json`, 'json',
     {
       ...dato.configuration.entity.payload.attributes,
+      availableLocales: i18n.availableLocales.map(locale => ({name: locale})),
+      popup: popup,
       menu: menuItems
     }
   );
