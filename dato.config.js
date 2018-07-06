@@ -1,6 +1,7 @@
 module.exports = (dato, root, i18n) => {
   let menuItems = [];
   let popup = {};
+  let mainLangs = {};
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -12,6 +13,8 @@ module.exports = (dato, root, i18n) => {
           break;
         }
       }
+
+      mainLangs[lang] = mainTranslations;
 
       /**
        * Menu Generation
@@ -171,6 +174,7 @@ module.exports = (dato, root, i18n) => {
       ...dato.configuration.entity.payload.attributes,
       availableLocales: i18n.availableLocales.map(locale => ({name: locale})),
       popup: popup,
+      mainLangs: mainLangs,
       menu: menuItems
     }
   );
