@@ -21,6 +21,7 @@ const crypto = require('crypto');
 const htmlMinifier = require('metalsmith-html-minifier');
 const Handlebars = require('handlebars');
 const metadata = require('metalsmith-metadata');
+const tag = require('html-tag');
 
 const urlProd = 'pushpushgo.com';
 const urlStag = 'stppg.co';
@@ -96,6 +97,10 @@ Handlebars.registerHelper('each', function(list, locale, limit, opts) {
 
 Handlebars.registerHelper('parseDate', function(date) {
   return moment(date).format('L');
+});
+
+Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content}) {
+  return tag(tagName, attributes, content);
 });
 
 const config = {

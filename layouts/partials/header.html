@@ -10,9 +10,13 @@
     <meta name="google-site-verification" content="oec4S5aP6w5wBadFzh9zMieUTWiMRPp9LYhiyfm4dgE" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{#each seoMetaTags}}
+     {{{tagGenerator this}}}
+    {{/each}}
+
     <meta property="og:title" content="{{#if title}}{{ title }}{{else}}PushPushGo - platforma to wysyłki web push{{/if}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ url }}{{ path }}" />
+    <meta property="og:url" content="{{ url }}{{link path }}" />
     <meta property="og:image" content="{{#if ogImage}}/{{stripPath path}}/{{ ogImage }}{{/if}}" />
     <meta property="og:description" content="{{#if sneakPeak}}{{ sneakPeak }}{{else}}Web push dla Twojego ecommerce, sprawdź - 14 dni bezpłatnego okresu testowego{{/if}}" />
 

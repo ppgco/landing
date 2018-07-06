@@ -4,6 +4,15 @@ module.exports = (dato, root, i18n) => {
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
+      let mainTranslations;
+
+      for (let obj of dato.layouts) {
+        if (obj.name === 'index.html') {
+          mainTranslations = obj.translations;
+          break;
+        }
+      }
+
       /**
        * Menu Generation
        * @type {Array}
@@ -68,13 +77,15 @@ module.exports = (dato, root, i18n) => {
           rootDirectory.createPost(
             `pages/${page.slug}/index.md`, "yaml", {
               frontmatter: {
+                ...mainTranslations,
+                ...extendTranslations,
+                seoMetaTags: page.seoMetaTags,
                 layout: page.layout.name,
                 locale: lang,
                 title: page.value && page.value.title || page.title,
                 slug: page.slug,
                 icon: page.icon,
                 description: page.value && page.value.description,
-                ...extendTranslations,
                 ...page.json || {}
 
               },
@@ -93,12 +104,14 @@ module.exports = (dato, root, i18n) => {
           rootDirectory.createPost(
             pagePath, "yaml", {
               frontmatter: {
+                ...mainTranslations,
+                ...extendTranslations,
+                seoMetaTags: mainPage.seoMetaTags,
                 layout: mainPage.layout.name,
                 locale: lang,
                 collection: mainPage.guides,
                 title: mainPage.value && mainPage.value.title,
                 description: mainPage.value && mainPage.value.description,
-                ...extendTranslations
               }
             }
           );
@@ -111,6 +124,9 @@ module.exports = (dato, root, i18n) => {
               rootDirectory.createPost(
                 `${nestedPath}/${item.slug}/index.md`, "yaml", {
                   frontmatter: {
+                    ...mainTranslations,
+                    ...extendTranslations,
+                    seoMetaTags: item.seoMetaTags,
                     layout: collectionLayout,
                     locale: lang,
                     slug: item.slug,
@@ -125,8 +141,7 @@ module.exports = (dato, root, i18n) => {
                     author: item.author && item.author.fullName,
                     image: getImagePath(item.backgroundImage),
                     description: item.sneakPeak,
-                    tags: item.tags && item.tags.map(tag => tag.name).join(', '),
-                    ...extendTranslations
+                    tags: item.tags && item.tags.map(tag => tag.name).join(', ')
                   },
                   content: item.content
                 }

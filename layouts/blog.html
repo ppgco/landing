@@ -43,7 +43,7 @@
               </span>
             </div>
             <div class="text-right">
-              <a class="btn btn--medium" href="/{{link this.path}}">{{ nextPage }} &#155;</a>
+              <a class="btn btn--medium" href="/{{link this.path}}">{{ readMore }} &#155;</a>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
       {{/if}}
 
       {{#if pagination.next}}
-        <a class='page page-next' href='/{{link pagination.next.path}}'>{{ readMore }} &gt; </a>
+        <a class='page page-next' href='/{{link pagination.next.path}}'>{{ nextPage }} &gt; </a>
       {{/if}}
     </nav>
   </div>
