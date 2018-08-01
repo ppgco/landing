@@ -103,6 +103,8 @@ Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content
   return tag(tagName, attributes, content);
 });
 
+const {mainLangs} = require('./src/settings.json');
+
 const config = {
   clean: false,
   source: './src/',
@@ -202,6 +204,7 @@ const config = {
         first: false,
         path: 'en/blog/page/:num/index.html',
         pageMetadata: {
+          ...mainLangs.en,
           title: 'Blog',
           locale: 'en'
         },
@@ -215,6 +218,7 @@ const config = {
         first: false,
         path: 'pl/blog/page/:num/index.html',
         pageMetadata: {
+          ...mainLangs.pl,
           title: 'Blog',
           locale: 'pl'
         },

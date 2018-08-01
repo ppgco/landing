@@ -1,6 +1,7 @@
 module.exports = (dato, root, i18n) => {
   let menuItems = [];
   let popup = {};
+  let mainLangs = {};
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -12,6 +13,8 @@ module.exports = (dato, root, i18n) => {
           break;
         }
       }
+
+      mainLangs[lang] = mainTranslations;
 
       /**
        * Menu Generation
@@ -135,7 +138,7 @@ module.exports = (dato, root, i18n) => {
                     sneakPeak: item.sneakPeak,
                     category: item.category && item.category.name,
                     video: item.video,
-                    date: item.endDate,
+                    date: item.endDate || item.createdAt,
                     index: index + 1,
                     location: item.location,
                     author: item.author && item.author.fullName,
@@ -171,6 +174,7 @@ module.exports = (dato, root, i18n) => {
       ...dato.configuration.entity.payload.attributes,
       availableLocales: i18n.availableLocales.map(locale => ({name: locale})),
       popup: popup,
+      mainLangs: mainLangs,
       menu: menuItems
     }
   );
