@@ -205,7 +205,8 @@ const config = {
         path: 'en/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.en,
-          title: 'Blog',
+          titlePage: 'Blog',
+          subtitlePage: 'Zainspiruj się',
           locale: 'en'
         },
         filter: (page) => page.locale === 'en'
@@ -219,7 +220,8 @@ const config = {
         path: 'pl/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.pl,
-          title: 'Blog',
+          titlePage: 'Blog',
+          subtitlePage: 'Let\'s read!',
           locale: 'pl'
         },
         filter: (page) => page.locale === 'pl'

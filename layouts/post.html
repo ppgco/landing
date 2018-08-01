@@ -12,17 +12,17 @@
 		<div class="blog-single-post">
 			<div class="blog-post-item">
 				<header class="blog-post-item-header">
-					<h1 class="blog-post-item-title">{{title}} </h1>
+					<h1 class="blog-post-item-title">{{title}}</h1>
 					<div>
 						{{#each this.tags}}
-						<a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>&nbsp; {{/each}}
+							<a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>
+						{{/each}}
 					</div>
-
 					<span class="blog-post-item-date"> {{parseDate date}} </span>
 				</header>
 				<div class="blog-post-item-stats">
 					<span class="stat-item">
-          {{readingTime}}
+          {{readingTimeLabel}}: {{readingTime}}
         </span>
 				</div>
 

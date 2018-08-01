@@ -115,6 +115,7 @@ module.exports = (dato, root, i18n) => {
                 collection: mainPage.guides,
                 title: mainPage.value && mainPage.value.title,
                 description: mainPage.value && mainPage.value.description,
+                ...mainPage.json || {}
               }
             }
           );
