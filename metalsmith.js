@@ -164,7 +164,7 @@ const config = {
       reverse: true
     },
     guides: {
-      pattern: '**/{guide,poradnik}/**/*.md',
+      pattern: '**/{user-guide,poradnik}/**/*.md',
       sortBy: 'index',
       reverse: false
     },
