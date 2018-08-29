@@ -111,17 +111,21 @@ $(function() {
   /**
    * @deprecated - remove after few months
    */
-  if ('serviceWorker' in navigator) {
+  if (navigator['serviceWorker']) {
     navigator
       .serviceWorker
       .getRegistrations()
       .then(function(registrations) {
-        for (let registration of registrations) {
+        (registrations || []).forEach(function (registration) {
           if (registration.active && registration.active.scriptURL && registration.active.scriptURL.indexOf('service-worker') !== -1) {
             console.log('Unregister old service-worker...')
-            registration.unregister().then(result => console.log('Unregister status: ', result))
+            registration
+              .unregister()
+              .then(function(result) {
+                console.log('Unregister status: ', result)
+              })
           }
-        }
+        })
       });
   }
 
