@@ -108,6 +108,23 @@ $(function() {
   fbq('init', '1959134684349655');
   fbq('track', 'PageView');
 
+  /**
+   * @deprecated - remove after few months
+   */
+  if ('serviceWorker' in navigator) {
+    navigator
+      .serviceWorker
+      .getRegistrations()
+      .then(function(registrations) {
+        for (let registration of registrations) {
+          if (registration.active && registration.active.scriptURL && registration.active.scriptURL.indexOf('service-worker') !== -1) {
+            console.log('Unregister old service-worker...')
+            registration.unregister().then(result => console.log('Unregister status: ', result))
+          }
+        }
+      });
+  }
+
   /** End Of async */
   var Click2Call, app, c2cconfig, planSliders, pricingHelper, Webinars;
 
