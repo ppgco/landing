@@ -205,11 +205,10 @@ const config = {
         path: 'en/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.en,
-          titlePage: 'Blog',
-          subtitlePage: 'Let\'s read!',
           locale: 'en'
         },
-        filter: (page) => page.locale === 'en'
+        filter: (page) => page.locale === 'en',
+        sortBy: 'index'
       }
     },
     pl: {
@@ -220,11 +219,10 @@ const config = {
         path: 'pl/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.pl,
-          titlePage: 'Blog',
-          subtitlePage: 'Zainspiruj się',
           locale: 'pl'
         },
-        filter: (page) => page.locale === 'pl'
+        filter: (page) => page.locale === 'pl',
+        sortBy: 'index'
       }
     }
   },
