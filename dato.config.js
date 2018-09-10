@@ -5,12 +5,11 @@ module.exports = (dato, root, i18n) => {
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
-      let mainTranslations;
+      let mainTranslations = {};
 
       for (let obj of dato.layouts) {
-        if (obj.name === 'index.html') {
-          mainTranslations = obj.translations;
-          break;
+        if (['index.html', 'blog.html'].indexOf(obj.name) !== -1) {
+          Object.assign(mainTranslations, obj.translations);
         }
       }
 
@@ -125,6 +124,9 @@ module.exports = (dato, root, i18n) => {
             const collectionLayout = mainPage.collectionLayout && mainPage.collectionLayout.name || 'post.html';
             const extendTranslations = mainPage.collectionLayout && mainPage.collectionLayout.translations || {};
             dato[mainPage.collection].forEach((item, index) => {
+              if (!item.slug) {
+                return;
+              }
               rootDirectory.createPost(
                 `${nestedPath}/${item.slug}/index.md`, "yaml", {
                   frontmatter: {
