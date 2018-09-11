@@ -26,11 +26,6 @@ const tag = require('html-tag');
 const urlProd = 'pushpushgo.com';
 const urlStag = 'stppg.co';
 
-// TODO: REMOVE
-Handlebars.registerHelper("__", function(key) {
-  return key;
-});
-
 Handlebars.registerHelper("link", function(value, locale, opts) {
   if (!value)
     return;
@@ -43,7 +38,6 @@ Handlebars.registerHelper("link", function(value, locale, opts) {
 
   return (value || '').replace('index.md', '').replace('index.html', '');
 });
-
 
 Handlebars.registerHelper("envlink", function(value, env) {
   return (value || '').replace('HOST_DOMAIN', (env === 'production') ? urlProd : urlStag);
@@ -163,7 +157,7 @@ const config = {
     posts: {
       pattern: '**/blog/**/*.md',
       sortBy: 'index',
-      reverse: true
+      reverse: false
     },
     guides: {
       pattern: '**/{user-guide,poradnik}/**/*.md',
@@ -183,7 +177,7 @@ const config = {
     jobs: {
       pattern: '**/{jobs,praca}/**/*.md',
       sortBy: 'index',
-      reverse: true
+      reverse: false
     },
     faq: {
       pattern: '**/faq/**/*.md',
