@@ -205,11 +205,10 @@ const config = {
         path: 'en/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.en,
-          titlePage: 'Blog',
-          subtitlePage: 'Zainspiruj się',
           locale: 'en'
         },
-        filter: (page) => page.locale === 'en'
+        filter: (page) => page.locale === 'en',
+        sortBy: 'index'
       }
     },
     pl: {
@@ -220,11 +219,10 @@ const config = {
         path: 'pl/blog/page/:num/index.html',
         pageMetadata: {
           ...mainLangs.pl,
-          titlePage: 'Blog',
-          subtitlePage: 'Let\'s read!',
           locale: 'pl'
         },
-        filter: (page) => page.locale === 'pl'
+        filter: (page) => page.locale === 'pl',
+        sortBy: 'index'
       }
     }
   },
@@ -287,13 +285,13 @@ const app = Metalsmith(__dirname)
   .use(defaultVariables)
   .use(layouts(config.layouts))
   .use(cleanCSS(config.cssmin))
-  .use(htmlMinifier())
 
 if (module.parent) {
   module.exports = app
 } else {
   app
     .use(sitemap(config.sitemap))
+    .use(htmlMinifier())
     .use(ignore(config.ignore))
     .build(function(err) {
       if (err) console.log(err.stack)
