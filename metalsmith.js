@@ -155,7 +155,11 @@ const config = {
   ],
   collections: {
     posts: {
-      pattern: '**/blog/**/*.md',
+      pattern: [
+        '**/blog/**/*.md',
+        '!**/pages/blog/index.md',
+        '!**/blog/index.md',
+      ],
       sortBy: 'index',
       reverse: false
     },
