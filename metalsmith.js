@@ -162,7 +162,7 @@ const config = {
   collections: {
     posts: {
       pattern: '**/blog/**/*.md',
-      sortBy: 'date',
+      sortBy: 'index',
       reverse: true
     },
     guides: {
@@ -192,7 +192,7 @@ const config = {
     },
     pages: {
       pattern: '**/pages/**/*.md',
-      sortBy: 'date',
+      sortBy: 'index',
       reverse: true
     }
   },
@@ -207,7 +207,7 @@ const config = {
           ...mainLangs.en,
           locale: 'en'
         },
-        filter: (page) => page.locale === 'en',
+        filter: (page) => page.locale === 'en' && ['en/pages/blog/index.md', 'en/blog/index.md'].indexOf(page.path) === -1,
         sortBy: 'index'
       }
     },
@@ -221,7 +221,7 @@ const config = {
           ...mainLangs.pl,
           locale: 'pl'
         },
-        filter: (page) => page.locale === 'pl',
+        filter: (page) => page.locale === 'pl' && ['pl/pages/blog/index.md', 'pl/blog/index.md'].indexOf(page.path) === -1,
         sortBy: 'index'
       }
     }

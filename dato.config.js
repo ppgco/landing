@@ -124,9 +124,11 @@ module.exports = (dato, root, i18n) => {
             const collectionLayout = mainPage.collectionLayout && mainPage.collectionLayout.name || 'post.html';
             const extendTranslations = mainPage.collectionLayout && mainPage.collectionLayout.translations || {};
             dato[mainPage.collection].forEach((item, index) => {
+
               if (!item.slug) {
                 return;
               }
+
               rootDirectory.createPost(
                 `${nestedPath}/${item.slug}/index.md`, "yaml", {
                   frontmatter: {
