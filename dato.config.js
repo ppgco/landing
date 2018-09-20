@@ -89,7 +89,6 @@ module.exports = (dato, root, i18n) => {
                 icon: page.icon,
                 description: page.value && page.value.description,
                 ...page.json || {}
-
               },
               content: page.content || ''
             }

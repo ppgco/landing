@@ -14,10 +14,10 @@
      {{{tagGenerator this}}}
     {{/each}}
 
-    <meta property="og:title" content="{{#if title}}{{ title }}{{else}}PushPushGo - platforma to wysyłki web push{{/if}}" />
+    <meta property="og:title" content="{{#if title}}{{ title }} - PushPushGo{{else}}PushPushGo - platforma to wysyłki web push{{/if}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url }}{{link path }}" />
-    <meta property="og:image" content="{{#if ogImage}}/{{stripPath path}}/{{ ogImage }}{{/if}}" />
+    <meta property="og:image" content="{{#if image}}{{ image }}{{/if}}" />
     <meta property="og:description" content="{{#if sneakPeak}}{{ sneakPeak }}{{else}}Web push dla Twojego ecommerce, sprawdź - 14 dni bezpłatnego okresu testowego{{/if}}" />
 
     <link rel="icon" type="image/png" href="/images/favicon.png">
