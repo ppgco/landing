@@ -13,45 +13,45 @@
 <div class="content-limiter text-center">
   <!--if offer exist-->
 
-  <!--<table class="career-table">-->
-    <!--<tr>-->
-      <!--<th>-->
-        <!--{{ role }}-->
-      <!--</th>-->
-      <!--<th>-->
-        <!--{{ location }}-->
-      <!--</th>-->
-      <!--<th>-->
-        <!--{{ workTime }}-->
-      <!--</th>-->
-      <!--<th>-->
-        <!--{{ endDate }}-->
-      <!--</th>-->
-    <!--</tr>-->
+  <table class="career-table">
+    <tr>
+      <th>
+        {{ role }}
+      </th>
+      <th>
+        {{ location }}
+      </th>
+      <th>
+        {{ workTime }}
+      </th>
+      <th>
+        {{ endDate }}
+      </th>
+    </tr>
 
-    <!--{{#each collections.jobs locale}}-->
-      <!--{{#if category}}-->
-        <!--<tr>-->
-          <!--<td>-->
-            <!--<a href="/{{link path}}">-->
-              <!--{{ title }}-->
-            <!--</a>-->
-          <!--</td>-->
-          <!--<td>-->
-            <!--<span class="icon-location"></span>-->
-             <!--{{ location }}-->
-          <!--</td>-->
-          <!--<td>-->
-            <!--{{ category }}-->
-          <!--</td>-->
-          <!--<td>-->
-            <!--{{ date }}-->
-          <!--</td>-->
-        <!--</tr>-->
-      <!--{{/if}}-->
-    <!--{{/each}}-->
+    {{#each collections.jobs locale}}
+      {{#if category}}
+        <tr>
+          <td>
+            <a href="/{{link path}}">
+              {{ title }}
+            </a>
+          </td>
+          <td>
+            <span class="icon-location"></span>
+             {{ location }}
+          </td>
+          <td>
+            {{ category }}
+          </td>
+          <td>
+            {{ date }}
+          </td>
+        </tr>
+      {{/if}}
+    {{/each}}
 
-  <!--</table>-->
+  </table>
 
   <!--if offer does not exist-->
 </div>
@@ -60,9 +60,9 @@
 <!--<br>-->
 <!--<br>-->
 
-<div class="text-center">
-  {{{action}}}
-</div>
+<!--<div class="text-center">-->
+  <!--{{{action}}}-->
+<!--</div>-->
 
 <br>
 <br>
