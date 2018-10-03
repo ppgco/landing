@@ -10,8 +10,19 @@
   margin: 0 -10px;
 
   .blog-post-item {
-    width: calc(~'33% - 20px');
     margin: 10px;
+
+    @media (min-width: 1024px) {
+      width: calc(~'33% - 20px');
+    }
+
+    @media (min-width: 768px) {
+      width: calc(~'50% - 20px');
+    }
+
+    @media (min-width: 320px) {
+      width: calc(~'100% - 20px');
+    }
   }
 }
 
