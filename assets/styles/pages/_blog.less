@@ -231,10 +231,23 @@
 ul.share-buttons{
   list-style: none;
   padding: 0;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    position: fixed;
+    top: 150px;
+    left: 40px;
+  }
 }
 
 ul.share-buttons li{
-  display: block;
+  display: inline;
+  padding: 15px;
+
+  @media (min-width: 1024px) {
+    display: block;
+    padding: 0;
+  }
 }
 
 ul.share-buttons .sr-only{
