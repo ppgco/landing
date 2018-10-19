@@ -8,8 +8,14 @@
 			<a href="{{link 'blog/page/1' locale}}">{{breadcrumbsBlog}}</a> <span class="divider">/</span>
 			<span>{{title}}</span>
 		</div>
-		<b>{{author}}</b>
-		<img src="{{authorAvatar}}"/>
+		<div class="author-information">
+			<img src="{{authorAvatar}}"/>
+			<div class="author-information__description">
+				<b>{{author}}</b>
+				<p>{{authorRole}}</p>
+				{{authorBio}}
+			</div>
+		</div>
 		<div class="blog-single-post">
 			<div class="blog-post-item">
 				<header class="blog-post-item-header">
