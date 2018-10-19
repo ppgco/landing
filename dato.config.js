@@ -85,6 +85,11 @@ module.exports = (dato, root, i18n) => {
           }
 
           const slugTagName = slug(tag.name, {mode: 'rfc3986'});
+          const collectionTagName = slug(tag.name, {
+            lower: true,
+            replacement: ''
+          });
+
           const collectionItem = {
             layout: 'default.html',
             locale: lang,
@@ -92,10 +97,11 @@ module.exports = (dato, root, i18n) => {
             color: tag.color && `#${rgbHex(tag.color.value.red, tag.color.value.green, tag.color.value.blue)}` || '#16a082',
             isCategory: tag.isBlogCategory,
             name: tag.name,
+            collectionName: `${lang}${collectionTagName}`,
             slug: slugTagName
           }
 
-          collections[`${lang}${slugTagName}`] = collectionItem;
+          collections[`${lang}${collectionTagName}`] = collectionItem;
 
           rootDirectory.createPost(
             `tags/${lang}/${index}.md`, "yaml", {

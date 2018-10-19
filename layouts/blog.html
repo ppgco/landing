@@ -23,9 +23,11 @@
       </a> -->
     {{#each collections.tags locale}}
       {{#if isCategory}}
-        <a class="category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{color}};" href="/{{locale}}/blog/category/{{slug}}/1">
-          {{name}}
+        {{#hasElements ../collections collectionName}}
+        <a class="category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
+          {{../name}}
         </a>
+       {{/hasElements}}
       {{/if}}
     {{/each}}
   </div>

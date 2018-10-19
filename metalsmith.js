@@ -95,6 +95,10 @@ Handlebars.registerHelper('parseDate', function(date) {
   return moment(date).format('L');
 });
 
+Handlebars.registerHelper('hasElements', function(collections, collectionName, options) {
+  return collections[collectionName].pages.length ? options.fn() : options.inverse()
+});
+
 Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content}) {
   return tag(tagName, attributes, content);
 });
@@ -243,6 +247,8 @@ function createPagination(tags) {
   const result = {};
 
   for (let key in tags) {
+    console.log(key);
+
     if (tags[key]) {
       const tag = tags[key];
       result[key] = {
@@ -268,6 +274,7 @@ function createCollection(tags) {
   tags = {...tags};
 
   for (let key in tags) {
+    console.log(key);
     if (tags[key]) {
       tags[key] = {
         pattern: [
