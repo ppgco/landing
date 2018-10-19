@@ -245,7 +245,7 @@ function createPagination(tags) {
   for (let key in tags) {
     if (tags[key]) {
       const tag = tags[key];
-      result[tag.slug] = {
+      result[key] = {
         [key]: {
           perPage: 6,
           layout: '../layouts/blog.html',
@@ -255,7 +255,7 @@ function createPagination(tags) {
             ...mainLangs[tag.locale],
             locale: tag.locale
           },
-          // filter: (page) => page.tags.indexOf(tag.name) !== -1,
+          filter: (page) => page.tags.indexOf(tag.name) !== -1,
           sortBy: 'index'
         }
       }
@@ -271,7 +271,7 @@ function createCollection(tags) {
     if (tags[key]) {
       tags[key] = {
         pattern: [
-          `${tag.locale}/blog/**/*.md`,
+          `**/blog/**/*.md`,
           '!**/pages/blog/index.md',
           '!**/blog/index.md',
         ],
@@ -314,14 +314,11 @@ const app = Metalsmith(__dirname)
   .use(less(config.less))
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null
-    metalsmith._metadata.posts = null
-    metalsmith._metadata.guides = null
-    metalsmith._metadata.employees = null
-    metalsmith._metadata.webinars = null
-    metalsmith._metadata.faq = null
-    metalsmith._metadata.pages = null
-    metalsmith._metadata.jobs = null
-    metalsmith._metadata.tags = null
+
+    for (let key in config.collections) {
+      metalsmith._metadata[key] = null;
+    }
+
     done();
   })
   .use(collections(config.collections));
