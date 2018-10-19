@@ -147,6 +147,8 @@ module.exports = (dato, root, i18n) => {
                     location: item.location,
                     author: item.author && item.author.fullName,
                     authorAvatar: item.author && getImagePath(item.author.avatar),
+                    authorBio: item.author && item.author.bio,
+                    authorRole: item.author && item.author.role,
                     image: getImagePath(item.backgroundImage),
                     description: item.sneakPeak,
                     tags: item.tags && item.tags.map(tag => tag.name).join(', ')

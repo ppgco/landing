@@ -57,10 +57,10 @@
 
 		<div class="post-share">
 			<ul class="share-buttons">
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/images/fb-post.png" /></a></li>
-				<li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img alt="Tweet" src="/images/twitter-post.png" /></a></li>
-				<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/images/lin-post.png" /></a></li>
-				<li><a href="https://getpocket.com/save?url=&title=" target="_blank" title="Add to Pocket"><img alt="Add to Pocket" src="/images/pocket-post.png" /></a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}{{link path }}&quote={{title}}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/images/fb-post.png" /></a></li>
+				<li><a href="https://twitter.com/intent/tweet?source={{ url }}{{link path }}&text={{title}} - {{ url }}{{link path }}" target="_blank" title="Tweet"><img alt="Tweet" src="/images/twitter-post.png" /></a></li>
+				<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ url }}{{link path }}&title={{title}}&summary=&source={{ url }}{{link path }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/images/lin-post.png" /></a></li>
+				<li><a href="https://getpocket.com/save?url={{ url }}{{link path }}&title={{title}}" target="_blank" title="Add to Pocket"><img alt="Add to Pocket" src="/images/pocket-post.png" /></a></li>
 			</ul>
 		</div>
 
