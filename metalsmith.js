@@ -247,8 +247,6 @@ function createPagination(tags) {
   const result = {};
 
   for (let key in tags) {
-    console.log(key);
-
     if (tags[key]) {
       const tag = tags[key];
       result[key] = {
@@ -274,7 +272,6 @@ function createCollection(tags) {
   tags = {...tags};
 
   for (let key in tags) {
-    console.log(key);
     if (tags[key]) {
       tags[key] = {
         pattern: [
