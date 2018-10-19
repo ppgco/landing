@@ -1,5 +1,4 @@
-'use strict';
-
+const slug = require('slug');
 const Metalsmith = require("metalsmith");
 const wordcount = require("metalsmith-word-count");
 const uglify = require('metalsmith-uglify');
@@ -13,7 +12,6 @@ const collections = require('metalsmith-collections');
 const paginate = require('metalsmith-pagination');
 const assets = require('metalsmith-assets');
 const env = require('metalsmith-env');
-const tags = require('metalsmith-tags');
 const cleanCSS = require('metalsmith-clean-css');
 const moment = require('moment');
 const lodash = require('lodash');
@@ -82,6 +80,10 @@ Handlebars.registerHelper('each', function(list, locale, limit, opts) {
     list = list.slice(0, limit);
   }
 
+  if (!Array.isArray(list)) {
+    list = list.split(',').map(s => ({name: s.trim(), slug: slug(s, {mode: 'rfc3986'}), link: 'blablabla'}));
+  }
+
   return list.reduce((concated, item) => {
     concated += opts.fn(item);
     return concated;
@@ -98,6 +100,7 @@ Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content
 });
 
 const {mainLangs} = require('./src/settings.json');
+const collectionsByTags = require('./src/collections.json');
 
 const config = {
   clean: false,
@@ -154,6 +157,7 @@ const config = {
     '**/*.less'
   ],
   collections: {
+    ...createCollection(collectionsByTags),
     posts: {
       pattern: [
         '**/blog/**/*.md',
@@ -192,9 +196,15 @@ const config = {
       pattern: '**/pages/**/*.md',
       sortBy: 'index',
       reverse: true
+    },
+    tags: {
+      pattern: '**/tags/**/*.md',
+      sortBy: 'index',
+      reverse: true
     }
   },
   paginate: {
+    ...createPagination(collectionsByTags),
     en: {
       'collections.posts': {
         perPage: 6,
@@ -222,16 +232,56 @@ const config = {
         filter: (page) => page.locale === 'pl' && ['pl/pages/blog/index.md', 'pl/blog/index.md'].indexOf(page.path) === -1,
         sortBy: 'index'
       }
-    }
+    },
   },
   wordcount: {
     speed: 200
-  },
-  tags: {
-    handle: "tags",
-    path: "tag/:tag/index.html",
-    layout: "tag.html"
   }
+}
+
+function createPagination(tags) {
+  const result = {};
+
+  for (let key in tags) {
+    if (tags[key]) {
+      const tag = tags[key];
+      result[tag.slug] = {
+        [key]: {
+          perPage: 6,
+          layout: '../layouts/blog.html',
+          first: false,
+          path: `${tag.locale}/blog/category/${tag.slug}/:num/index.html`,
+          pageMetadata: {
+            ...mainLangs[tag.locale],
+            locale: tag.locale
+          },
+          // filter: (page) => page.tags.indexOf(tag.name) !== -1,
+          sortBy: 'index'
+        }
+      }
+    }
+  }
+  return result;
+}
+
+function createCollection(tags) {
+  tags = {...tags};
+
+  for (let key in tags) {
+    if (tags[key]) {
+      tags[key] = {
+        pattern: [
+          `${tag.locale}/blog/**/*.md`,
+          '!**/pages/blog/index.md',
+          '!**/blog/index.md',
+        ],
+        sortBy: 'index',
+        reverse: true
+      }
+    }
+  }
+
+  return tags;
 }
 
 const defaultVariables = function(files, metalsmith, done) {
@@ -262,7 +312,6 @@ const app = Metalsmith(__dirname)
   .use(uglify(config.uglify))
   .use(concat(config.concat))
   .use(less(config.less))
-  .use(tags(config.tags))
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null
     metalsmith._metadata.posts = null
@@ -272,11 +321,16 @@ const app = Metalsmith(__dirname)
     metalsmith._metadata.faq = null
     metalsmith._metadata.pages = null
     metalsmith._metadata.jobs = null
+    metalsmith._metadata.tags = null
     done();
   })
-  .use(collections(config.collections))
-  .use(paginate(config.paginate.pl))
-  .use(paginate(config.paginate.en))
+  .use(collections(config.collections));
+
+  for (let key in config.paginate) {
+    app.use(paginate(config.paginate[key]));
+  }
+
+  app
   .use(markdown())
   .use(filepaths)
   .use(wordcount(config.wordcount))

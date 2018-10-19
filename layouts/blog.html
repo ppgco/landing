@@ -17,33 +17,18 @@
     <span>{{ breadcrumbsBlog }}</span>
   </div>
 
-    <div class="category-tabs">
-        <a class="category-tabs__tab category-tabs__tab--white" href="#">
-          All blog posts
+  <div class="category-tabs">
+      <!-- <a class="category-tabs__tab category-tabs__tab--white" href="#">
+        All blog posts
+      </a> -->
+    {{#each collections.tags locale}}
+      {{#if isCategory}}
+        <a class="category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{color}};" href="/{{locale}}/blog/category/{{slug}}/1">
+          {{name}}
         </a>
-
-        <a class="category-tabs__tab category-tabs__tab--violet" href="#">
-          Online Marketing Insights
-        </a>
-
-        <a class="category-tabs__tab category-tabs__tab--yellow" href="#">
-          Experts Advice
-        </a>
-
-        <a class="category-tabs__tab category-tabs__tab--blue" href="#">
-          PushPushGo. Behind the Scenes
-        </a>
-
-        <a class="category-tabs__tab category-tabs__tab--red" href="#">
-          Web Push - from A to Z
-        </a>
-
-        <a class="category-tabs__tab category-tabs__tab--black" href="#">
-          Personal And Professional Development
-        </a>
-
-    </div>
-
+      {{/if}}
+    {{/each}}
+  </div>
   <div class="blog-grid">
     {{#each pagination.files locale}}
       <div class="blog-post-item">
@@ -55,7 +40,7 @@
         <div class="blog-post-item-text">
           <div>
             {{#each this.tags}}
-              <a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>&nbsp;
+              <a href="{{link 'blog' locale}}/category/{{slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
             {{/each}}
           </div>
           <a class="blog-post-item-title"  href="/{{link this.path}}">{{this.title}} </a>

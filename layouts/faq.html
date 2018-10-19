@@ -17,9 +17,9 @@
       <section class="user-guide">
         <div class="menu-wrapper">
           {{#each collections.faq locale}}
-          {{#if index}}
-          <a href="/{{link path}}" class="{{#ifCond title category}}category{{else}}sub{{/ifCond}} {{#ifCond  ../slug slug}}active{{/ifCond}}">{{title}}</a>
-          {{/if}}
+            {{#if index}}
+              <a href="/{{link path}}" class="{{#ifCond title category}}category{{else}}sub{{/ifCond}} {{#ifCond  ../slug slug}}active{{/ifCond}}">{{title}}</a>
+            {{/if}}
           {{/each}}
         </div>
       </section>
