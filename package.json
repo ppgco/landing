@@ -36,5 +36,9 @@
     "metalsmith-word-count": "0.0.4",
     "moment": "^2.22.2",
     "zepto": "^1.2.0"
+  },
+  "dependencies": {
+    "rgb-hex": "^2.1.0",
+    "slug": "^0.9.1"
   }
 }

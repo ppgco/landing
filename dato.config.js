@@ -1,7 +1,11 @@
+const slug = require('slug');
+const rgbHex = require('rgb-hex');
+
 module.exports = (dato, root, i18n) => {
   let menuItems = [];
   let popup = {};
   let mainLangs = {};
+  let collections = {};
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -23,6 +27,7 @@ module.exports = (dato, root, i18n) => {
 
       for (let id in dato.itemsById) {
         const item = dato.itemsById[id];
+
         if (item.menuId)
           menuItems.push({
             slug: item.slug,
@@ -32,6 +37,7 @@ module.exports = (dato, root, i18n) => {
             menuId: item.menuId,
             locale: lang
           });
+
         if (item.footerMenuId)
           menuItems.push({
             slug: item.slug,
@@ -41,6 +47,7 @@ module.exports = (dato, root, i18n) => {
             menuId: item.footerMenuId,
             locale: lang
           });
+
       }
 
       const path = `src/${lang}`;
@@ -69,6 +76,40 @@ module.exports = (dato, root, i18n) => {
           );
         });
 
+        /**
+         * Create tags
+         */
+        dato.tags.forEach((tag, index) => {
+          if (!tag.name || !tag.isBlogCategory) {
+            return;
+          }
+
+          const slugTagName = slug(tag.name, {mode: 'rfc3986'});
+          const collectionTagName = slug(tag.name, {
+            lower: true,
+            replacement: ''
+          });
+
+          const collectionItem = {
+            layout: 'default.html',
+            locale: lang,
+            index: index,
+            color: tag.color && `#${rgbHex(tag.color.value.red, tag.color.value.green, tag.color.value.blue)}` || '#16a082',
+            isCategory: tag.isBlogCategory,
+            name: tag.name,
+            collectionName: `${lang}${collectionTagName}`,
+            slug: slugTagName
+          }
+
+          collections[`${lang}${collectionTagName}`] = collectionItem;
+
+          rootDirectory.createPost(
+            `tags/${lang}/${index}.md`, "yaml", {
+              frontmatter: collectionItem,
+              content: tag.content || '&nbsp;'
+            }
+          );
+        });
 
         /**
          * Create pages
@@ -140,7 +181,7 @@ module.exports = (dato, root, i18n) => {
                     title: item.title || item.title,
                     subtitle: item.subtitle,
                     sneakPeak: item.sneakPeak,
-                    category: item.category && item.category.name,
+                    category: item.category && item.category.name, // Kategorie w poradniku i faq
                     video: item.video,
                     date: item.endDate || item.createdAt,
                     index: index + 1,
@@ -163,7 +204,6 @@ module.exports = (dato, root, i18n) => {
     });
   });
 
-
   menuItems = menuItems.reduce((menu, item) => {
     if (!menu[item.menuId]) {
       menu[item.menuId] = [];
@@ -184,6 +224,11 @@ module.exports = (dato, root, i18n) => {
       mainLangs: mainLangs,
       menu: menuItems
     }
+  );
+
+  root.createDataFile(
+    `src/collections.json`, 'json',
+    collections
   );
 };
 
