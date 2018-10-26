@@ -18,15 +18,17 @@
   </div>
 
   <div class="category-tabs">
-      <!-- <a class="category-tabs__tab category-tabs__tab--white" href="#">
-        All blog posts
-      </a> -->
     {{#each collections.tags locale}}
       {{#if isCategory}}
         {{#hasElements ../collections collectionName}}
-        <a class="category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
-          {{../name}}
-        </a>
+          <div class="hover">
+            <a class="on-hover-show category-tabs__tab category-tabs__tab" style="color: white; background-color: {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
+              {{../name}}
+            </a>
+            <a class="on-hover-hide category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
+              {{../name}}
+            </a>
+          </div>
        {{/hasElements}}
       {{/if}}
     {{/each}}

@@ -261,7 +261,22 @@ ul.share-buttons .sr-only{
   width: 1px;
   overflow: hidden;
 }
+.hover {
 
+  .on-hover-show {
+    display: none;
+  }
+
+
+  &:hover {
+    .on-hover-hide {
+      display: none;
+    }
+    .on-hover-show {
+      display: inline;
+    }
+  }
+}
 .category-tabs {
   display: flex;
   flex-direction: row;
@@ -272,9 +287,6 @@ ul.share-buttons .sr-only{
     flex-direction: column;
   }
 
-
-
-
   &__tab {
     margin: 0 15px;
     padding: 10px 15px;
@@ -283,30 +295,6 @@ ul.share-buttons .sr-only{
     &:hover, &:active {
       border-bottom: 2px solid white;
       color: #3a3a3a;
-    }
-    &:first-child:hover {
-      background-color: #16A085;
-      color: white;
-    }
-    &:nth-child(2):hover {
-      background-color: #EEB671;
-      color: white;
-    }
-    &:nth-child(3):hover {
-      background-color: #58B0E3;
-      color: white;
-    }
-    &:nth-child(4):hover {
-      background-color: #EA6A59;
-      color: white;
-    }
-    &:nth-child(5):hover {
-      backgournd-color: #3D405A;
-      color: white;
-    }
-    &:nth-child(6):hover {
-      backgournd-color: #B26DD8;
-      color: white;
     }
   }
 }
