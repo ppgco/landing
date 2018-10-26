@@ -280,7 +280,7 @@ function createCollection(tags) {
           '!**/blog/index.md',
         ],
         sortBy: 'index',
-        reverse: true
+        reverse: false
       }
     }
   }
