@@ -333,6 +333,7 @@ $(function() {
     },
     inVieportElems: ['.features-list', '.click-animation', '.browser', '.integration-animation', '.section-test-push', '.app-screen'],
     run: function() {
+      this.initializeSliderTestimonials();
       this.showFaqCategoryOnStart();
       this.showPopup();
       this.showCookiesBar();
@@ -387,6 +388,23 @@ $(function() {
           return _this.showFaqCategory(event)
         };
       })(this));
+    },
+    initializeSliderTestimonials: function() {
+      var self = this;
+      new Siema({
+        selector: '.testimonials-container',
+        duration: 200,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: true,
+        threshold: 20,
+        loop: false,
+        rtl: false,
+        onInit: function() {},
+        onChange: function() {},
+      });
     },
     showClick2CallOnPricing: function() {
       if (location.href.indexOf('pricing') > -1 || location.href.indexOf('cennik') > -1) {
@@ -497,7 +515,9 @@ $(function() {
       return null;
     }
   };
+
   app.run();
+
   pricingHelper = {
     nbpApiUrl: 'https://api.nbp.pl/api/exchangerates/rates/A/USD?format=json',
     getLang: function() {
