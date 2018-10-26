@@ -17,6 +17,22 @@
     <span>{{ breadcrumbsBlog }}</span>
   </div>
 
+  <div class="category-tabs">
+    {{#each collections.tags locale}}
+      {{#if isCategory}}
+        {{#hasElements ../collections collectionName}}
+          <div class="hover">
+            <a class="on-hover-show category-tabs__tab category-tabs__tab" style="color: white; background-color: {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
+              {{../name}}
+            </a>
+            <a class="on-hover-hide category-tabs__tab category-tabs__tab" style="border-bottom: 2px solid {{../color}};" href="/{{../locale}}/blog/category/{{../slug}}/1">
+              {{../name}}
+            </a>
+          </div>
+       {{/hasElements}}
+      {{/if}}
+    {{/each}}
+  </div>
   <div class="blog-grid">
     {{#each pagination.files locale}}
       <div class="blog-post-item">
@@ -28,7 +44,7 @@
         <div class="blog-post-item-text">
           <div>
             {{#each this.tags}}
-              <a href="/tag/{{this.slug}}/" class="post-tag">{{this.name}}</a>&nbsp;
+              <a href="{{link 'blog' locale}}/category/{{slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
             {{/each}}
           </div>
           <a class="blog-post-item-title"  href="/{{link this.path}}">{{this.title}} </a>
