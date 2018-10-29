@@ -130,6 +130,19 @@ $(function() {
       });
   }
 
+  document.querySelectorAll('.blog-post-item-text a').forEach(function(node) {
+    if (!node) {
+      return;
+    }
+
+    node.addEventListener('click', function(event) {
+      var title = node.innerHTML;
+      ga('send', 'event', 'outbound', 'click', title, {
+        'transport': 'beacon'
+      });
+    });
+  });
+
   /** End Of async */
   var Click2Call, app, c2cconfig, planSliders, pricingHelper, Webinars;
 
