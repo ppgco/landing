@@ -183,7 +183,7 @@ module.exports = (dato, root, i18n) => {
                     sneakPeak: item.sneakPeak,
                     category: item.category && item.category.name, // Kategorie w poradniku i faq
                     video: item.video,
-                    date: item.endDate || item.createdAt,
+                    date: item.endDate || item.publishDate || item.createdAt,
                     index: index + 1,
                     location: item.location,
                     author: item.author && item.author.fullName,
