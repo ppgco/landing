@@ -11,6 +11,7 @@
 
   .blog-post-item {
     margin: 10px;
+    background: white;
 
     @media (min-width: 320px) {
       width: calc(~'100% - 20px');
@@ -53,6 +54,7 @@
   img {
     border-radius: 3px;
     margin: 20px 0;
+    min-height: 280px;
   }
 
   h2 {
@@ -262,13 +264,16 @@ ul.share-buttons .sr-only{
   overflow: hidden;
 }
 .hover {
-
+  
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
   .on-hover-show {
     display: none;
   }
 
 
-  &:hover {
+  &:hover, &:visited {
     .on-hover-hide {
       display: none;
     }
