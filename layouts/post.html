@@ -21,8 +21,8 @@
 				</header>
 				<div class="blog-post-item-stats">
 					<span class="stat-item">
-          {{readingTimeLabel}}: {{readingTime}}
-        </span>
+					  {{readingTimeLabel}}: {{readingTime}}
+					</span>
 				</div>
 
 				{{#if image}}
@@ -37,12 +37,11 @@
 
 					<div class="blog-post-navigation">
 						{{#if this.previous}}
-						<a class="post-prev" href="/{{link this.previous.path}}">
-							<div class="link-description">{{nextPage}}:</div>
-							{{this.previous.title}}
-						</a>
+							<a class="post-prev" href="/{{link this.previous.path}}">
+								<div class="link-description">{{nextPage}}:</div>
+								{{this.previous.title}}
+							</a>
 						{{/if}}
-
 						<a class="post-next" href="/{{link this.next.path}}">
 							<div class="link-description">{{prevPage}}:</div>
 							{{this.next.title}}

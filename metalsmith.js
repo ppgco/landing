@@ -216,8 +216,7 @@ const config = {
         first: false,
         path: 'en/blog/page/:num/index.html',
         pageMetadata: {
-          ...mainLangs.en,
-          locale: 'en'
+          ...mainLangs.en
         },
         filter: (page) => page.locale === 'en' && ['en/pages/blog/index.md', 'en/blog/index.md'].indexOf(page.path) === -1,
         sortBy: 'index'
@@ -230,8 +229,7 @@ const config = {
         first: false,
         path: 'pl/blog/page/:num/index.html',
         pageMetadata: {
-          ...mainLangs.pl,
-          locale: 'pl'
+          ...mainLangs.pl
         },
         filter: (page) => page.locale === 'pl' && ['pl/pages/blog/index.md', 'pl/blog/index.md'].indexOf(page.path) === -1,
         sortBy: 'index'
