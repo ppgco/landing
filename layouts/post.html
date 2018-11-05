@@ -32,7 +32,14 @@
 				{{/if}}
 
 				<div class="blog-post-item-text">
-
+					<div class="author-information">
+						<img src="{{authorAvatar}}"/>
+						<div class="author-information__description">
+							<b>{{author}}</b>
+							<p>{{authorRole}}</p>
+							<p>{{{authorBio}}}</p>
+						</div>
+					</div>
 					{{{contents}}}
 
 					<div class="blog-post-navigation">
@@ -51,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="content-limiter">
+		<!-- <div class="content-limiter">
 			<div class="blog-single-post">
 				<div class="author-information">
 					<img src="{{authorAvatar}}"/>
@@ -62,7 +69,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="post-share">
 			<ul class="share-buttons">
