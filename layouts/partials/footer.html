@@ -68,6 +68,22 @@
 	{{cookiesDescription}} <span class="link ppg-cookies__close">{{cookiesDescriptionClose}}</span> <a href="{{link cookiesDescriptionPath locale}}">{{cookiesDescriptionMore}}</a>
 </div>
 
-<div class="funding-banner">
+<!-- <div class="funding-banner">
 	<img src="/images/funding-banner.png" alt="funding banner">
-</div>
+
+
+
+</div> -->
+
+
+{{#ifCond locale 'pl'}}
+	<div class="funding-banner">
+		<img src="https://www.datocms-assets.com/6307/1541781099-funding-banner-pl.png" alt="found banner">
+	</div>
+{{/ifCond}}
+
+{{#ifCond locale 'en'}}
+	<div class="funding-banner">
+		<img src="https://www.datocms-assets.com/6307/1541781460-found-banner-en.png" alt="found banner">
+	</div>
+{{/ifCond}}
