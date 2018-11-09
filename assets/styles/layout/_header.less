@@ -93,6 +93,7 @@ body.scrolled {
 		height: @header-height - 10px;
 		box-shadow: @header-shadow;
 		.logo {
+			display: flex;
 			width: 240px;
 		}
 	}
@@ -103,9 +104,18 @@ body.scrolled {
 }
 
 .logo {
+	display: flex;
 	width: 280px;
 	margin-right: 25px;
 	transition: width @base-transition;
+
+	.ppg-logo {
+		margin-right: 22px;
+
+		img { 
+			vertical-align: text-top;
+		}
+	}
 
 	img {
 		max-width: 100%;

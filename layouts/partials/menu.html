@@ -1,11 +1,34 @@
 <header class="main">
   <div class="content-limiter flex space-between">
 
-    <div class="logo">
+    <!-- <div class="logo">
       <a href="/" class="white">
         <img src="https://www.datocms-assets.com/6307/1540995921-logogdpr-ready.png" alt="PushPushGo">
       </a>
+    </div> -->
+
+    {{#ifCond locale 'pl'}}
+    <div class="logo">
+      <a href="/" class="white ppg-logo">
+        <img src="https://www.datocms-assets.com/6307/1541781946-ppg-logo.png" alt="logo PushPushGo">
+      </a>
+      <a href="https://pushpushgo.com/pl/pages/rodo/" class="white">
+        <img src="https://www.datocms-assets.com/6307/1541781960-rodoready.png" alt="RODO ready">
+      </a>
     </div>
+    {{/ifCond}}
+    
+    {{#ifCond locale 'en'}}
+    <div class="logo">
+        <a href="/" class="white ppg-logo">
+          <img src="https://www.datocms-assets.com/6307/1541781946-ppg-logo.png" alt="logo PushPushGo">
+        </a>
+        <a href="https://pushpushgo.com/en/pages/gdpr/" class="white">
+          <img src="https://www.datocms-assets.com/6307/1541781962-gdprready-logo.png" alt="GDPR ready">
+        </a>
+      </div>
+    {{/ifCond}}
+
 
     <span class="icon-menu main-menu-toggle"></span>
 
