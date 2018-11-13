@@ -103,6 +103,17 @@
 	</div>
 </section>
 
-{{>newsletter}}
+{{#ifCond locale 'pl'}}
+	<div class="newsletter-post">
+		<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2I"></script>
+	</div>
+{{/ifCond}}
+
+{{#ifCond locale 'en'}}
+	<div class="newsletter-post">
+		<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2Q"></script>
+	</div>
+{{/ifCond}}
+
 
 {{>footer}}
