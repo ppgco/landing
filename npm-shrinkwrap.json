@@ -6731,7 +6731,7 @@
           "integrity": "sha1-LSFgx3iAMuTdbL4lAvH5osj2zeQ=",
           "dev": true,
           "requires": {
-            "lodash": "4.17.4"
+            "lodash": "^4.14.0"
           }
         },
         "balanced-match": {
@@ -6746,7 +6746,7 @@
           "integrity": "sha1-cZfX6qm4fmSDkOph/GbIRCdCDfk=",
           "dev": true,
           "requires": {
-            "balanced-match": "0.4.2",
+            "balanced-match": "^0.4.1",
             "concat-map": "0.0.1"
           }
         },
@@ -6756,8 +6756,8 @@
           "integrity": "sha1-YE+7yiTBL+tZsC8AuE8ft97W0AE=",
           "dev": true,
           "requires": {
-            "commander": "2.8.1",
-            "source-map": "0.4.4"
+            "commander": "2.8.x",
+            "source-map": "0.4.x"
           }
         },
         "commander": {
@@ -6766,7 +6766,7 @@
           "integrity": "sha1-Br42f+v9oMMwqh4qBy09yXYkJdQ=",
           "dev": true,
           "requires": {
-            "graceful-readlink": "1.0.1"
+            "graceful-readlink": ">= 1.0.0"
           }
         },
         "concat-map": {
@@ -6793,7 +6793,7 @@
           "integrity": "sha1-Kk5AkLlrLbBqnX3wEFWmKnfJt3Q=",
           "dev": true,
           "requires": {
-            "brace-expansion": "1.1.6"
+            "brace-expansion": "^1.0.0"
           }
         },
         "source-map": {
@@ -6802,7 +6802,7 @@
           "integrity": "sha1-66T12pwNyZneaAMti092FzZSA2s=",
           "dev": true,
           "requires": {
-            "amdefine": "1.0.1"
+            "amdefine": ">=0.0.4"
           }
         }
       }
@@ -6866,7 +6866,7 @@
           "integrity": "sha1-l4/EFV0fwwuLWPw/AgECstoC8qQ=",
           "dev": true,
           "requires": {
-            "lodash": "4.13.1"
+            "lodash": "^4.8.0"
           }
         },
         "balanced-match": {
@@ -6881,7 +6881,7 @@
           "integrity": "sha1-RkogTHf0gsCFwqNsRWu/uvtnoSc=",
           "dev": true,
           "requires": {
-            "balanced-match": "0.4.1",
+            "balanced-match": "^0.4.1",
             "concat-map": "0.0.1"
           }
         },
@@ -6897,11 +6897,11 @@
           "integrity": "sha1-CqI1kxpKlqwT1g/6wvuHe9btT1g=",
           "dev": true,
           "requires": {
-            "inflight": "1.0.5",
-            "inherits": "2.0.1",
-            "minimatch": "3.0.0",
-            "once": "1.3.3",
-            "path-is-absolute": "1.0.0"
+            "inflight": "^1.0.4",
+            "inherits": "2",
+            "minimatch": "2 || 3",
+            "once": "^1.3.0",
+            "path-is-absolute": "^1.0.0"
           }
         },
         "inflight": {
@@ -6910,8 +6910,8 @@
           "integrity": "sha1-2zIEzVqd4ubNiQuFxuL2a89PYgo=",
           "dev": true,
           "requires": {
-            "once": "1.3.3",
-            "wrappy": "1.0.2"
+            "once": "^1.3.0",
+            "wrappy": "1"
           }
         },
         "inherits": {
@@ -6932,7 +6932,7 @@
           "integrity": "sha1-UjYVelHk8ATBd/s8Un/33Xjw74M=",
           "dev": true,
           "requires": {
-            "brace-expansion": "1.1.4"
+            "brace-expansion": "^1.0.0"
           }
         },
         "once": {
@@ -6941,7 +6941,7 @@
           "integrity": "sha1-suJhVXzkwxTsgwTz+oJmPkKXyiA=",
           "dev": true,
           "requires": {
-            "wrappy": "1.0.2"
+            "wrappy": "1"
           }
         },
         "path-is-absolute": {
