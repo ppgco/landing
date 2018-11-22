@@ -11,9 +11,9 @@
 <br>
 
 <div class="content-limiter text-center">
-  <!--if offer exist-->
-
-  <table class="career-table">
+  
+  {{#ifCond locale 'pl'}}
+	<table class="career-table">
     <tr>
       <th>
         {{ role }}
@@ -53,7 +53,13 @@
 
   </table>
 
-  <!--if offer does not exist-->
+{{/ifCond}}
+
+{{#ifCond locale 'en'}}
+<div class="text-center">
+  {{{action}}}
+</div>
+{{/ifCond}}
 </div>
 
 
