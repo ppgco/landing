@@ -43,7 +43,71 @@
     <title> {{ title }} </title>
 
     {{#ifCond NODE_ENV 'staging'}}
-      <meta name="robots" content="noindex"/>
+    <meta name="robots" content="noindex"/>
+    {{/ifCond}}
+
+    <script>
+      function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) {
+          return parts.pop().split(";").shift();
+        }
+      }
+    </script>
+
+    {{#ifCond NODE_ENV 'production'}}
+    <script src="https://api.pushpushgo.com/uuid"></script>
+    {{/ifCond}}
+
+    {{#ifCond NODE_ENV 'production'}}
+    <script>
+      window._ppgConfig = {
+        uuid: getCookie('ppgUUID'),
+        mixpanel: '990d62dbba53d999b1e54cd92ed1a63d',
+        amplitude: 'c2a0c8412d60508b75b2f3223d623b20',
+        hotjar: 431312,
+        ga: 'UA-80826141-1',
+        facebook: '1959134684349655',
+        albacross: 89620050
+      };
+    </script>
+    {{/ifCond}}
+
+    {{#ifCond NODE_ENV 'staging'}}
+    <script src="https://api.staging.com/uuid"></script>
+    {{/ifCond}}
+
+    {{#ifCond NODE_ENV 'staging'}}
+    <script>
+      window._ppgConfig = {
+        uuid: getCookie('ppgUUID'),
+        mixpanel: '990d62dbba53d999b1e54cd92ed1a63d',
+        amplitude: '73121cfbbcafbdfde3ba45051e67efe2',
+        hotjar: 431312,
+        ga: 'UA-80826141-2',
+        facebook: '1959134684349655',
+        albacross: 89620050
+      };
+    </script>
+    {{/ifCond}}
+
+    {{#ifCond NODE_ENV 'development'}}
+    <script src="http://localhost:3000/api/uuid"></script>
+    {{/ifCond}}
+
+    {{#ifCond NODE_ENV 'development'}}
+    <script>
+      window._ppgConfig = {
+        uuid: getCookie('ppgUUID'),
+        mixpanel: '990d62dbba53d999b1e54cd92ed1a63d',
+        amplitude: '73121cfbbcafbdfde3ba45051e67efe2',
+        hotjar: 431312,
+        ga: 'UA-80826141-2',
+        facebook: '1959134684349655',
+        albacross: 89620050
+      };
+    </script>
     {{/ifCond}}
 
     <link rel="manifest" href="/manifest.json">
