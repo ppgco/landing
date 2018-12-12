@@ -50,6 +50,30 @@ Handlebars.registerHelper("stripPath", function(path) {
   return pathArr.join('/')
 });
 
+function isExcluded(path) {
+  return [
+    '/pages/rodo',
+    '/webinar-form',
+    '/pages/gdpr',
+    '/webinar/'
+  ].some(world => path.search(world) !== -1)
+}
+
+Handlebars.registerHelper("generateRobots", function(object) {
+  if (process.env.NODE_ENV === 'staging') {
+    object.nofollow = true;
+    return `<meta name="robots" content="noindex,nofollow"/>`;
+  }
+
+  if (/\/\d+\/|\d+\//g.test(object.path) || object.nofollow || isExcluded(object.path)) {
+    object.nofollow = true;
+    return `<meta name="robots" content="noindex,nofollow">`;
+  } else {
+    object.nofollow = false;
+    return `<meta name="robots" content="index,follow">`;
+  }
+});
+
 Handlebars.registerHelper('prop', function(object, prop) {
   return object[prop];
 });
@@ -111,7 +135,7 @@ const config = {
   source: './src/',
   destination: './release',
   sitemap: {
-    privateProperty: 'unlisted',
+    privateProperty: 'nofollow',
     hostname: "https://pushpushgo.com/"
   },
   cssmin: {
@@ -317,7 +341,7 @@ const app = Metalsmith(__dirname)
   .use(concat(config.concat))
   .use(less(config.less))
   .use((files, metalsmith, done) => {
-    metalsmith._metadata.collections = null
+    metalsmith._metadata.collections = null;
 
     for (let key in config.collections) {
       metalsmith._metadata[key] = null;
