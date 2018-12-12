@@ -1,9 +1,11 @@
 /                                                                   /pl/                                                302  Language=pl
 /                                                                   /en/                                                302  Language=en
-/pl/faq/*                                                           https://edu.pushpushgo.com/pl/faq/:splat            301
-/pl/poradnik/*                                                      https://edu.pushpushgo.com/pl/poradnik/:splat       301
-/en/user-guide/*                                                    https://edu.pushpushgo.com/user-guide/:splat        301
-/en/faq/*                                                           https://edu.pushpushgo.com/faq/:splat               301
+/edu                                                                https://edu.pushpushgo.com                          301
+/sample/*                                                           https://edu.pushpushgo.com/:splat                   301
+/pl/faq*                                                            https://edu.pushpushgo.com/pl/faq/:splat            301
+/pl/poradnik*                                                       https://edu.pushpushgo.com/pl/poradnik/:splat       301
+/en/user-guide*                                                     https://edu.pushpushgo.com/user-guide/:splat        301
+/en/faq*                                                            https://edu.pushpushgo.com/faq/:splat               301
 /pl/pages/dokumentacja                                              https://edu.pushpushgo.com/pl/poradnik/start        301
 /pl/pages/poradnik                                                  https://edu.pushpushgo.com/pl/poradnik/start        301
 /pl/pages/documentation                                             https://edu.pushpushgo.com/pl/poradnik/start        301
