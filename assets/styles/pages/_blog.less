@@ -312,6 +312,10 @@ ul.share-buttons .sr-only{
   display: flex;
   flex-direction: row;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
   img {
     height: 120px;
     width: 120px;
@@ -365,3 +369,4 @@ ul.share-buttons .sr-only{
 
   }
 }
+
