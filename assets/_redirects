@@ -1,6 +1,5 @@
 /                                                                   /pl/                                                302  Language=pl
 /                                                                   /en/                                                302  Language=en
-/                                                                   /en
 /tag/cennik                                                         /tag
 /tag/kontakt                                                        /tag
 /tag/faq                                                            /tag
@@ -11,18 +10,19 @@
 /tag/szkolenie                                                      /tag
 /tag/edukajca                                                       /tag
 /tag/edukacja                                                       /tag
+/en/blog/                                                           /en/blog/page/1
+/pl/blog/                                                           /pl/blog/page/1
 /en/blog/post/boost-your-campaigns                                  /en/blog/boost-your-campaigns
 /en/blog/post/5-ways-to-use-web-push                                /en/blog/5-ways-to-use-web-push
 /en/blog/post/5-things-to-use-web-push                              /en/blog/5-ways-to-use-web-push
 /en/blog/post/choosing-web-push-platform                            /en/blog/choosing-web-push-platform
-/en/blog/post/dummy-post                                            /en/blog
+/en/blog/post/dummy-post                                            /en/blog/page/1
 /en/blog/post/how-to-enable                                         /en/blog/how-to-enable
 /en/blog/post/newsletter-vs-webpush                                 /en/blog/newsletter-vs-webpush
 /en/blog/post/web-push-basic-knowledge                              /en/blog/web-push-basic-knowledge
-/en/pages/documentation                                             /en/user-guide
 /en/pages/partnership-archived                                      /en/contact
 /en/pages/partnership-archived/rules                                /en/contact
-/pl/blog/post/dummy-post                                            /pl/blog
+/pl/blog/post/dummy-post                                            /pl/blog/page/1
 /pl/blog/post/5-things-about-web-push                               /pl/blog/5-rzeczy-o-web-push
 /pl/blog/post/first-steps                                           /pl/blog/pierwsze-kroki
 /pl/blog/post/gtm-integration                                       /pl/blog/gtm-integracja
@@ -55,3 +55,12 @@
 /pl/pages/program-partnerski-archived                               /pl/pages/kontakt
 /pl/pages/program-partnerski-archived/regulamin                     /pl/pages/kontakt
 /pl/pages/zespol                                                    /pl/pages/kontakt
+/pl/faq/*                                                           https://edu.pushpushgo.com/pl/faq/:splat            301!
+/pl/poradnik/*                                                      https://edu.pushpushgo.com/pl/poradnik/:splat       301!
+/en/user-guide/*                                                    https://edu.pushpushgo.com/user-guide/:splat        301!
+/en/faq/*                                                           https://edu.pushpushgo.com/faq/:splat               301!
+/pl/pages/dokumentacja/                                             https://edu.pushpushgo.com/pl/poradnik/start        301!
+/pl/pages/poradnik/                                                 https://edu.pushpushgo.com/pl/poradnik/start        301!
+/pl/pages/documentation/                                            https://edu.pushpushgo.com/pl/poradnik/start        301!
+/en/pages/documentation/                                            https://edu.pushpushgo.com/user-guide/start         301!
+/en/pages/documentation/                                            https://edu.pushpushgo.com/user-guide/start         301!
