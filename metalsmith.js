@@ -62,6 +62,9 @@ function isExcluded(path) {
     '/pages/gdpr',
     '/webinar/',
     '/category/',
+    '/user-guide/',
+    '/poradnik/',
+    '/faq/',
     '/tags/',
   ].some(world => path.search(world) !== -1)
 }
