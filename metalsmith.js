@@ -32,9 +32,14 @@ Handlebars.registerHelper("link", function(value, locale, opts) {
     return value;
 
   if (locale && typeof locale !== 'object')
-    return '/' + locale + '/' + (value || '').replace('index.md', '').replace('index.html', '');
+    value = '/' + locale + '/' + (value || '');
 
-  return (value || '').replace('index.md', '').replace('index.html', '');
+  return (value || '')
+  .replace('index.md', '')
+  .replace('index.html', '')
+  .replace('.md', '')
+  .replace(/"/g, '')
+  .replace(/'/g, '');
 });
 
 Handlebars.registerHelper("envlink", function(value, env) {
@@ -55,7 +60,9 @@ function isExcluded(path) {
     '/pages/rodo',
     '/webinar-form',
     '/pages/gdpr',
-    '/webinar/'
+    '/webinar/',
+    '/category/',
+    '/tags/',
   ].some(world => path.search(world) !== -1)
 }
 
@@ -65,12 +72,12 @@ Handlebars.registerHelper("generateRobots", function(object) {
     return `<meta name="robots" content="noindex,nofollow"/>`;
   }
 
-  if (/\/\d+\/|\d+\//g.test(object.path) || object.nofollow || isExcluded(object.path)) {
+  if (object.nofollow || isExcluded(object.path)) {
     object.nofollow = true;
-    return `<meta name="robots" content="noindex,nofollow">`;
+    return `<meta name="robots" content="noindex, nofollow">`;
   } else {
     object.nofollow = false;
-    return `<meta name="robots" content="index,follow">`;
+    return `<meta name="robots" content="index, follow">`;
   }
 });
 
@@ -80,6 +87,13 @@ Handlebars.registerHelper('prop', function(object, prop) {
 
 Handlebars.registerHelper('ifCond', function(v1, v2, options) {
   if (v1 === v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
+Handlebars.registerHelper('isCategory', function(v1, options) {
+  if (categoriesSet.has(v1)) {
     return options.fn(this);
   }
   return options.inverse(this);
@@ -128,7 +142,15 @@ Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content
 });
 
 const {mainLangs} = require('./src/settings.json');
-const collectionsByTags = require('./src/collections.json');
+const categories = require('./src/categories.json');
+const categoriesSet = new Set();
+const tags = require('./src/tags.json');
+
+for (let key in categories) {
+  if (categories[key]) {
+    categoriesSet.add(categories[key].slug)
+  }
+}
 
 const config = {
   clean: false,
@@ -185,7 +207,8 @@ const config = {
     '**/*.less'
   ],
   collections: {
-    ...createCollection(collectionsByTags),
+    ...createCollection(categories),
+    ...createCollection(tags),
     posts: {
       pattern: [
         '**/blog/**/*.md',
@@ -232,7 +255,8 @@ const config = {
     }
   },
   paginate: {
-    ...createPagination(collectionsByTags),
+    ...createPagination({tags: categories, layout: '../layouts/blog.html', pathFn: (tag) => `${tag.locale}/blog/category/${tag.slug}/:num/index.html`}),
+    ...createPagination({tags: tags, layout: '../layouts/blog.html', pathFn: (tag) => `${tag.locale}/blog/tag/${tag.slug}/:num/index.html`}),
     en: {
       'collections.posts': {
         perPage: 6,
@@ -267,7 +291,7 @@ const config = {
   }
 }
 
-function createPagination(tags) {
+function createPagination({tags, layout, pathFn}) {
   const result = {};
 
   for (let key in tags) {
@@ -276,11 +300,12 @@ function createPagination(tags) {
       result[key] = {
         [key]: {
           perPage: 6,
-          layout: '../layouts/blog.html',
+          layout: layout,
           first: false,
-          path: `${tag.locale}/blog/category/${tag.slug}/:num/index.html`,
+          path: pathFn && pathFn(tag),
           pageMetadata: {
             ...mainLangs[tag.locale],
+            isCategory: tag.isCategory,
             locale: tag.locale
           },
           filter: (page) => page.tags.indexOf(tag.name) !== -1,
