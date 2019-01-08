@@ -44,7 +44,11 @@
         <div class="blog-post-item-text">
           <div>
             {{#each this.tags}}
-              <a href="{{link 'blog' locale}}/category/{{slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
+            {{#isCategory this.slug}}
+            <a href="{{link 'blog' ../locale}}/category/{{this.slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
+            {{else}}
+            <a href="{{link 'blog' ../locale}}/tag/{{this.slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
+            {{/isCategory}}
             {{/each}}
           </div>
           <a class="blog-post-item-title"  href="/{{link this.path}}">{{this.title}} </a>

@@ -5,7 +5,8 @@ module.exports = (dato, root, i18n) => {
   let menuItems = [];
   let popup = {};
   let mainLangs = {};
-  let collections = {};
+  let categories = {};
+  let tags = {};
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -77,10 +78,10 @@ module.exports = (dato, root, i18n) => {
         });
 
         /**
-         * Create tags
+         * Create blog category
          */
         dato.tags.forEach((tag, index) => {
-          if (!tag.name || !tag.isBlogCategory) {
+          if (!tag.name) {
             return;
           }
 
@@ -95,20 +96,30 @@ module.exports = (dato, root, i18n) => {
             locale: lang,
             index: index,
             color: tag.color && `#${rgbHex(tag.color.value.red, tag.color.value.green, tag.color.value.blue)}` || '#16a082',
-            isCategory: tag.isBlogCategory,
+            isCategory: tag.isBlogCategory || false,
             name: tag.name,
             collectionName: `${lang}${collectionTagName}`,
             slug: slugTagName
           }
 
-          collections[`${lang}${collectionTagName}`] = collectionItem;
+          if (collectionItem.isCategory) {
+            categories[`${lang}${collectionTagName}`] = collectionItem;
+            rootDirectory.createPost(
+              `tags/categories/${slugTagName}/index.md`, "yaml", {
+                frontmatter: collectionItem,
+                content: tag.content || '&nbsp;'
+              }
+            );
+          } else {
+            tags[`${lang}${collectionTagName}`] = collectionItem;
+            rootDirectory.createPost(
+              `tags/tags/${slugTagName}/index.md`, "yaml", {
+                frontmatter: collectionItem,
+                content: tag.content || '&nbsp;'
+              }
+            );
+          }
 
-          rootDirectory.createPost(
-            `tags/${lang}/${index}.md`, "yaml", {
-              frontmatter: collectionItem,
-              content: tag.content || '&nbsp;'
-            }
-          );
         });
 
         /**
@@ -228,8 +239,13 @@ module.exports = (dato, root, i18n) => {
   );
 
   root.createDataFile(
-    `src/collections.json`, 'json',
-    collections
+    `src/categories.json`, 'json',
+    categories
+  );
+
+  root.createDataFile(
+    `src/tags.json`, 'json',
+    tags
   );
 };
 
