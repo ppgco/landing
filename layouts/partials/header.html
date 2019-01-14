@@ -25,6 +25,13 @@
       <meta property="og:description" content="{{#if sneakPeak}}{{ sneakPeak }}{{else}}Web push dla Twojego ecommerce, sprawdź - 14 dni bezpłatnego okresu testowego{{/if}}" />
     {{/if}}
 
+
+    {{#if hreflangs}}
+      {{#each hreflangs}}
+        {{{tagGenerator this}}}
+      {{/each}}
+    {{#/if}}
+
     <link rel="canonical" href="{{ url }}{{link path }}" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
