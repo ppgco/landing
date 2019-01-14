@@ -272,29 +272,49 @@ function generateLink(...paths) {
 }
 
 function generateHrefLangs(map, path, itemLang, actualSlug) {
-  if (!map || typeof map === 'string') {
-    return;
-  }
+  const result = [];
 
-  const result = [{
-    tagName: 'link',
-    attributes: {
-      rel: 'canonical',
-      href: generateLink(itemLang, path, actualSlug)
-    }
-  }];
+  if (path === 'index.md') { //case na strony glowne pl/ en/
+    result.push({
+      tagName: 'link',
+      attributes: {
+        rel: 'canonical',
+        href: generateLink(itemLang, null, actualSlug)
+      }
+    });
 
-  for (let lang in map) {
-    if (map[lang]) {
-      const slug = map[lang] && map[lang].replace('index.md', '').replace('/', '') || null;
+    for (let mainLang of Object.keys(localesMap).filter(lng => lng !== itemLang)) {
       result.push({
         tagName: 'link',
         attributes: {
           rel: 'alternate',
-          href: generateLink(lang, path, slug),
-          hreflang: localesMap[lang]
+          href: generateLink(mainLang, null, actualSlug)
         }
       });
+    }
+  }
+
+  if (typeof map === 'object') {
+    result.push({
+      tagName: 'link',
+      attributes: {
+        rel: 'canonical',
+        href: generateLink(itemLang, path, actualSlug)
+      }
+    });
+
+    for (let lang in map) {
+      if (map[lang]) {
+        const slug = map[lang] && map[lang].replace('index.md', '').replace('/', '') || null;
+        result.push({
+          tagName: 'link',
+          attributes: {
+            rel: 'alternate',
+            href: generateLink(lang, path, slug),
+            hreflang: localesMap[lang]
+          }
+        });
+      }
     }
   }
 
