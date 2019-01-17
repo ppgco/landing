@@ -144,6 +144,14 @@ Handlebars.registerHelper('tagGenerator', function({tagName, attributes, content
   return tag(tagName, attributes, content);
 });
 
+Handlebars.registerHelper('hreflang', function(lang, hreflangs) {
+  return `
+    <link rel=”alternate” href=” https://pushpushgo.com/pl/” hreflang=”pl-pl” />
+    <link rel=”alternate” href=”https://pushpushgo.com/en/” hreflang=”en-gb” />
+    <link rel=”canonical” href=” https://pushpushgo.com/pl/” />
+  `;
+});
+
 const {mainLangs} = require('./src/settings.json');
 const categories = require('./src/categories.json');
 const categoriesSet = new Set();

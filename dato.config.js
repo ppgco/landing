@@ -1,12 +1,18 @@
 const slug = require('slug');
 const rgbHex = require('rgb-hex');
 
+const localesMap = {
+  pl: 'pl-pl',
+  en: 'en-gb'
+};
+
 module.exports = (dato, root, i18n) => {
   let menuItems = [];
   let popup = {};
   let mainLangs = {};
   let categories = {};
   let tags = {};
+
 
   i18n.availableLocales.forEach(lang => {
     i18n.withLocale(lang, () => {
@@ -127,7 +133,6 @@ module.exports = (dato, root, i18n) => {
          */
         dato.pages.forEach(page => {
           const extendTranslations = page.layout && page.layout.translations || {};
-
           rootDirectory.createPost(
             `pages/${page.slug}/index.md`, "yaml", {
               frontmatter: {
@@ -135,6 +140,7 @@ module.exports = (dato, root, i18n) => {
                 ...extendTranslations,
                 seoMetaTags: page.seoMetaTags,
                 layout: page.layout.name,
+                hreflangs: generateHrefLangs(page.entity.slug, 'pages', lang, page.slug),
                 locale: lang,
                 title: page.value && page.value.title || page.title,
                 slug: page.slug,
@@ -153,7 +159,7 @@ module.exports = (dato, root, i18n) => {
         dato.mainPages.forEach(mainPage => {
           const extendTranslations = mainPage.layout && mainPage.layout.translations || {};
 
-          const pagePath = mainPage.path || 'nospecifiedmainpagepath.md'
+          const pagePath = mainPage.path || 'nospecifiedmainpagepath.md';
           rootDirectory.createPost(
             pagePath, "yaml", {
               frontmatter: {
@@ -162,6 +168,7 @@ module.exports = (dato, root, i18n) => {
                 seoMetaTags: mainPage.seoMetaTags,
                 layout: mainPage.layout.name,
                 locale: lang,
+                hreflangs: generateHrefLangs(mainPage.entity.name, pagePath, lang, mainPage.slug),
                 collection: mainPage.guides,
                 title: mainPage.value && mainPage.value.title,
                 description: mainPage.value && mainPage.value.description,
@@ -188,6 +195,7 @@ module.exports = (dato, root, i18n) => {
                     seoMetaTags: item.seoMetaTags,
                     layout: collectionLayout,
                     locale: lang,
+                    hreflangs: generateHrefLangs(item.entity.slug, nestedPath, lang, item.slug),
                     slug: item.slug,
                     title: item.title || item.title,
                     subtitle: item.subtitle,
@@ -248,6 +256,50 @@ module.exports = (dato, root, i18n) => {
     tags
   );
 };
+
+function getUrlByEnv() {
+  const env = process.env.NODE_ENV || 'development';
+  switch (env) {
+    case 'production': return 'https://pushpushgo.com';
+    case 'staging': return 'https://stppg.co';
+    case 'development': return 'http://localhost:8082';
+  }
+}
+
+function generateLink(...paths) {
+  const path = [].concat(paths).filter(i => i).join('/').replace('//', '/');
+  return `${getUrlByEnv()}/${path}`;
+}
+
+function generateHrefLangs(map, path, itemLang, actualSlug) {
+  if (!map || typeof map === 'string') {
+    return;
+  }
+
+  const result = [{
+    tagName: 'link',
+    attributes: {
+      rel: 'canonical',
+      href: generateLink(itemLang, path, actualSlug)
+    }
+  }];
+
+  for (let lang in map) {
+    if (map[lang]) {
+      const slug = map[lang] && map[lang].replace('index.md', '').replace('/', '') || null;
+      result.push({
+        tagName: 'link',
+        attributes: {
+          rel: 'alternate',
+          href: generateLink(lang, path, slug),
+          hreflang: localesMap[lang]
+        }
+      });
+    }
+  }
+
+  return result;
+}
 
 function getImagePath(image) {
   if (image) {
