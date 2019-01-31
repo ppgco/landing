@@ -1,0 +1,71 @@
+<footer class="main-footer" id="contact">
+	<div class="content-limiter">
+		<div class="row">
+			<div class="logo-column column">
+				<a href="{{envlink 'https://HOST_DOMAIN' NODE_ENV}}" class="logo">PushPushGo</a>
+				<p class="copyright">{{footerCopy}}</p>
+			</div>
+
+			{{>footer-menu}}
+			<div class="socials-column column">
+				<a href="https://www.linkedin.com/company/10915197" class="icon-linkedin" target="_blank"></a>
+				<a href="https://twitter.com/PushPushGo" class="icon-twitter" target="_blank"></a>
+				<a href="https://www.facebook.com/PushPushGo/" target="_blank" class="icon-facebook" target="_blank"></a>
+				<a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="icon-youtube" target="_blank"></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="c2c-modal hide" id="c2c-modal">
+	<div class="c2c-modal-backdrop"></div>
+	<div class="c2c-modal-box">
+		<span class="icon-telephone size30 text-light"></span>
+		<h2 class="title--uppercase">{{c2cTitle}}</h2>
+		<p>{{c2cSubtitle}}</p>
+		<input class="c2c-input" id="c2c-input" placeholder="{{c2cPlaceholder}}"/>
+		<a href="#" class="c2c-call" id="c2c-call">{{c2cOrder}}</a>
+
+		<a href="#" class="c2c-modal-close" id="c2c-modal-close"></a>
+		<p><small> {{c2cDisclaimer}}</small></p>
+		<p>
+			<span id="c2c-status-ok" class="c2c-status hide">{{c2cOk}}</span>
+			<span id="c2c-status-error" class="c2c-status hide">{{c2cError}}</span>
+			<span id="c2c-status-validate" class="c2c-status hide">{{c2cValidate}}</span>
+			<span id="c2c-status-loading" class="c2c-status hide">{{c2cLoading}}</span>
+		</p>
+	</div>
+</div>
+
+</body>
+</html>
+
+<link rel="stylesheet" type="text/css" href="/styles/main.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+<script src="/js/main.js" async="true"></script>
+
+{{{ settings.htmlCodes }}}
+
+<div class="ppg-cookies">
+	{{cookiesDescription}} <span class="link ppg-cookies__close">{{cookiesDescriptionClose}}</span> <a href="{{link cookiesDescriptionPath locale}}">{{cookiesDescriptionMore}}</a>
+</div>
+
+<!-- <div class="funding-banner">
+	<img src="/images/funding-banner.png" alt="funding banner">
+
+
+
+</div> -->
+
+
+{{#ifCond locale 'pl'}}
+	<div class="funding-banner">
+		<img src="https://www.datocms-assets.com/6307/1541781099-funding-banner-pl.png" alt="found banner">
+	</div>
+{{/ifCond}}
+
+{{#ifCond locale 'en'}}
+	<div class="funding-banner">
+		<img src="https://www.datocms-assets.com/6307/1541781460-found-banner-en.png" alt="found banner">
+	</div>
+{{/ifCond}}
