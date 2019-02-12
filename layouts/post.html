@@ -14,11 +14,7 @@
 					<h1 class="blog-post-item-title">{{title}}</h1>
 					<div>
 						{{#each this.tags}}
-						{{#isCategory this.slug}}
-						<a href="{{link 'blog' ../locale}}/category/{{this.slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
-						{{else}}
-						<a href="{{link 'blog' ../locale}}/tag/{{this.slug}}/1" class="post-tag">{{this.name}}</a>&nbsp;
-						{{/isCategory}}
+							<a href="/tag/{{slug}}/" class="post-tag">{{name}}</a>
 						{{/each}}
 					</div>
 					<span class="blog-post-item-date"> {{parseDate date}} </span>

@@ -15,35 +15,14 @@
 }
 
 .sh-pricing {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-
-    @media (max-width: 1024px) {
-        flex-direction: column;
-    }
-
     &__card {
-        padding: 40px 20px;
-        box-shadow: 0 0 10px 4px rgba(0,0,0,.04);
-        width: 22%;
-        margin: 0 10px;
-
-        @media (max-width: 1024px) {
-            margin: 10px auto;
-            width: 40%;
-        }
-
-
-        &:hover {
-            box-shadow: 0 0 10px 4px rgba(0,0,0,.08);
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
 
         &--container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
         }
 
         &--plant {
@@ -51,35 +30,54 @@
             margin: 0 0 30px 0;
         }
 
-        &--plant.plant-2 {
-            margin: 25px 0 35px;
-        }
-
-        &--plant.plant-1 {
-            margin: 23px 0 30px;
-        }
-
-        &--plant.plant-4 {
-            margin: 0 0 20px;
-        }
-
         &--price {
             font-size: 25px;
             font-weight: 500;
             color: teal;
-            padding: 35px 0;
+            padding: 45px 0 0;
             margin: 0;
         }
 
         &--quantity {
             font-size: 18px;
             font-weight: 500;
+            margin-bottom: 35px;
         }
 
         &--features {
-            text-align: left;
             padding-left: 0;
             padding-top: 30px;
+            margin-left: 10%;
+            width: 25%;
+        }
+    }
+
+    &__plus {
+        text-align: center;
+        border-top: 1px solid #dcdcdc;
+
+        &--head {
+            margin-top: 30px;
+        }
+
+        &--plan {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-left: -60px;
+            margin-top: 50px;
+            font-weight: 500;
+
+            @media (max-width: 1024px) {
+                margin-left: 0;
+                flex-direction: column;
+            }
+        }
+
+        &--price {
+            font-size: 20px;
+            font-weight: 500;
+            color: teal;
         }
     }
 }
