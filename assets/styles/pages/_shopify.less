@@ -15,6 +15,7 @@
 }
 
 .sh-pricing {
+
     &__card {
         display: flex;
         flex-direction: column;
@@ -53,7 +54,16 @@
         }
 
         &--automation{
-            margin: 0 -30px;
+            margin: 0;
+        }
+
+        &--list {
+            padding-left: 60px;
+            li {
+                .type {
+                    margin-left: 10px;
+                }
+            }
         }
     }
 
