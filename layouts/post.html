@@ -4,8 +4,10 @@
 	<div class="content-limiter">
 
 		<div class="blog-breadcrumbs">
-			<a href="{{link '' locale}}">{{breadcrumbsHome}}</a> <span class="divider">/</span>
-			<a href="{{link 'blog/page/1' locale}}">{{breadcrumbsBlog}}</a> <span class="divider">/</span>
+			<a href="{{link '' locale}}">{{breadcrumbsHome}}</a>
+			<span class="divider">/</span>
+			<a href="{{link 'blog/page/1' locale}}">{{breadcrumbsBlog}}</a>
+			<span class="divider">/</span>
 			<span>{{title}}</span>
 		</div>
 		<div class="blog-single-post">
@@ -14,14 +16,14 @@
 					<h1 class="blog-post-item-title">{{title}}</h1>
 					<div>
 						{{#each this.tags}}
-							<a href="/tag/{{slug}}/" class="post-tag">{{name}}</a>
+						<a href="/tag/{{slug}}/" class="post-tag">{{name}}</a>
 						{{/each}}
 					</div>
 					<span class="blog-post-item-date"> {{parseDate date}} </span>
 				</header>
 				<div class="blog-post-item-stats">
 					<span class="stat-item">
-					  {{readingTimeLabel}}: {{readingTime}}
+						{{readingTimeLabel}}: {{readingTime}}
 					</span>
 				</div>
 
@@ -32,15 +34,7 @@
 				{{/if}}
 
 				<div class="blog-post-item-text">
-					<div class="author-information">
-						<img src="{{authorAvatar}}"/>
-						<div class="author-information__description">
-							<b>{{author}}</b>
-							<p class="author-information__description--role">{{authorRole}}</p>
-							<p>{{{authorBio}}}</p>
-						</div>
-					</div>
-					<hr>
+
 					{{{contents}}}
 
 					<!-- <div class="blog-post-navigation">
@@ -56,10 +50,20 @@
 						</a>
 					</div> -->
 
+					<hr class="blog-line">
+					<div class="author-information">
+						<img src="{{authorAvatar}}" />
+						<div class="author-information__description">
+							<b>{{author}}</b>
+							<p class="author-information__description--role">{{authorRole}}</p>
+							<p>{{{authorBio}}}</p>
+						</div>
+					</div>
+					
 					<div class="realted-posts">
 						<p>{{{realtedPosts}}}</p>
 					</div>
-					
+
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -79,46 +83,62 @@
 
 		<div class="post-share">
 			<ul class="share-buttons">
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}{{link path }}&quote={{title}}" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="/images/fb-post.png" /></a></li>
-				<li><a href="https://twitter.com/intent/tweet?source={{ url }}{{link path }}&text={{title}} - {{ url }}{{link path }}" target="_blank" title="Tweet"><img alt="Tweet" src="/images/twitter-post.png" /></a></li>
-				<li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ url }}{{link path }}&title={{title}}&summary=&source={{ url }}{{link path }}" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="/images/lin-post.png" /></a></li>
-				<li><a href="https://getpocket.com/save?url={{ url }}{{link path }}&title={{title}}" target="_blank" title="Add to Pocket"><img alt="Add to Pocket" src="/images/pocket-post.png" /></a></li>
+				<li>
+					<a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}{{link path }}&quote={{title}}" title="Share on Facebook"
+					 target="_blank">
+						<img alt="Share on Facebook" src="/images/fb-post.png" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/intent/tweet?source={{ url }}{{link path }}&text={{title}} - {{ url }}{{link path }}" target="_blank"
+					 title="Tweet">
+						<img alt="Tweet" src="/images/twitter-post.png" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ url }}{{link path }}&title={{title}}&summary=&source={{ url }}{{link path }}"
+					 target="_blank" title="Share on LinkedIn">
+						<img alt="Share on LinkedIn" src="/images/lin-post.png" />
+					</a>
+				</li>
+				<li>
+					<a href="https://getpocket.com/save?url={{ url }}{{link path }}&title={{title}}" target="_blank" title="Add to Pocket">
+						<img alt="Add to Pocket" src="/images/pocket-post.png" />
+					</a>
+				</li>
 			</ul>
 		</div>
 
 		<div id="disqus_thread"></div>
 		<script id="dsq-count-scr" src="//pushpushgo.disqus.com/count.js" async></script>
 		<script>
-				var disqus_config = function () {
-					this.page.url = 'https://www.pushpushgo.com/{{link path}}';
-					this.page.identifier = '{{md5 path}}';
-				};
+			var disqus_config = function () {
+				this.page.url = 'https://www.pushpushgo.com/{{link path}}';
+				this.page.identifier = '{{md5 path}}';
+			};
 
-				(function () {
-					var d = document, s = d.createElement('script');
+			(function () {
+				var d = document, s = d.createElement('script');
 
-					s.src = '//pushpushgo.disqus.com/embed.js';
+				s.src = '//pushpushgo.disqus.com/embed.js';
 
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-			</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+		</noscript>
 
 	</div>
 </section>
 
 {{#ifCond locale 'pl'}}
-	<div class="newsletter-post">
-		<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2I"></script>
-	</div>
-{{/ifCond}}
-
-{{#ifCond locale 'en'}}
-	<div class="newsletter-post">
-		<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2Q"></script>
-	</div>
-{{/ifCond}}
-
-
-{{>footer}}
+<div class="newsletter-post">
+	<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2I"></script>
+</div>
+{{/ifCond}} {{#ifCond locale 'en'}}
+<div class="newsletter-post">
+	<script type="text/javascript" src="https://newsletter.pushpushgo.com/view_webform_v2.js?u=riyWa&webforms_id=P2O2Q"></script>
+</div>
+{{/ifCond}} {{>footer}}
