@@ -278,7 +278,12 @@ const config = {
           ...mainLangs.en,
           locale: 'en'
         },
-        filter: (page) => page.locale === 'en' && ['en/pages/blog/index.md', 'en/blog/index.md'].indexOf(page.path) === -1,
+        filter: (page) => {
+          if (!page.tags.length) {
+            return false;
+          }
+          return page.locale === 'en' && ['en/pages/blog/index.md', 'en/blog/index.md'].indexOf(page.path) === -1;
+        },
         sortBy: 'index'
       }
     },
@@ -292,7 +297,12 @@ const config = {
           ...mainLangs.pl,
           locale: 'pl'
         },
-        filter: (page) => page.locale === 'pl' && ['pl/pages/blog/index.md', 'pl/blog/index.md'].indexOf(page.path) === -1,
+        filter: (page) => {
+          if (!page.tags.length) {
+            return false;
+          }
+          return page.locale === 'pl' && ['pl/pages/blog/index.md', 'pl/blog/index.md'].indexOf(page.path) === -1;
+        },
         sortBy: 'index'
       }
     },
@@ -302,7 +312,7 @@ const config = {
   }
 }
 
-function createPagination({tags, layout, pathFn}) {
+function createPagination({tags, layout, pathFn}, opts = {}) {
   const result = {};
 
   for (let key in tags) {
@@ -319,8 +329,11 @@ function createPagination({tags, layout, pathFn}) {
             isCategory: tag.isCategory,
             locale: tag.locale
           },
-          filter: (page) => page.tags.indexOf(tag.name) !== -1,
-          sortBy: 'index'
+          filter: (page) => {
+            return page.tags.indexOf(tag.name) !== -1
+          },
+          sortBy: 'index',
+          ...opts
         }
       }
     }
@@ -328,7 +341,7 @@ function createPagination({tags, layout, pathFn}) {
   return result;
 }
 
-function createCollection(tags) {
+function createCollection(tags, opts = {}) {
   tags = {...tags};
 
   for (let key in tags) {
@@ -340,7 +353,8 @@ function createCollection(tags) {
           '!**/blog/index.md',
         ],
         sortBy: 'index',
-        reverse: false
+        reverse: false,
+        ...opts,
       }
     }
   }
