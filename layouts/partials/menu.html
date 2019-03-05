@@ -11,7 +11,7 @@
       </a>
     </div>
     {{/ifCond}}
-    
+
     {{#ifCond locale 'en'}}
     <div class="logo">
         <a href="/en" class="white ppg-logo">
@@ -22,7 +22,6 @@
         </a>
       </div>
     {{/ifCond}}
-
 
     <span class="icon-menu main-menu-toggle"></span>
 
@@ -58,8 +57,8 @@
 
         <a href="#" class="c2c-btn nav-link" id="c2c-btn">{{headerOrderCallLabel}}</a>
 
-        <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#login?language={{locale}}" target="_blank" class="nav-link">{{ headerLogin }}</a>
-        <a class="btn btn--medium register" target="_blank" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/#register?language={{locale}}">{{ headerRegister }}</a>
+        <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/login?language={{locale}}" target="_blank" class="nav-link">{{ headerLogin }}</a>
+        <a class="btn btn--medium register" target="_blank" href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/register?language={{locale}}">{{ headerRegister }}</a>
         <div class="language-toggle">
           <div class="language-toggle-list">
             {{#each settings.availableLocales}}
