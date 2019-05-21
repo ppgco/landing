@@ -1,0 +1,3 @@
+[submodule "landing"]
+	path = landing
+	url = git@git.pushpushgo.com:dominika/landing.git
