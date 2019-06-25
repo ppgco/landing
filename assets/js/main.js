@@ -291,6 +291,17 @@ $(function() {
       value = parseInt(value);
       return config.modal.input.regexp.test(value);
     };
+    Click2Call.prototype.getLang = function() {
+      var language = 'pl';
+
+      try {
+        language = window.navigator.userLanguage || window.navigator.language;
+      } catch(error) {
+        console.error(error)
+      }
+
+      return language === 'pl' ? 'pl' : 'en'; // TODO: temporary
+    };
     Click2Call.prototype.call = function(phone, onSuccess, onFail) {
       var xmlhttp;
       xmlhttp = new XMLHttpRequest;
@@ -304,7 +315,8 @@ $(function() {
         }
       };
       return xmlhttp.send(JSON.stringify({
-        phone: phone
+        phone: phone,
+        lang: this.getLang()
       }));
     };
     Click2Call.prototype.getDate = function() {
