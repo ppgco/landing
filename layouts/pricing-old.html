@@ -1,0 +1,116 @@
+{{> header }}
+
+{{{contents}}}
+
+  {{>menu}}
+
+<section class="page-intro new-prices__intro">
+  <div class="content-limiter">
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
+  </div>
+</section>
+
+<section class="new-prices__content">
+  <div class="content-limiter">
+
+    <div>
+      <div class="well">
+        <div class="row">
+          <div class="column">
+            <h4>{{ callToActionTitle }}</h4>
+
+            <div class="m20b">
+              <span class="icon-access size40 text-green"></span>
+            </div>
+
+            <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/register?language={{locale}}" class="btn" target="_blank">{{callToActionButton}}</a>
+          </div>
+          <div class="column">
+            <div class="m10t m10b">
+              <div class="m10b">{{{ callToActionListFirst }}}</div>
+              <div class="m10b">{{{ callToActionListSecond }}}</div>
+              <div>{{{ callToActionListThird }}}</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="well">
+
+        <div class="row">
+          <div class="column">
+            <h4>{{leadActionTitle}}</h4>
+
+            <div class="m20b m20t">
+              <span class="icon-telephone size30 text-green"></span>
+            </div>
+
+            <button class="btn c2c-btn">{{leadActionButton}}</button>
+          </div>
+          <div class="column">
+            <div class="contact-avatar avatar--artur">
+              <img src="{{leadActionImage}}">
+            </div>
+            <div class="m10t">{{leadActionOrLabel}}</div>
+            <a href="mailto:{{leadActionMail}}">{{leadActionMail}}</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="m20t text-center light-uppercase">{{ clientListLabel }}</div>
+    <div class="flex space-between client-logos p20">
+      <img src="{{clientLogo1}}">
+      <img src="{{clientLogo2}}">
+      <img src="{{clientLogo3}}">
+      <img src="{{clientLogo4}}">
+      <img src="{{clientLogo5}}">
+      <img src="{{clientLogo6}}">
+      <img src="{{clientLogo7}}">
+    </div>
+
+    <br/>
+
+    <header class="section-header">
+      <h2 class="title--uppercase">{{ featuresLabel }}</h2>
+    </header>
+
+    <br/>
+
+    <div class="features">
+      <div class="row">
+        <div class="column">
+          <div class="p20 features__item">{{{ features11 }}}</div>
+          <div class="p20 features__item">{{{ features12 }}}</div>
+          <div class="p20 features__item">{{{ features13 }}}</div>
+          <div class="p20 features__item">{{{ features14 }}}</div>
+        </div>
+        <div class="column">
+          <div class="p20 features__item">{{{ features21 }}}</div>
+          <div class="p20 features__item">{{{ features22 }}}</div>
+          <div class="p20 features__item">{{{ features23 }}}</div>
+          <div class="p20 features__item">{{{ features24 }}}</div>
+        </div>
+        <div class="column">
+          <div class="p20 features__item">{{{ features31 }}}</div>
+          <div class="p20 features__item">{{{ features32 }}}</div>
+          <div class="p20 features__item">{{{ features33 }}}</div>
+          <div class="p20 features__item">{{{ features34 }}}</div>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+  </div>
+</section>
+
+{{>footer}}

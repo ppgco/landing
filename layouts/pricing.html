@@ -2,113 +2,150 @@
 
 {{{contents}}}
 
-  {{>menu}}
+{{>menu}}
 
-<section class="page-intro new-prices__intro">
+<section class="page-intro">
   <div class="content-limiter">
     <h1>{{ title }}</h1>
     <p>{{ subtitle }}</p>
   </div>
 </section>
 
-<section class="new-prices__content">
-  <div class="content-limiter">
+<br>
+<br>
 
-    <div>
-      <div class="well">
-        <div class="row">
-          <div class="column">
-            <h4>{{ callToActionTitle }}</h4>
+<section class="main prices">
+  <div class="content-limiter pricing-container">
 
-            <div class="m20b">
-              <span class="icon-access size40 text-green"></span>
-            </div>
+    <div class="plan plan--starter">
+      <header class="plan-header">
+        <span class="icon-mortarboard plan-icon"></span>
+        <h4>{{ firstPlanTier }}</h4>
+      </header>
 
-            <a href="{{envlink 'https://app.HOST_DOMAIN' NODE_ENV}}/register?language={{locale}}" class="btn" target="_blank">{{callToActionButton}}</a>
-          </div>
-          <div class="column">
-            <div class="m10t m10b">
-              <div class="m10b">{{{ callToActionListFirst }}}</div>
-              <div class="m10b">{{{ callToActionListSecond }}}</div>
-              <div>{{{ callToActionListThird}}}</div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="well">
-
-        <div class="row">
-          <div class="column">
-            <h4>{{leadActionTitle}}</h4>
-
-            <div class="m20b m20t">
-              <span class="icon-telephone size30 text-green"></span>
-            </div>
-
-            <button class="btn c2c-btn">{{leadActionButton}}</button>
-          </div>
-          <div class="column">
-            <div class="contact-avatar avatar--artur">
-              <img src="{{leadActionImage}}">
-            </div>
-            <div class="m10t">{{leadActionOrLabel}}</div>
-            <a href="mailto:{{leadActionMail}}">{{leadActionMail}}</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="m20t text-center light-uppercase">{{ clientListLabel }}</div>
-    <div class="flex space-between client-logos p20">
-      <img src="{{clientLogo1}}">
-      <img src="{{clientLogo2}}">
-      <img src="{{clientLogo3}}">
-      <img src="{{clientLogo4}}">
-      <img src="{{clientLogo5}}">
-      <img src="{{clientLogo6}}">
-      <img src="{{clientLogo7}}">
-    </div>
-
-    <br/>
-
-    <header class="section-header">
-      <h2 class="title--uppercase">{{ featuresLabel }}</h2>
-    </header>
-
-    <br/>
-
-    <div class="features">
-      <div class="row">
-        <div class="column">
-          <div class="p20 features__item">{{{ features11 }}}</div>
-          <div class="p20 features__item">{{{ features12 }}}</div>
-          <div class="p20 features__item">{{{ features13 }}}</div>
-          <div class="p20 features__item">{{{ features14 }}}</div>
-        </div>
-        <div class="column">
-          <div class="p20 features__item">{{{ features21 }}}</div>
-          <div class="p20 features__item">{{{ features22 }}}</div>
-          <div class="p20 features__item">{{{ features23 }}}</div>
-          <div class="p20 features__item">{{{ features24 }}}</div>
-        </div>
-        <div class="column">
-          <div class="p20 features__item">{{{ features31 }}}</div>
-          <div class="p20 features__item">{{{ features32 }}}</div>
-          <div class="p20 features__item">{{{ features33 }}}</div>
-          <div class="p20 features__item">{{{ features34 }}}</div>
+      <div class="plan-slider">
+        <div class="plan-slider__price callus-hide">
+          <div class="big">{{firstPlanTierAmount}} <sub>{{firstPlanTierCurrency}}</sub></div>
         </div>
       </div>
+
+      <div class="plan-includes">
+        <div class="included-item">
+          {{firstPlanTierFeature1}}
+        </div>
+      </div>
+
+      <a href="" class="btn callus-show c2c-btn">{{firstPlanTierContactUs}}</a>
+      <a target="_blank" href="https://magick.pushpushgo.com/?utm_source=landing&utm_campaign=freeplan" class="btn callus-hide">{{firstPlanTierChoose}}</a>
     </div>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+
+    <div class="plan plan--premium">
+      <div class="plan__recommended-belt">
+        {{secondPlanTierBelt}}
+      </div>
+
+      <header class="plan-header">
+        <span class="icon-handshake plan-icon"></span>
+        <h4>{{secondPlanTier}}</h4>
+
+        <div class="plan-slider">
+          <div class="plan-slider__price callus-hide">
+            <div class="big">{{secondPlanTierAmount}} <sub>{{secondPlanTierCurrency}}</sub></div>
+          </div>
+        </div>
+
+        <div>
+          {{secondPlanTierPriceNote}}
+        </div>
+      </header>
+
+      <div class="plan-includes">
+        <div class="included-item">
+          <div class="contact-avatar avatar--artur">
+            <img src="{{leadActionImage}}">
+          </div>
+        </div>
+        <div class="included-item">
+          {{secondPlanTierFeature1}}
+        </div>
+      </div>
+      <a href="" class="btn callus-hide c2c-btn">Umów rozmowę</a>
+      <div class="m10t">{{leadActionOrLabel}}</div>
+      <a href="mailto:{{leadActionMail}}">{{leadActionMail}}</a>
+    </div>
+
+    <div class="plan plan--enterprise">
+      <header class="plan-header">
+        <span class="icon-winner-cup plan-icon"></span>
+        <h4>{{thirdPlanTier}}</h4>
+      </header>
+
+      <div class="plan-slider">
+        <div class="plan-slider__price callus-hide">
+          <div class="big">{{thirdPlanTierAmount}} <sub>{{thirdPlanTierCurrency}}</sub></div>
+        </div>
+      </div>
+
+      <div class="plan-includes">
+        <div class="included-item">
+          {{thirdPlanTierFeature1}}
+        </div>
+      </div>
+
+      <a href="" class="btn callus-show c2c-btn">{{thirdPlanTierContactUs}}</a>
+      <a target="_blank" href="https://magick.pushpushgo.com/?utm_source=landing&utm_campaign=paidplan" class="btn callus-hide">{{thirdPlanTierChoose}}</a>
+    </div>
+  </div>
+  <br>
+
+  <div class="m20t text-center light-uppercase">{{ clientListLabel }}</div>
+  <div class="flex space-between client-logos p20">
+    <img src="{{clientLogo1}}">
+    <img src="{{clientLogo2}}">
+    <img src="{{clientLogo3}}">
+    <img src="{{clientLogo4}}">
+    <img src="{{clientLogo5}}">
+    <img src="{{clientLogo6}}">
+    <img src="{{clientLogo7}}">
+  </div>
+
+  <br/>
+
+  <header class="section-header">
+    <h2 class="title--uppercase">{{ featuresLabel }}</h2>
+  </header>
+
+  <br/>
+
+  <div class="features">
+    <div class="row">
+      <div class="column">
+        <div class="p20 features__item">{{{ features11 }}}</div>
+        <div class="p20 features__item">{{{ features12 }}}</div>
+        <div class="p20 features__item">{{{ features13 }}}</div>
+        <div class="p20 features__item">{{{ features14 }}}</div>
+      </div>
+      <div class="column">
+        <div class="p20 features__item">{{{ features21 }}}</div>
+        <div class="p20 features__item">{{{ features22 }}}</div>
+        <div class="p20 features__item">{{{ features23 }}}</div>
+        <div class="p20 features__item">{{{ features24 }}}</div>
+      </div>
+      <div class="column">
+        <div class="p20 features__item">{{{ features31 }}}</div>
+        <div class="p20 features__item">{{{ features32 }}}</div>
+        <div class="p20 features__item">{{{ features33 }}}</div>
+        <div class="p20 features__item">{{{ features34 }}}</div>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
   </div>
 </section>
