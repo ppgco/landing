@@ -56,21 +56,16 @@
         </div>
 
         <div>
-          {{secondPlanTierPriceNote}}
+          {{secondPlanTierPriceNote}}<br>
+          {{secondPlanTierPriceNoteSecondLine}}
         </div>
       </header>
 
-      <div class="plan-includes">
-        <div class="included-item">
-          <div class="contact-avatar avatar--artur">
-            <img src="{{leadActionImage}}">
-          </div>
-        </div>
-        <div class="included-item">
-          {{secondPlanTierFeature1}}
-        </div>
+      <div class="contact-avatar avatar--artur">
+        <img src="{{leadActionImage}}" />
       </div>
-      <a href="" class="btn callus-hide c2c-btn">Umów rozmowę</a>
+      <br><br>
+      <a href="" class="btn callus-hide c2c-btn">{{leadActionButton}}</a>
       <div class="m10t">{{leadActionOrLabel}}</div>
       <a href="mailto:{{leadActionMail}}">{{leadActionMail}}</a>
     </div>
