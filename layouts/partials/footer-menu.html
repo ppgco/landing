@@ -1,23 +1,52 @@
-<div class="nav-column column">
-  <div class="footer-title">{{footerMenuHeader1}}</div>
+<div class="footer-navigation grid1-2">
+  <h1>{{footerMenuHeader1}}</h1>
   <nav>
     {{#each settings.menu.footer1 locale}}
-      <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
     {{/each}}
   </nav>
 </div>
-<div class="nav-column column">
-  <div class="footer-title">{{footerMenuHeader2}}</div>
+
+<div class="footer-navigation grid1-3">
+  <h1>{{footerMenuHeader2}}</h1>
   <nav>
     {{#each settings.menu.footer2 locale}}
-      <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
     {{/each}}
   </nav>
 </div>
-<div class="nav-column column">
-  <div class="footer-title">{{footerMenuHeader3}}</div>
+
+<div class="footer-navigation grid1-4">
+  <h1>{{footerMenuHeader3}}</h1>
   <nav>
     {{#each settings.menu.footer3 locale}}
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>
+
+<div class="footer-navigation grid2-2">
+  <h1>{{footerMenuHeader4}}</h1>
+  <nav>
+    {{#each settings.menu.footer4 locale}}
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>
+
+<div class="footer-navigation grid2-3">
+  <h1>{{footerMenuHeader5}}</h1>
+  <nav>
+    {{#each settings.menu.footer5 locale}}
+    <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
+    {{/each}}
+  </nav>
+</div>
+
+<div class="footer-navigation grid2-4">
+  <h1>{{footerMenuHeader6}}</h1>
+  <nav>
+    {{#each settings.menu.footer6 locale}}
     <a href="{{link link locale}}">{{title}}{{#if icon}} <span class="icon {{icon}} size18 m10r"></span>{{/if}}</a>
     {{/each}}
   </nav>
