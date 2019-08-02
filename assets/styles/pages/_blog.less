@@ -13,6 +13,10 @@
     margin: 10px;
     background: white;
 
+    @media @xsmall {
+      margin: 0 0 0 0;
+    }
+
     @media (min-width: 320px) {
       width: calc(~'100% - 20px');
     }
@@ -34,6 +38,10 @@
   @media (min-width: 1139px) and (max-width: 1340px) {
     max-width: 600px;
   }
+
+  @media @xsmall {
+    margin: 0 0 0 0;
+  }
 }
 
 .blog-breadcrumbs {
@@ -47,8 +55,13 @@
   display: block;
   color: @text-color;
   margin-bottom: 50px;
+  margin-right: 50px;
   font-size: 15px;
   line-height: 1.8;
+
+  @media @xsmall {
+    margin: 0 0 0 0;
+  }
 
   p {
     max-width: none;
@@ -246,7 +259,13 @@ ul.share-buttons{
   }
 }
 
-ul.share-buttons li{
+.back-to-top {
+  position:fixed;
+  right:15px;
+  bottom:15px;
+}
+
+ul.share-buttons li {
   display: inline;
   padding: 15px;
 

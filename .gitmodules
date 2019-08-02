@@ -1,0 +1,3 @@
+[submodule "landing"]
+	path = landing
+	url = https://gitlab+deploy-token-6:mKRbRT64r7zHuCxbKby4@git.pushpushgo.com/dominika/landing.git

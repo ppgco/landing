@@ -1,56 +1,98 @@
-/                                                                   /pl/                                                302  Language=pl
-/                                                                   /en/
-/en/blog/                                                           /en/blog/page/1
-/pl/blog/                                                           /pl/blog/page/1
-/en/blog/post/boost-your-campaigns                                  /en/blog/boost-your-campaigns
-/en/blog/post/5-ways-to-use-web-push                                /en/blog/5-ways-to-use-web-push
-/en/blog/post/5-things-to-use-web-push                              /en/blog/5-ways-to-use-web-push
-/en/blog/post/choosing-web-push-platform                            /en/blog/choosing-web-push-platform
-/en/blog/post/dummy-post                                            /en/blog/page/1
-/en/blog/post/how-to-enable                                         /en/blog/how-to-enable
-/en/blog/post/newsletter-vs-webpush                                 /en/blog/newsletter-vs-webpush
-/en/blog/post/web-push-basic-knowledge                              /en/blog/web-push-basic-knowledge
-/en/pages/partnership-archived                                      /en/contact
-/en/pages/partnership-archived/rules                                /en/contact
-/pl/blog/post/dummy-post                                            /pl/blog/page/1
-/pl/blog/post/5-things-about-web-push                               /pl/blog/5-rzeczy-o-web-push
-/pl/blog/post/first-steps                                           /pl/blog/pierwsze-kroki
-/pl/blog/post/gtm-integration                                       /pl/blog/gtm-integracja
-/pl/blog/post/iai-shop-integracja                                   /pl/blog/iai-shop-integracja
-/pl/blog/post/improve-push-campaigns                                /pl/blog/4-wskazowki-ktore-zwieksza-skutecznosc-twoich-kampanii
-/pl/blog/post/inbox-sidebar                                         /pl/blog/skrzynka-odbiorcza-web-push
-/pl/blog/post/jak-wlaczyc-web-push                                  /pl/blog/jak-wlaczyc-web-push
-/pl/blog/post/jak-zachecic-do-zakupu                                /pl/blog/jak-zachecic-do-zakupu
-/pl/blog/post/jak-wykorzystywac-web-push                            /pl/blog/jak-wykorzystywac-web-push
-/pl/blog/post/language-support                                      /pl/blog/jezyki-wsparcie
-/pl/blog/post/landingi-integracja                                   /pl/blog/landingi-integracja
-/pl/blog/post/newsletter-vs-webpush                                 /pl/blog/8-waznych-roznic-pomiedzy-newsletterem-a-web-push
-/pl/blog/post/push-support                                          /pl/blog/push-wsparcie-przegladarek
-/pl/blog/post/rodo-poradnik                                         /pl/blog/rodo-poradnik
-/pl/blog/post/shoper-integration                                    /pl/blog/shoper-integracja
-/pl/blog/post/shoplo-integration                                    /pl/blog/shoplo-integracja
-/pl/blog/post/wybor-aplikacji-web-push                              /pl/blog/wybor-aplikacji-web-push
-/pl/blog/post/wordpress-integration                                 /pl/blog/wordpress-integracja
-/pl/blog/post/wyglad-powiadomien-web-push                           /pl/blog/wplyw-przegladarek-na-wyglad-powiadomien-web-push
-/pl/pages/contact                                                   /pl/pages/kontakt
-/pl/pages/rules                                                     /pl/pages/regulamin
-/pl/pages/czesto-zadawane-pytania                                   /pl/pages/faq
-/pl/pages/praca-account-manager                                     /pl/praca
-/pl/pages/praca-new-business-specialist                             /pl/praca
-/pl/pages/praca-customer-service                                    /pl/praca
-/pl/pages/praca-software-developer                                  /pl/praca
-/pl/pages/pricing                                                   /pl/pages/cennik
-/pl/pages/webinar                                                   /pl/pages/webinar-form
-/pl/pages/work                                                      /pl/pages/praca
-/pl/pages/program-partnerski-archived                               /pl/pages/kontakt
-/pl/pages/program-partnerski-archived/regulamin                     /pl/pages/kontakt
-/pl/pages/zespol                                                    /pl/pages/kontakt
-/pl/pages/dokumentacja/                                             /pl/poradnik/start
-/pl/pages/poradnik/                                                 /pl/poradnik/start
-/pl/pages/documentation/                                            /pl/poradnik/start
-/en/pages/documentation/                                            /en/user-guide/start
-/faq                                                                /en/faq
-/user-guide/                                                        /en/user-guide/start
-/pl/poradnik/                                                       /pl/poradnik/start
-/pl/faq                                                             /pl/faq
-/*                                                                  /404.html                                           404
+/                                                                           /pl/                                                302  Language=pl
+/                                                                           /en/
+/en/blog/                                                                   /en/blog/page/1
+/pl/blog/                                                                   /pl/blog/page/1
+/en/blog/post/boost-your-campaigns                                          /en/blog/boost-your-campaigns
+/en/blog/post/5-ways-to-use-web-push                                        /en/blog/5-ways-to-use-web-push
+/en/blog/post/5-things-to-use-web-push                                      /en/blog/5-ways-to-use-web-push
+/en/blog/post/choosing-web-push-platform                                    /en/blog/choosing-web-push-platform
+/en/blog/post/dummy-post                                                    /en/blog/page/1
+/en/blog/post/how-to-enable                                                 /en/blog/how-to-enable
+/en/blog/post/newsletter-vs-webpush                                         /en/blog/newsletter-vs-webpush
+/en/blog/post/web-push-basic-knowledge                                      /en/blog/web-push-basic-knowledge
+/en/pages/partnership-archived                                              /en/contact
+/en/pages/partnership-archived/rules                                        /en/contact
+/pl/blog/post/dummy-post                                                    /pl/blog/page/1
+/pl/blog/post/5-things-about-web-push                                       /pl/blog/5-rzeczy-o-web-push
+/pl/blog/post/first-steps                                                   /pl/blog/pierwsze-kroki
+/pl/blog/post/gtm-integration                                               /pl/blog/gtm-integracja
+/pl/blog/post/iai-shop-integracja                                           /pl/blog/iai-shop-integracja
+/pl/blog/post/improve-push-campaigns                                        /pl/blog/4-wskazowki-ktore-zwieksza-skutecznosc-twoich-kampanii
+/pl/blog/post/inbox-sidebar                                                 /pl/blog/skrzynka-odbiorcza-web-push
+/pl/blog/post/jak-wlaczyc-web-push                                          /pl/blog/jak-wlaczyc-web-push
+/pl/blog/post/jak-zachecic-do-zakupu                                        /pl/blog/jak-zachecic-do-zakupu
+/pl/blog/post/jak-wykorzystywac-web-push                                    /pl/blog/jak-wykorzystywac-web-push
+/pl/blog/post/language-support                                              /pl/blog/jezyki-wsparcie
+/pl/blog/post/landingi-integracja                                           /pl/blog/landingi-integracja
+/pl/blog/post/newsletter-vs-webpush                                         /pl/blog/8-waznych-roznic-pomiedzy-newsletterem-a-web-push
+/pl/blog/post/push-support                                                  /pl/blog/push-wsparcie-przegladarek
+/pl/blog/post/rodo-poradnik                                                 /pl/blog/rodo-poradnik
+/pl/blog/post/shoper-integration                                            /pl/blog/shoper-integracja
+/pl/blog/post/shoplo-integration                                            /pl/blog/shoplo-integracja
+/pl/blog/post/wybor-aplikacji-web-push                                      /pl/blog/wybor-aplikacji-web-push
+/pl/blog/post/wordpress-integration                                         /pl/blog/wordpress-integracja
+/pl/blog/post/wyglad-powiadomien-web-push                                   /pl/blog/wplyw-przegladarek-na-wyglad-powiadomien-web-push
+/pl/pages/contact                                                           /pl/pages/kontakt
+/pl/pages/rules                                                             /pl/pages/regulamin
+/pl/pages/czesto-zadawane-pytania                                           /pl/pages/faq
+/pl/pages/praca-account-manager                                             /pl/praca
+/pl/pages/praca-new-business-specialist                                     /pl/praca
+/pl/pages/praca-customer-service                                            /pl/praca
+/pl/pages/praca-software-developer                                          /pl/praca
+/pl/pages/pricing                                                           /pl/pages/cennik
+/pl/pages/webinar                                                           /pl/pages/webinar-form
+/pl/pages/work                                                              /pl/pages/praca
+/pl/pages/program-partnerski-archived                                       /pl/pages/kontakt
+/pl/pages/program-partnerski-archived/regulamin                             /pl/pages/kontakt
+/pl/pages/zespol                                                            /pl/pages/kontakt
+/pl/pages/dokumentacja/                                                     /pl/poradnik/start
+/pl/pages/poradnik/                                                         /pl/poradnik/start
+/pl/pages/documentation/                                                    /pl/poradnik/start
+/en/pages/documentation/                                                    /en/user-guide/start
+/faq                                                                        /en/faq
+/user-guide/                                                                /en/user-guide/start
+/pl/poradnik/                                                               /pl/poradnik/start
+/pl/faq                                                                     /pl/faq
+/pl/pages/ratowanie-porzuconych-koszykow-ecommerce/                         /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/ratowanie-porzuconych-koszykow-ecommerce/index.html               /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/ratowanie-porzuconych-koszykow                                    /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/ratowanie-porzuconych-koszykow/index.html                         /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/generowanie-leadow-b2b-narzedzie                                  /generowanie-leadow-b2b-narzedzie/                   301
+/pl/pages/generowanie-leadow-b2b-narzedzie/index.html                       /generowanie-leadow-b2b-narzedzie/                   301
+/pl/pages/lead-nurturing-narzedzie                                          /lead-nurturing-narzedzie/                           301
+/pl/pages/lead-nurturing-narzedzie/index.html                               /lead-nurturing-narzedzie/                           301
+/pl/pages/wspolczynnik-konwersji-e-commerce-narzedzie                       /wspolczynnik-konwersji-e-commerce-narzedzie/        301
+/pl/pages/wspolczynnik-konwersji-e-commerce-narzedzie/index.html            /wspolczynnik-konwersji-e-commerce-narzedzie/        301
+/pl/pages/jak-zwiekszyc-sprzedaz-online                                     /jak-zwiekszyc-sprzedaz-online/                      301
+/pl/pages/jak-zwiekszyc-sprzedaz-online/index.html                          /jak-zwiekszyc-sprzedaz-online/                      301
+/pl/pages/marketing-automation-narzedzie                                    /marketing-automation-narzedzie/                     301
+/pl/pages/marketing-automation-narzedzie/index.html                         /marketing-automation-narzedzie/                     301
+/pl/pages/ratowanie-porzuconych-koszykow                                    /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/ratowanie-porzuconych-koszykow/index.html                         /ratowanie-porzuconych-koszykow/                     301
+/pl/pages/email-marketing                                                   /email-marketing-narzedzie/                          301
+/pl/pages/email-marketing/index.html                                        /email-marketing-narzedzie/                          301
+/pl/pages/pop-up-narzedzie                                                  /pop-up-narzedzie/                                   301
+/pl/pages/pop-up-narzedzie/index.html                                       /pop-up-narzedzie/                                   301
+/pl/pages/cross-selling-narzedzie                                           /cross-selling-narzedzie/                            301
+/pl/pages/cross-selling-narzedzie/index.html                                /cross-selling-narzedzie/                            301
+/pl/pages/up-selling-narzedzie                                              /up-selling-narzedzie/                               301
+/pl/pages/up-selling-narzedzie/index.html                                   /up-selling-narzedzie/                               301
+/en/pages/how-to-rock-upselling-with-web-push-notifications                 /how-to-rock-upselling-with-web-push-notifications/  301
+/en/pages/lead-generation-tool                                              /lead-generation-tool/                               301
+/en/pages/getting-b2b-leads-tool                                            /getting-b2b-leads-tool/                             301
+/en/pages/lead-nurturing-tool                                               /lead-nurturing-tool/                                301
+/en/pages/conversion-rate-tool                                              /conversion-rate-tool/                               301
+/en/pages/how-to-increase-online-store-sales                                /how-to-increase-online-store-sales/                 301
+/en/pages/marketing-automation-tool                                         /marketing-automation-tool/                          301
+/en/pages/recover-abandoned-carts-tool                                      /recover-abandoned-carts-tool/                       301
+/en/pages/email-marketing                                                   /email-marketing/                                    301
+/en/pages/how-to-rock-upselling-with-web-push-notifications/index.html      /how-to-rock-upselling-with-web-push-notifications/  301
+/en/pages/lead-generation-tool/index.html                                   /lead-generation-tool/                               301
+/en/pages/getting-b2b-leads-tool/index.html                                 /getting-b2b-leads-tool/                             301
+/en/pages/lead-nurturing-tool/index.html                                    /lead-nurturing-tool/                                301
+/en/pages/conversion-rate-tool/index.html                                   /conversion-rate-tool/                               301
+/en/pages/how-to-increase-online-store-sales/index.html                     /how-to-increase-online-store-sales/                 301
+/en/pages/marketing-automation-tool/index.html                              /marketing-automation-tool/                          301
+/en/pages/recover-abandoned-carts-tool/index.html                           /recover-abandoned-carts-tool/                       301
+/en/pages/email-marketing/index.html                                        /email-marketing/                                    301
+/*                                                                          /404.html                                            404

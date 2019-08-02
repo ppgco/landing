@@ -1,6 +1,6 @@
 {
   "name": "pushpushgo-landing",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "pushpushgo-landing",
   "license": "ISC",
   "scripts": {
@@ -8,7 +8,9 @@
     "watch": "./node_modules/.bin/dato dump --preview --watch",
     "staging": "./node_modules/.bin/dato dump --preview",
     "production": "./node_modules/.bin/dato dump",
-    "build": "rm -fr release/ && node metalsmith.js"
+    "build": "rm -fr release/ && node metalsmith.js",
+    "build:landings": "export NODE_ENV=production && npm install --prefix landing && npm run build --prefix landing && rsync -av --progress landing/public/* release/ --exclude landing/public/404 --exclude landing/public/404.html --exclude landing/public/index.html",
+    "netlify": "export NODE_ENV=production && npm run production && npm run build && npm run build:landings"
   },
   "devDependencies": {
     "datocms-client": "^0.5.4",
