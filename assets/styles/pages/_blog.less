@@ -119,6 +119,11 @@
     padding: 30px 20px;
     color: @text-color;
   }
+
+  [id^='instagram-embed'] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 .post-tag {
@@ -228,6 +233,31 @@
   }
   body {
     padding-top: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .blog-single-post {
+    margin: 0 10px;
+
+    .blog-post-item {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .blog-single-post {
+    margin: 0;
+
+    .blog-post-item {
+    .blog-post-item-text {
+
+      [id^='instagram-embed'] {
+        min-width: auto !important;
+        }
+      }
+    }
   }
 }
 
